@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Minimal Template - index_basic.py &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=ff720171"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index_basic_py';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar">
+  <div class="bd-header__inner bd-page-width">
+    
+    <!-- Left Side: Logo -->
+    <div class="navbar-header-items__start">
+      <a class="navbar-brand logo" href="index.html">
+        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+      </a>
+    </div>
+
+    <!-- Center: Title -->
+    <div class="navbar-header-items__center">
+      <span class="navbar-text">Bfabric Web Apps Documentation</span>
+    </div>
+
+    <!-- Right Side: Search & Light/Dark Mode -->
+    <div class="navbar-header-items__end">
+
+      <!-- Search -->
+      <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="search-button__default-text">Search</span>
+        <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+      </button>
+
+      <!-- Light/Dark Mode Switch -->
+      <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode">
+        <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+        <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+        <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><div class="sidebar-item" style="overflow: visible; height: auto; max-height: none;">
+  <h3>Navigation Bar</h3>
+  <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="installation.html">Installation</a></li>
+    <li><a href="bfabric_web_apps_functions.html">Library Docs</a></li>
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul style="overflow: visible; height: auto; max-height: none;">
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="#">Minimal Template</a></li>
+      </ul>
+    </li>
+  </ul>
+</div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Minimal Template - index_basic.py</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="minimal-template-index-basic-py">
+<h1>Minimal Template - index_basic.py<a class="headerlink" href="#minimal-template-index-basic-py" title="Link to this heading">#</a></h1>
+<p>This chapter provides a step-by-step breakdown of the <strong>index_basic.py</strong> script. It explains key functions and their roles in setting up a <strong>basic B-Fabric web application</strong>.</p>
+<hr class="docutils" />
+<section id="view-the-demo">
+<h2>View the Demo<a class="headerlink" href="#view-the-demo" title="Link to this heading">#</a></h2>
+<p>Before diving into the details, you can preview a <strong>live demo</strong> of this template:</p>
+<p><a class="reference external" href="https://small-template-d12.bfabric.org/">View the Demo</a></p>
+<p>This will give you an idea of how the <strong>Minimal Template</strong> looks and functions.</p>
+</section>
+<hr class="docutils" />
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>Before starting, ensure familiarity with:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dash.plotly.com/layout">Dash Fundamentals</a></p></li>
+<li><p><a class="reference internal" href="bfabric_web_apps_functions.html"><span class="std std-doc">bfabric_web_apps Documentation</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="running-the-template">
+<h2>Running the Template<a class="headerlink" href="#running-the-template" title="Link to this heading">#</a></h2>
+<p>To execute the template:</p>
+<ol class="arabic">
+<li><p>Run the following command in your terminal:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>index_basic.py
+</pre></div>
+</div>
+</li>
+<li><p>Open your browser and go to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="importing-dependencies">
+<h2>Importing Dependencies<a class="headerlink" href="#importing-dependencies" title="Link to this heading">#</a></h2>
+<p>This section covers the <strong>necessary imports</strong> that make the template functional.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">State</span>
+<span class="kn">from</span> <span class="nn">generic_bfabric</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">from</span> <span class="nn">bfabric_web_apps</span> <span class="kn">import</span> <span class="n">get_static_layout</span><span class="p">,</span> <span class="n">get_logger</span><span class="p">,</span> <span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span>
+<span class="kn">import</span> <span class="nn">dash_bootstrap_components</span> <span class="k">as</span> <span class="nn">dbc</span>
+</pre></div>
+</div>
+<section id="explanation">
+<h3>Explanation<a class="headerlink" href="#explanation" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Dash Imports</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code> and <code class="docutils literal notranslate"><span class="pre">dcc</span></code>: Used to construct the app layout.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span></code>, <code class="docutils literal notranslate"><span class="pre">Output</span></code>, and <code class="docutils literal notranslate"><span class="pre">State</span></code>: Required for callback interactions.</p></li>
+</ul>
+</li>
+<li><p><strong>Generic B-Fabric Imports</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">app</span></code>: The <strong>Dash instance</strong> that runs the web app.</p></li>
+</ul>
+</li>
+<li><p><strong>bfabric_web_apps Imports</strong></p>
+<ul class="simple">
+<li><p><strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-static-layout"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_static_layout</span></code></span></a></strong>: Provides a <strong>consistent page layout</strong>.</p></li>
+<li><p><strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-logger"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_logger</span></code></span></a></strong>: Handles <strong>logging of user actions</strong>.</p></li>
+<li><p><strong>HOST &amp; PORT</strong>: Define <strong>server configurations</strong> (imported from <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Dash Bootstrap Components (DBC)</strong></p>
+<ul class="simple">
+<li><p>Provides <strong>pre-styled UI elements</strong> to enhance the look and functionality of the app.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="setting-up-the-app-title">
+<h2>Setting Up the App Title<a class="headerlink" href="#setting-up-the-app-title" title="Link to this heading">#</a></h2>
+<p>The <strong>application title</strong> provides a clear and identifiable name for the B-Fabric web app. This title appears in the <strong>UI header</strong> and helps users understand the purpose of the application.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_title</span> <span class="o">=</span> <span class="s2">&quot;My B-Fabric App (Basic)&quot;</span>
+</pre></div>
+</div>
+<section id="id1">
+<h3>Explanation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This title is used inside <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-static-layout"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_static_layout</span></code></span></a></strong> to maintain a consistent UI.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="designing-the-main-page">
+<h2>Designing the Main Page<a class="headerlink" href="#designing-the-main-page" title="Link to this heading">#</a></h2>
+<p>The <strong>application layout</strong> organizes the <strong>sidebar and main content area</strong> into a structured, two-column design. The <strong>left column</strong> houses interactive elements for user input, while the <strong>right column</strong> displays content dynamically based on authentication and user selections.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_specific_layout</span> <span class="o">=</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Row</span><span class="p">([</span>
+    <span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;border-right&quot;</span><span class="p">:</span> <span class="s2">&quot;2px solid #d4d7d9&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="s2">&quot;70vh&quot;</span><span class="p">,</span> <span class="s2">&quot;padding&quot;</span><span class="p">:</span> <span class="s2">&quot;20px&quot;</span><span class="p">}),</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="c1"># Sidebar placeholder.</span>
+    <span class="p">),</span>
+    <span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">([</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">H1</span><span class="p">(</span><span class="s2">&quot;Welcome to The Sample B-Fabric App&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;margin&quot;</span><span class="p">:</span> <span class="s2">&quot;2vh 0 2vh 0&quot;</span><span class="p">}),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;user-display&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;margin&quot;</span><span class="p">:</span> <span class="s2">&quot;2vh 0 2vh 0&quot;</span><span class="p">}),</span>
+    <span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+<section id="id2">
+<h3>Explanation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>app_specific_layout</strong>: Defines <strong>two columns</strong>:</p>
+<ul>
+<li><p>A <strong>left sidebar</strong> (currently empty, but can be extended).</p></li>
+<li><p>A <strong>main content area</strong>, including:</p>
+<ul>
+<li><p>A <strong>welcome message</strong>.</p></li>
+<li><p>A <strong>user display section</strong> (id='user-display'), which updates dynamically based on login status.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="defining-the-documentation-section">
+<h2>Defining the Documentation Section<a class="headerlink" href="#defining-the-documentation-section" title="Link to this heading">#</a></h2>
+<p>The <strong>documentation section</strong> provides users with an introduction to the <strong>B-Fabric App Template</strong> and links to external resources for further learning.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">documentation_content</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">H2</span><span class="p">(</span><span class="s2">&quot;Documentation&quot;</span><span class="p">),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;Describe your app&#39;s features here.&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<section id="id3">
+<h3>Explanation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Header (html.H2)</strong> – Displays a <strong>title</strong> for the documentation section.</p></li>
+<li><p><strong>Content (html.P)</strong> – Placeholder for future documentation, explaining the <strong>purpose of the application</strong> and its customization options.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="integrating-the-app-layout">
+<h2>Integrating the App Layout<a class="headerlink" href="#integrating-the-app-layout" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">app.layout</span></code> function <strong>establishes the final structure</strong> of the application by integrating the <strong>title, main content, and documentation</strong> into a cohesive layout. This ensures a <strong>consistent user experience</strong> across all pages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">get_static_layout</span><span class="p">(</span>
+    <span class="n">app_title</span><span class="p">,</span>  <span class="c1"># Application title</span>
+    <span class="n">app_specific_layout</span><span class="p">,</span>  <span class="c1"># The main content for the app</span>
+    <span class="n">documentation_content</span>  <span class="c1"># Documentation section</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id4">
+<h3>Explanation<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Uses <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-static-layout"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_static_layout</span></code></span></a></strong> to maintain a <strong>consistent page structure</strong> throughout the application.</p></li>
+<li><p><strong>app_title</strong> – Defines the <strong>main heading</strong> of the application.</p></li>
+<li><p><strong>app_specific_layout</strong> – Contains the <strong>sidebar and main content area</strong>.</p></li>
+<li><p><strong>documentation_content</strong> – Displays <strong>informational resources</strong> for users.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="callback-for-user-display">
+<h2>Callback for User Display<a class="headerlink" href="#callback-for-user-display" title="Link to this heading">#</a></h2>
+<p>This callback <strong>dynamically updates the UI</strong> to reflect user authentication status and application information.</p>
+<p>For more details on Dash callbacks, see: <strong><a class="reference external" href="https://dash.plotly.com/basic-callbacks">Dash Callbacks Documentation</a></strong></p>
+<hr class="docutils" />
+<section id="callback-definition">
+<h3>Callback Definition<a class="headerlink" href="#callback-definition" title="Link to this heading">#</a></h3>
+<p>The callback <strong>listens for authentication</strong> (<code class="docutils literal notranslate"><span class="pre">token_data</span></code>) and <strong>application details</strong> (<code class="docutils literal notranslate"><span class="pre">app_data</span></code>) and decides what to display in the <code class="docutils literal notranslate"><span class="pre">user-display</span></code> component.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;user-display&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;token_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>
+    <span class="n">State</span><span class="p">(</span><span class="s1">&#39;app_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>Explanation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Output:</strong></p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">user-display</span></code></strong>: A Dash component to show user/app data or a login prompt.</p></li>
+</ul>
+</li>
+<li><p><strong>Input:</strong></p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">token_data</span></code></strong>: Tracks user authentication status.</p></li>
+</ul>
+</li>
+<li><p><strong>State:</strong></p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_data</span></code></strong>: Stores application information (e.g., name, description).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="handling-user-and-application-data">
+<h3>Handling User and Application Data<a class="headerlink" href="#handling-user-and-application-data" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_user_display</span><span class="p">(</span><span class="n">token_data</span><span class="p">,</span> <span class="n">app_data</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">token_data</span> <span class="ow">and</span> <span class="n">app_data</span><span class="p">:</span>
+        <span class="n">user_name</span> <span class="o">=</span> <span class="n">token_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;user_data&quot;</span><span class="p">,</span> <span class="s2">&quot;Unknown User&quot;</span><span class="p">)</span>
+        <span class="n">app_name</span> <span class="o">=</span> <span class="n">app_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;Unknown App&quot;</span><span class="p">)</span>
+        <span class="n">app_description</span> <span class="o">=</span> <span class="n">app_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="s2">&quot;Unknown App&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>Explanation<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Checks if both <code class="docutils literal notranslate"><span class="pre">token_data</span></code> and <code class="docutils literal notranslate"><span class="pre">app_data</span></code> exist.</p></li>
+<li><p>Retrieves:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">user_name</span></code></strong> from <code class="docutils literal notranslate"><span class="pre">token_data</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_name</span></code></strong> and <strong><code class="docutils literal notranslate"><span class="pre">app_description</span></code></strong> from <code class="docutils literal notranslate"><span class="pre">app_data</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="logging-the-event">
+<h3>Logging the Event<a class="headerlink" href="#logging-the-event" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="c1"># Initialize logger and log the login event</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">log_operation</span><span class="p">(</span><span class="s2">&quot;User Login&quot;</span><span class="p">,</span> <span class="s2">&quot;User logged in successfully.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>Explanation<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-logger"><span class="std std-ref">'get_logger'</span></a></strong> method is used to capture user actions.</p></li>
+<li><p>The <strong><a class="reference internal" href="#bfabric_web_apps_functions.mdl#log-operation"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">log_operation</span></code></span></a></strong> method records a <strong>“User Login”</strong> event in the logs.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="return-statements">
+<h3>Return Statements<a class="headerlink" href="#return-statements" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="k">return</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User </span><span class="si">{</span><span class="n">user_name</span><span class="si">}</span><span class="s2"> has successfully logged in!&quot;</span><span class="p">),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Application Name: </span><span class="si">{</span><span class="n">app_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Application Description: </span><span class="si">{</span><span class="n">app_description</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Please log in.&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h3>Explanation<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>If authenticated</strong> (both <code class="docutils literal notranslate"><span class="pre">token_data</span></code> and <code class="docutils literal notranslate"><span class="pre">app_data</span></code> present):</p>
+<ul class="simple">
+<li><p>Returns an <code class="docutils literal notranslate"><span class="pre">html.Div</span></code> showing the user’s name, application name, and application description.</p></li>
+</ul>
+</li>
+<li><p><strong>If not authenticated</strong> (missing data):</p>
+<ul class="simple">
+<li><p>Returns the string <strong>&quot;Please log in.&quot;</strong>, prompting the user to authenticate.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="running-the-app">
+<h2>Running the App<a class="headerlink" href="#running-the-app" title="Link to this heading">#</a></h2>
+<p>This section ensures the app <strong>runs on the correct server settings</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">PORT</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">HOST</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id9">
+<h3>Explanation<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">PORT</span></code> and <code class="docutils literal notranslate"><span class="pre">HOST</span></code></strong> define the server’s <strong>address and port number</strong>.</p></li>
+<li><p>These values are <strong>imported by default from the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> module</strong>. If you want to modify them, refer to the <strong><a class="reference internal" href="bfabric_web_apps_functions.html#dynamic-variable-configuration"><span class="std std-ref">Global Configuration Variables</span></a></strong> chapter for more information.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view-the-demo">View the Demo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-template">Running the Template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-dependencies">Importing Dependencies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-app-title">Setting Up the App Title</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#designing-the-main-page">Designing the Main Page</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-documentation-section">Defining the Documentation Section</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-app-layout">Integrating the App Layout</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-for-user-display">Callback for User Display</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-definition">Callback Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Explanation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-user-and-application-data">Handling User and Application Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Explanation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-the-event">Logging the Event</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Explanation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-statements">Return Statements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-app">Running the App</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Explanation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+<footer class="bd-footer">
+  <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->
+    <div class="footer-items__start">
+      <div class="footer-item">
+        <p class="copyright">
+          © Copyright 2024, GWC GmbH. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

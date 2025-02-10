@@ -1,0 +1,1199 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>B-Fabric Web Apps Functions &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=ff720171"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bfabric_web_apps_functions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar">
+  <div class="bd-header__inner bd-page-width">
+    
+    <!-- Left Side: Logo -->
+    <div class="navbar-header-items__start">
+      <a class="navbar-brand logo" href="index.html">
+        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+      </a>
+    </div>
+
+    <!-- Center: Title -->
+    <div class="navbar-header-items__center">
+      <span class="navbar-text">Bfabric Web Apps Documentation</span>
+    </div>
+
+    <!-- Right Side: Search & Light/Dark Mode -->
+    <div class="navbar-header-items__end">
+
+      <!-- Search -->
+      <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="search-button__default-text">Search</span>
+        <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+      </button>
+
+      <!-- Light/Dark Mode Switch -->
+      <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode">
+        <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+        <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+        <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><div class="sidebar-item" style="overflow: visible; height: auto; max-height: none;">
+  <h3>Navigation Bar</h3>
+  <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="installation.html">Installation</a></li>
+    <li><a href="#">Library Docs</a></li>
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul style="overflow: visible; height: auto; max-height: none;">
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+      </ul>
+    </li>
+  </ul>
+</div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">B-Fabric Web Apps Functions</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="b-fabric-web-apps-functions">
+<h1>B-Fabric Web Apps Functions<a class="headerlink" href="#b-fabric-web-apps-functions" title="Link to this heading">#</a></h1>
+<p>This section provides an in-depth explanation of the <strong>core functions</strong> used in <strong>bfabric_web_apps</strong>. These functions are responsible for <strong>authentication, layout management, logging, API interactions, bug reporting</strong> and more.</p>
+<hr class="docutils" />
+<section id="application-initialization">
+<h2>1. Application Initialization<a class="headerlink" href="#application-initialization" title="Link to this heading">#</a></h2>
+<section id="create-app">
+<h3>create_app()<a class="headerlink" href="#create-app" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">create_app()</span></code> function initializes a <strong>Dash app instance</strong> with pre-configured settings suitable for use with B-Fabric, including responsive design and Bootstrap-based styling. This function simplifies starting a new Dash app by applying common configurations.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">create_app()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/app_init.py">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="returns">
+<h4>Returns:<a class="headerlink" href="#returns" title="Link to this heading">#</a></h4>
+<p>A Dash app instance with support for dynamic callbacks and responsive design.</p>
+</section>
+<hr class="docutils" />
+<section id="return-type">
+<h4>Return type:<a class="headerlink" href="#return-type" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">dash.Dash</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="example-usage">
+<h4>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the create_app function from the bfabric_web_apps module.</span>
+<span class="kn">from</span> <span class="nn">bfabric_web_apps</span> <span class="kn">import</span> <span class="n">create_app</span>
+
+<span class="c1"># Create an instance of the Dash app using the create_app function.</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">()</span>
+
+<span class="c1"># Define the layout for the Dash app.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">get_static_layout</span><span class="p">(</span>
+    <span class="n">app_title</span><span class="p">,</span>
+    <span class="n">app_specific_layout</span><span class="p">,</span>
+    <span class="n">documentation_content</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="understanding-the-app-object-in-dash">
+<h3>Understanding the app Object in Dash<a class="headerlink" href="#understanding-the-app-object-in-dash" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">app</span></code> object is an instance of the <code class="docutils literal notranslate"><span class="pre">Dash</span></code> class from the <a class="reference external" href="https://dash.plotly.com/"><code class="docutils literal notranslate"><span class="pre">dash</span></code></a> library. It serves as the central object of a Dash application, managing the layout, callbacks, and overall app configuration. The <code class="docutils literal notranslate"><span class="pre">Dash()</span></code> class is used to create an instance of a Dash application. It initializes the app, providing the structure to define its layout and interactivity. The <code class="docutils literal notranslate"><span class="pre">Dash()</span></code> class serves as the foundation for building Dash applications, allowing developers to add components like HTML elements, interactive controls, and graphs.</p>
+<p>For more details on defining layouts in Dash, refer to the <a class="reference external" href="https://dash.plotly.com/layout#dash-layout">Dash Layout Documentation</a>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ui-and-layout-management">
+<h2>2. UI and Layout Management<a class="headerlink" href="#ui-and-layout-management" title="Link to this heading">#</a></h2>
+<section id="get-static-layout">
+<h3>get_static_layout()<a class="headerlink" href="#get-static-layout" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">get_static_layout()</span></code> function combines various <strong>UI components</strong> into a structured Dash layout with pre-defined tabs for <strong>Main</strong>, <strong>Documentation</strong>, and <strong>Report a Bug</strong>. This layout ensures a consistent look and feel across B-Fabric applications, while allowing customization of the main content and documentation.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">get_static_layout()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/layouts/layouts.py#L4">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">get_static_layout</span><span class="p">(</span><span class="n">app_title</span><span class="p">,</span> <span class="n">main_content</span><span class="p">,</span> <span class="n">documentation_content</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="args">
+<h4>Args:<a class="headerlink" href="#args" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>base_title</strong> (<em>str</em>, optional): The title displayed in the browser tab. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>main_content</strong> (<em>Dash HTML Component</em>, optional): The main content displayed in the &quot;Main&quot; tab. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>documentation_content</strong> (<em>Dash HTML Component</em>, optional): The static documentation displayed under the &quot;Documentation&quot; tab. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h4>Returns:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>A Dash layout containing the specified content along with static tabs for <strong>Main</strong>, <strong>Documentation</strong>, and <strong>Report a Bug</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h4>Return type:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">dash.html.Div</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h4>Example Usage<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the &#39;html&#39; module from Dash</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">html</span>
+
+<span class="n">sidebar</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span><span class="o">...</span><span class="p">])</span>  <span class="c1"># Custom sidebar content</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span><span class="o">...</span><span class="p">])</span>  <span class="c1"># Main app content</span>
+<span class="n">documentation</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span><span class="o">...</span><span class="p">])</span>  <span class="c1"># Documentation content</span>
+
+<span class="c1"># Set the layout of the app</span>
+<span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">get_static_layout</span><span class="p">(</span><span class="s2">&quot;My App&quot;</span><span class="p">,</span> <span class="n">sidebar</span><span class="p">,</span> <span class="n">documentation</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For detailed guidance on implementing and structuring layouts, please refer to the official <a class="reference external" href="https://dash.plotly.com/layout">Dash documentation</a>.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="authentication-token-handling">
+<h2>3. Authentication &amp; Token Handling<a class="headerlink" href="#authentication-token-handling" title="Link to this heading">#</a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
+<p>The B-Fabric authentication flow is designed to be straightforward and seamless for users of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_app</span></code> library. While the underlying processes are abstracted, the following provides an overview of how the authentication and token handling works.</p>
+<p><img alt="Authentication Token Flow" src="_images/Authentication_Token_Flow.png" /></p>
+<section id="steps-explained">
+<h4>Steps Explained:<a class="headerlink" href="#steps-explained" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Token Sent to FGCZ Application Server</strong><br />
+When a user clicks a link in B-Fabric, they are redirected to the web application's page. The authentication token is included as a parameter in the URL.<br />
+Example URL:<br />
+<code class="docutils literal notranslate"><span class="pre">https://some.webapp/param1?token=xyabcdefg1234561234234234asdf</span></code></p></li>
+<li><p><strong>Token Validation</strong><br />
+The web application sends the token to a dedicated REST endpoint hosted on <code class="docutils literal notranslate"><span class="pre">fgcz-bfabric.uzh.ch</span></code>.</p></li>
+<li><p><strong>Token Decryption</strong><br />
+If the token is valid, B-Fabric responds with a JSON payload containing essential authentication details, such as the username, web service password, and entity class information.</p></li>
+<li><p><strong>Authenticated API Calls</strong><br />
+Now that the web application has authenticated the user, it can use the username and web service password obtained from the token auth endpoint to authenticate subsequent calls to the B-Fabric web service.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="process-url-and-token">
+<h3>process_url_and_token()<a class="headerlink" href="#process-url-and-token" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">process_url_and_token()</span></code> function processes URL parameters to extract and validate authentication tokens, retrieve related entity data, and prepare page content for B-Fabric applications.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">process_url_and_token()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/callbacks.py#L8">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">process_url_and_token</span><span class="p">(</span><span class="n">url_params</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id4">
+<h4>Args:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>url_params</strong> (<em>str</em>):<br />
+The URL parameters containing the token (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;?token=abc123&quot;</span></code>).</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="processing-steps">
+<h4>Processing Steps:<a class="headerlink" href="#processing-steps" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Check for <code class="docutils literal notranslate"><span class="pre">url_params</span></code></strong>:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">url_params</span></code> is empty or <code class="docutils literal notranslate"><span class="pre">None</span></code>, the function immediately returns <code class="docutils literal notranslate"><span class="pre">None</span></code> for the token, token data, entity data, app data, session details, <code class="docutils literal notranslate"><span class="pre">None</span></code> for the job link, and a default <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> for the page title.</p></li>
+</ul>
+</li>
+<li><p><strong>Extract the token</strong>:</p>
+<ul class="simple">
+<li><p>Splits the <code class="docutils literal notranslate"><span class="pre">url_params</span></code> string to find the segment after <code class="docutils literal notranslate"><span class="pre">token=</span></code>.</p></li>
+<li><p>This extracted string is treated as the token.</p></li>
+</ul>
+</li>
+<li><p><strong>Validate the token</strong>:</p>
+<ul class="simple">
+<li><p>Calls <code class="docutils literal notranslate"><span class="pre">BfabricInterface.token_to_data(token)</span></code> to validate the token.</p></li>
+<li><p>If the token is expired (<code class="docutils literal notranslate"><span class="pre">&quot;EXPIRED&quot;</span></code>), returns <code class="docutils literal notranslate"><span class="pre">None</span></code> for the token, token data, entity data, app_data, session details, job link, and a default <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> for the page title.</p></li>
+<li><p>If the token is invalid or not found, the function also returns <code class="docutils literal notranslate"><span class="pre">None</span></code> values for these fields and uses <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code> for the page title.</p></li>
+</ul>
+</li>
+<li><p><strong>Retrieve entity data and app data</strong>:</p>
+<ul class="simple">
+<li><p>On successful token validation, loads the token data (<code class="docutils literal notranslate"><span class="pre">tdata</span></code>) from JSON.</p></li>
+<li><p>Calls <code class="docutils literal notranslate"><span class="pre">BfabricInterface.entity_data(tdata)</span></code> to fetch entity details and parses it into <code class="docutils literal notranslate"><span class="pre">entity_data</span></code>.</p></li>
+<li><p>Calls <code class="docutils literal notranslate"><span class="pre">BfabricInterface.app_data(tdata)</span></code> to fetch app-related information and parses it into <code class="docutils literal notranslate"><span class="pre">app_data</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Generate page title</strong>:</p>
+<ul class="simple">
+<li><p>Constructs a string based on the entity class, entity name, and environment.</p></li>
+<li><p>Falls back to <code class="docutils literal notranslate"><span class="pre">&quot;Bfabric</span> <span class="pre">App</span> <span class="pre">Interface&quot;</span></code> if key fields are missing.</p></li>
+</ul>
+</li>
+<li><p><strong>Construct job link</strong>:</p>
+<ul class="simple">
+<li><p>Extracts the <code class="docutils literal notranslate"><span class="pre">jobId</span></code> from the token data (<code class="docutils literal notranslate"><span class="pre">tdata</span></code>).</p></li>
+<li><p>Checks the environment (test or production) and constructs the corresponding B-Fabric job URL with <code class="docutils literal notranslate"><span class="pre">jobId</span></code>.</p></li>
+<li><p>If no <code class="docutils literal notranslate"><span class="pre">jobId</span></code> is present, <code class="docutils literal notranslate"><span class="pre">job_link</span></code> defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Compose session details</strong>:</p>
+<ul class="simple">
+<li><p>Builds a list of Dash HTML components containing summary information about the entity, token details, and app metadata.</p></li>
+<li><p>Includes environment, job ID, user name, session expiration time, and the current timestamp.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h4>Returns:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>The function returns a 7-element tuple, which varies depending on whether authentication succeeds or fails.</p>
+<ol class="arabic simple">
+<li><p><strong>Authenticated Case</strong>:</p>
+<ul class="simple">
+<li><p><strong>Returns</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>token</strong> (<em>str</em>): The extracted token string.</p></li>
+<li><p><strong>token_data</strong> (<em>dict</em>): A dictionary containing valid user and environment data.</p></li>
+<li><p><strong>entity_data</strong> (<em>dict</em>): Details about the current entity (e.g., name, class).</p></li>
+<li><p><strong>app_data</strong> (<em>dict</em>): Information about the related application (e.g., name, description).</p></li>
+<li><p><strong>page_title</strong> (<em>str</em>): A dynamically generated string based on token and entity data.</p></li>
+<li><p><strong>session_details</strong> (<em>list</em>): A list of Dash HTML components summarizing the session.</p></li>
+<li><p><strong>job_link</strong> (<em>str</em>): Dynamically generated link to the job page (if <code class="docutils literal notranslate"><span class="pre">jobId</span></code> is provided).</p></li>
+</ol>
+</li>
+<li><p><strong>Return Type</strong>:<br />
+<em>(str, dict, dict, dict, str, list, str)</em></p></li>
+</ul>
+</li>
+<li><p><strong>Authentication Fails</strong>:</p>
+<ul class="simple">
+<li><p><strong>Returns</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>token</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>token_data</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>entity_data</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>app_data</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>page_title</strong> (<em>str</em>): Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>.</p></li>
+<li><p><strong>session_details</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+<li><p><strong>job_link</strong>: <code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ol>
+</li>
+<li><p><strong>Return Type</strong>:<br />
+<em>(None, None, None, None, str, None, None)</em></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="example-usage-callback-integration">
+<h4>Example Usage - Callback Integration<a class="headerlink" href="#example-usage-callback-integration" title="Link to this heading">#</a></h4>
+<p>This function is typically used within a Dash callback to manage authentication. As a reference, you can check out how this function is used in <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template/blob/main/generic_bfabric.py#L44"><code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>                <span class="c1"># Store authentication token.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;token_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>           <span class="c1"># Store token metadata.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>               <span class="c1"># Store entity data.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;app_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>               <span class="c1"># Store app data.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;page-title&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>       <span class="c1"># Update page title.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;session-details&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>  <span class="c1"># Update session details.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;dynamic-link&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">)</span>  <span class="c1"># Directly update the button!</span>
+    <span class="p">],</span>
+    <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;search&#39;</span><span class="p">)]</span>                    <span class="c1"># Extract token from URL parameters.</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">generic_process_url_and_token</span><span class="p">(</span><span class="n">url_params</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">process_url_and_token</span><span class="p">(</span><span class="n">url_params</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="logging">
+<h2>4. Logging<a class="headerlink" href="#logging" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h3>Overview<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Logging in B-Fabric is crucial for tracking user actions, API calls, and errors. Logs are stored in B-Fabric's job history, ensuring transparency, accountability, and effective debugging.</p>
+</section>
+<hr class="docutils" />
+<section id="accessing-logs-in-b-fabric">
+<h3>Accessing Logs in B-Fabric<a class="headerlink" href="#accessing-logs-in-b-fabric" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Open the <strong>Job</strong> menu item (see screenshot).</p></li>
+<li><p>Use filters or search by <strong>Job ID</strong> to find the relevant job.</p></li>
+<li><p>Click on the <strong>Job ID</strong> to open the job details.</p></li>
+<li><p>In the job details view, click on the <strong>Log</strong> entry to access all recorded logs for that job.</p></li>
+</ol>
+<p><img alt="Screenshot showing where to find logs in B-Fabric" src="_images/Logger_page.png" /></p>
+<p>If the web application is based on the provided <strong><a class="reference internal" href="usage.html"><span class="std std-doc">templates</span></a></strong>, there is an additional way to find the logs.</p>
+<section id="through-web-applications">
+<h4>Through Web Applications<a class="headerlink" href="#through-web-applications" title="Link to this heading">#</a></h4>
+<p>If the web applications are built using the provided <strong><a class="reference internal" href="usage.html"><span class="std std-doc">templates</span></a></strong>, a shortcut to logs is available:</p>
+<ol class="arabic simple">
+<li><p>In the application, locate the <strong>button in the top-right corner</strong> (see screenshot).</p></li>
+<li><p>Clicking this button will <strong>directly open the corresponding logs</strong> for the job.</p></li>
+</ol>
+<p><img alt="Screenshot of the log button in web apps" src="_images/View_Logs.png" /></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="initializing-a-logger-instance">
+<h3>Initializing a Logger Instance<a class="headerlink" href="#initializing-a-logger-instance" title="Link to this heading">#</a></h3>
+<p>A logger instance is essential for tracking user actions, API calls, and errors within B-Fabric. This process ensures accountability and simplifies debugging by maintaining detailed logs of system events.</p>
+<hr class="docutils" />
+<section id="get-logger">
+<h4>get_logger()<a class="headerlink" href="#get-logger" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">get_logger()</span></code> function extracts logging-related information from <code class="docutils literal notranslate"><span class="pre">token_data</span></code> and initializes a <strong>Logger instance</strong> for managing and storing logs in B-Fabric.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">get_logger()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/get_logger.py">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id7">
+<h5>Args:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>token_data</strong> (<em>dict</em>): A dictionary containing token information. This is required to associate logs with the corresponding user or session in B-Fabric.</p></li>
+</ol>
+</section>
+<section id="id8">
+<h5>Returns:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h5>
+<p>A logger instance for managing and creating logs.</p>
+</section>
+</section>
+<section id="id9">
+<h4>Return Type::<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">Logger</span></code></p>
+<section id="example">
+<h5>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if token data is available</span>
+<span class="k">if</span> <span class="n">token_data</span><span class="p">:</span>
+    <span class="c1"># Initialize the logger instance</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+    
+    <span class="c1"># Use logger instance to log a simple user action</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">log_operation</span><span class="p">(</span><span class="s2">&quot;User Login&quot;</span><span class="p">,</span> <span class="s2">&quot;User logged in successfully.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="creating-logs-manual-and-automatic-methods">
+<h3>Creating Logs: Manual and Automatic Methods<a class="headerlink" href="#creating-logs-manual-and-automatic-methods" title="Link to this heading">#</a></h3>
+<p>Logging in B-Fabric enables tracking of system events through two key methods: <strong>manual logging</strong> with <code class="docutils literal notranslate"><span class="pre">log_operation()</span></code> and <strong>automatic logging</strong> with <code class="docutils literal notranslate"><span class="pre">logthis()</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Use <code class="docutils literal notranslate"><span class="pre">log_operation()</span></code></strong> when you need to manually record specific user actions or system events, such as data submissions or logins.</p></li>
+<li><p><strong>Use <code class="docutils literal notranslate"><span class="pre">logthis()</span></code></strong> when making API calls to automatically log execution details, including function names, input parameters, execution time, and results. This simplifies API monitoring by capturing all relevant context without additional manual logging.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="log-operation">
+<h4>log_operation()<a class="headerlink" href="#log-operation" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">log_operation()</span></code> function allows manual logging of user actions, storing these logs in <strong>B-Fabric's job history</strong>. It is commonly used for tracking specific events, such as data submissions or user logins.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">log_operation()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/objects/Logger.py#L69">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">log_operation</span><span class="p">(</span><span class="n">operation</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">flush_logs</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id10">
+<h5>Args:<a class="headerlink" href="#id10" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>operation</strong> (<em>str</em>): A short event label describing the action (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;Login&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Update</span> <span class="pre">Sample&quot;</span></code>).</p></li>
+<li><p><strong>message</strong> (<em>str</em>): A detailed description of the event.</p></li>
+<li><p><strong>params</strong> (<em>dict</em>, optional): Additional metadata related to the event. Defaults to <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p></li>
+<li><p><strong>flush_logs</strong> (<em>bool</em>): Controls whether logs are immediately sent to the backend. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>: The log entry is appended to the local log storage and immediately flushed to the backend using the <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> method. This ensures that the log is recorded in real time.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>: The log entry is stored locally and will remain in the local cache until the next time the <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> method is explicitly called. This can be useful for batching multiple log entries to minimize backend calls.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h5>Returns:<a class="headerlink" href="#id11" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h5>Example<a class="headerlink" href="#id12" title="Link to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if token data is available</span>
+<span class="k">if</span> <span class="n">token_data</span><span class="p">:</span>
+    <span class="c1"># Initialize the logger instance</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+    <span class="c1"># Log a file upload action</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">log_operation</span><span class="p">(</span>
+        <span class="n">operation</span> <span class="o">=</span><span class="s2">&quot;FileUpload&quot;</span><span class="p">,</span> 
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;User uploaded a CSV file&quot;</span><span class="p">,</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="s2">&quot;data.csv&quot;</span><span class="p">},</span>
+        <span class="n">flush_logs</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#The log entry is stored locally</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="logthis">
+<h4>logthis()<a class="headerlink" href="#logthis" title="Link to this heading">#</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">logthis()</span></code> function automatically wraps an API call, logging essential details such as the function name, input parameters, execution time, and return values. This method simplifies logging for API interactions while capturing all necessary context.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">logthis()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/objects/Logger.py#L117">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">logthis</span><span class="p">(</span><span class="n">api_call</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">flush_logs</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id13">
+<h5>Args:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>api_call</strong> (<em>function</em>): The API function to execute.</p></li>
+<li><p><strong>endpoint</strong> (<em>str</em>): The endpoint to read from, e.g. &quot;sample&quot;.</p></li>
+<li><p><strong>obj</strong> (<em>dict</em>) A dictionary containing the query, for every field multiple possible values can be provided, the final query requires the condition for each field to be met</p></li>
+<li><p><strong>flush_logs</strong> (<em>bool</em>): Controls whether logs are immediately sent to the backend. Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>: The log entry is appended to the local log storage and immediately flushed to the backend using the <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> method. This ensures that the log is recorded in real time.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>: The log entry is stored locally and will remain in the local cache until the next time the <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> method is explicitly called. This can be useful for batching multiple log entries to minimize backend calls.</p></li>
+</ul>
+</li>
+<li><p><strong>kwargs</strong>: These are keyword arguments passed directly to the API call. For example, <code class="docutils literal notranslate"><span class="pre">max_results</span></code> can be used to specify a cap on the number of results to query. If provided as an integer, the number of results will be limited to the specified value. If set to <code class="docutils literal notranslate"><span class="pre">None</span></code>, the code will load all available pages. The function will continue fetching data page by page until either the maximum number of results is reached or all pages have been retrieved.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h5>Returns:<a class="headerlink" href="#id14" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p>The result of the API call.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id15">
+<h5>Return Type:<a class="headerlink" href="#id15" title="Link to this heading">#</a></h5>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">any</span></code></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id16">
+<h5>Example<a class="headerlink" href="#id16" title="Link to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lane_samples</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">logthis</span><span class="p">(</span>
+    <span class="n">api_call</span> <span class="o">=</span> <span class="n">wapper</span><span class="o">.</span><span class="n">read</span><span class="p">,</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;rununitlane&quot;</span><span class="p">,</span>
+    <span class="n">obj</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">elt</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">lane_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rununitlane&quot;</span><span class="p">,</span> <span class="p">[])]},</span>
+    <span class="n">flush_logs</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1">#The log entry is stored locally</span>
+    <span class="n">max_results</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="c1">#Keyword arguments to pass to the API call (kwargs)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="flush-logs">
+<h3>flush_logs()<a class="headerlink" href="#flush-logs" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> function is used to send all accumulated log entries to the backend at once and clear the local cache. This function is particularly useful when multiple logging operations have been performed with <code class="docutils literal notranslate"><span class="pre">flush_logs=False</span></code>, allowing logs to be batched and sent in a single request instead of logging each action individually. If no logs are stored, calling this function has no effect.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">flush_logs()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/objects/Logger.py#L103">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">.</span><span class="n">flush_logs</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="id17">
+<h4>Args:<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="id18">
+<h4>Returns:<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>None</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="behavior">
+<h4>Behavior:<a class="headerlink" href="#behavior" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>If there are <strong>pending logs</strong> saved locally, they are flushed with a <strong>single API call</strong> to the backend, reducing the number of individual requests.</p></li>
+<li><p>After a successful flush, the local log storage is cleared.</p></li>
+<li><p>If no logs are pending, the function does nothing and exits immediately.</p></li>
+</ul>
+<hr class="docutils" />
+</section>
+<section id="id19">
+<h4>Example<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the logger instance</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+
+<span class="c1"># Log multiple API calls without flushing immediately</span>
+<span class="n">entity_data_list</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">logthis</span><span class="p">(</span>
+    <span class="n">api_call</span><span class="o">=</span><span class="n">wrapper</span><span class="o">.</span><span class="n">read</span><span class="p">,</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="n">endpoint</span><span class="p">,</span>
+    <span class="n">obj</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">entity_id</span><span class="p">},</span>
+    <span class="n">max_results</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">flush_logs</span><span class="o">=</span><span class="kc">False</span> <span class="c1"># Store log locally</span>
+<span class="p">)</span>
+
+<span class="n">lane_samples</span> <span class="o">=</span> <span class="n">L</span><span class="o">.</span><span class="n">logthis</span><span class="p">(</span>
+    <span class="n">api_call</span><span class="o">=</span><span class="n">wrapper</span><span class="o">.</span><span class="n">read</span><span class="p">,</span>
+    <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;rununitlane&quot;</span><span class="p">,</span>
+    <span class="n">obj</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">elt</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">lane_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;rununitlane&quot;</span><span class="p">,</span> <span class="p">[])]},</span>
+    <span class="n">max_results</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">flush_logs</span><span class="o">=</span><span class="kc">False</span> <span class="c1"># Store log locally</span>
+<span class="p">)</span>
+
+<span class="c1"># Flush all stored logs at once</span>
+<span class="n">L</span><span class="o">.</span><span class="n">flush_logs</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="b-fabric-power-user-access">
+<h2>5. B-Fabric Power User Access<a class="headerlink" href="#b-fabric-power-user-access" title="Link to this heading">#</a></h2>
+<section id="power-user-overview">
+<h3>Power User Overview<a class="headerlink" href="#power-user-overview" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Username</strong>: <strong>gfeeder</strong></p></li>
+<li><p><strong>Purpose</strong>: The power user account is used to perform elevated operations in the B-Fabric system, such as reading or modifying restricted data. Ensure that this access is used responsibly and within the bounds of the system's usage policies.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="get-power-user-wrapper">
+<h3>get_power_user_wrapper()<a class="headerlink" href="#get-power-user-wrapper" title="Link to this heading">#</a></h3>
+<p>Initializes and returns an <strong>authenticated wrapper</strong> for interacting with the <strong>B-Fabric API</strong>. This wrapper is specifically configured for <strong>Power User</strong> access, allowing privileged operations within the system. The default <strong>Power User</strong> login is <strong><code class="docutils literal notranslate"><span class="pre">gfeeder</span></code></strong>.</p>
+<p>This function uses the environment information provided in <code class="docutils literal notranslate"><span class="pre">token_data</span></code> to determine the appropriate configuration for initializing the <code class="docutils literal notranslate"><span class="pre">Bfabric</span></code> instance. It reads the configuration from a predefined path (<code class="docutils literal notranslate"><span class="pre">CONFIG_FILE_PATH</span></code>) and applies the environment settings.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">get_power_user_wrapper()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/get_power_user_wrapper.py">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">power_user_wrapper</span> <span class="o">=</span> <span class="n">get_power_user_wrapper</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<hr class="docutils" />
+<section id="id20">
+<h4>Args:<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>token_data</strong> (<em>dict</em>): A dictionary containing token-related information.</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">&quot;environment&quot;</span></code> key specifies the environment configuration (e.g., production or testing).</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">&quot;environment&quot;</span></code> key is not provided, it defaults to <code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code>.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id21">
+<h4>Returns:<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Bfabric</strong>: A <code class="docutils literal notranslate"><span class="pre">Bfabric</span></code> instance, authenticated and configured for the specified environment.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id22">
+<h4>Example Usage<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the power user wrapper</span>
+<span class="n">power_user_wrapper</span> <span class="o">=</span> <span class="n">get_power_user_wrapper</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bug-reports">
+<h2>6. Bug Reports<a class="headerlink" href="#bug-reports" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h3>Overview<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<p>The bug-report functionality within the <code class="docutils literal notranslate"><span class="pre">bfabric-web-apps</span></code> Python library utilizes the Unix command-line utility <code class="docutils literal notranslate"><span class="pre">mail</span></code> to send emails from a running application.</p>
+<p>When the <code class="docutils literal notranslate"><span class="pre">send_bug_report</span></code> function is invoked, <strong>token details, session details, and entity details</strong> are sent as input parameters from the browser cache. These details are aggregated into a <code class="docutils literal notranslate"><span class="pre">mail_string</span></code>, which is then sent to the <strong>bug-report email address</strong> via a system call to the Unix command-line utility <code class="docutils literal notranslate"><span class="pre">mail</span></code>.</p>
+<p><strong>“Mail”</strong> must therefore be active and running on the deployed system, and accessible to the application process for the bug-report functionality to work.</p>
+<p>The default choice of bug-report mail address is <strong>&quot;gwtools&#64;fgcz.system&quot;</strong> which is an OTRS queue, which is only accessible from within FGCZ server hardware. This is adaptable for your own use-case.</p>
+<hr class="docutils" />
+<section id="modifying-the-bug-report-email-address">
+<h4>Modifying the Bug-Report Email Address<a class="headerlink" href="#modifying-the-bug-report-email-address" title="Link to this heading">#</a></h4>
+<p>By default, bug reports are sent to <code class="docutils literal notranslate"><span class="pre">gwtools&#64;fgcz.system</span></code>, but you can customize this to fit your organization's needs. The bug-report email address can be modified as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">BUG_REPORT_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;my_email@my_domain.com&quot;</span> 
+</pre></div>
+</div>
+<p>This change ensures that bug reports are redirected to your preferred email address instead of the default FGCZ system queue.</p>
+<p>For further details on modifying global variables, refer to <a class="reference internal" href="#dynamic-variable-configuration"><span class="xref myst">Chapter 7: Dynamic Variable Configuration</span></a>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="submit-bug-report">
+<h3>submit_bug_report()<a class="headerlink" href="#submit-bug-report" title="Link to this heading">#</a></h3>
+<p>Submits bug reports by collecting the user-provided bug description, along with token and entity data, and then emails these details to the <strong>bug-report email address</strong> configured in <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.BUG_REPORT_EMAIL_ADDRESS</span></code>. By default, this address is <code class="docutils literal notranslate"><span class="pre">gwtools&#64;fgcz.system</span></code>, but it can be customized as needed.</p>
+<p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">submit_bug_report()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/callbacks.py#L92">source code on GitHub</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">submit_bug_report</span><span class="p">(</span><span class="n">n_clicks</span><span class="p">,</span> <span class="n">bug_description</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="id24">
+<h4>Args:<a class="headerlink" href="#id24" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>n_clicks</strong> (int): Number of times the submit button has been clicked.</p></li>
+<li><p><strong>bug_description</strong> (str): Description of the bug provided by the user.</p></li>
+<li><p><strong>token</strong> (str): Authentication token.</p></li>
+<li><p><strong>entity_data</strong> (dict): Data related to the current entity.</p></li>
+</ol>
+</section>
+<section id="id25">
+<h4>Returns:<a class="headerlink" href="#id25" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>tuple</strong>: Two boolean values indicating whether the submission succeeded or failed.</p>
+<ul>
+<li><p><strong>is_open_success</strong> (bool): True if bug report submission was successful.</p></li>
+<li><p><strong>is_open_failure</strong> (bool): True if bug report submission failed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id26">
+<h4>Example<a class="headerlink" href="#id26" title="Link to this heading">#</a></h4>
+<p>As a reference, you can check out how this function is used in <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template/blob/main/generic_bfabric.py#L73"><code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;alert-fade-bug-success&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">),</span>  <span class="c1"># Show success alert.</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;alert-fade-bug-fail&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">)</span>      <span class="c1"># Show failure alert.</span>
+    <span class="p">],</span>
+    <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s2">&quot;submit-bug-report&quot;</span><span class="p">,</span> <span class="s2">&quot;n_clicks&quot;</span><span class="p">)],</span>         <span class="c1"># Detect button clicks.</span>
+    <span class="p">[</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;bug-description&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>            <span class="c1"># Bug description input.</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;token&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">),</span>                       <span class="c1"># Authentication token.</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;entity&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">)</span>                       <span class="c1"># Entity metadata.</span>
+    <span class="p">],</span>
+    <span class="n">prevent_initial_call</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">generic_handle_bug_report</span><span class="p">(</span><span class="n">n_clicks</span><span class="p">,</span> <span class="n">bug_description</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">submit_bug_report</span><span class="p">(</span><span class="n">n_clicks</span><span class="p">,</span> <span class="n">bug_description</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="dynamic-variable-configuration">
+<h2>7. Dynamic Variable Configuration<a class="headerlink" href="#dynamic-variable-configuration" title="Link to this heading">#</a></h2>
+<section id="id27">
+<h3>Overview<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<p>B-Fabric Web Apps provide a set of <strong>global variables</strong> that can be customized by users to adapt the application's behavior to specific needs. These variables control aspects such as configuration file paths, email addresses for support, server settings, and the development environment state.</p>
+<p>This chapter explains how to modify these variables and where they are stored.</p>
+</section>
+<hr class="docutils" />
+<section id="list-of-configurable-variables">
+<h3>List of Configurable Variables<a class="headerlink" href="#list-of-configurable-variables" title="Link to this heading">#</a></h3>
+<p>The following global variables can be modified in B-Fabric Web Apps:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Default Value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bfabric_web_apps.CONFIG_FILE_PATH</p></td>
+<td><p>&quot;~/.bfabricpy.yml&quot;</p></td>
+<td><p>Path to the configuration file used by the application.</p></td>
+</tr>
+<tr class="row-odd"><td><p>bfabric_web_apps.DEVELOPER_EMAIL_ADDRESS</p></td>
+<td><p>&quot;griffin&#64;gwcustom.com&quot;</p></td>
+<td><p>Email address for development-related inquiries.</p></td>
+</tr>
+<tr class="row-even"><td><p>bfabric_web_apps.BUG_REPORT_EMAIL_ADDRESS</p></td>
+<td><p>&quot;gwtools&#64;fgcz.system&quot;</p></td>
+<td><p>Email address for submitting bug reports.</p></td>
+</tr>
+<tr class="row-odd"><td><p>HOST</p></td>
+<td><p>'0.0.0.0'</p></td>
+<td><p>The IP address where the Dash app is hosted.</p></td>
+</tr>
+<tr class="row-even"><td><p>PORT</p></td>
+<td><p>8050</p></td>
+<td><p>The port number used by the Dash server.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEV</p></td>
+<td><p>False</p></td>
+<td><p>Indicates whether the application is running in development mode.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="how-to-modify-global-variables">
+<h3>How to Modify Global Variables<a class="headerlink" href="#how-to-modify-global-variables" title="Link to this heading">#</a></h3>
+<p>You can modify these global variables within your script before initializing the application.</p>
+<section id="change-the-configuration-file-path">
+<h4>Change the Configuration File Path<a class="headerlink" href="#change-the-configuration-file-path" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">CONFIG_FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;~/custom_config.yml&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="update-developer-email-address">
+<h4>Update Developer Email Address<a class="headerlink" href="#update-developer-email-address" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">DEVELOPER_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;support@mydomain.com&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="update-bug-report-email-address">
+<h4>Update Bug Report Email Address<a class="headerlink" href="#update-bug-report-email-address" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">BUG_REPORT_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;bugs@mydomain.com&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="change-host-and-port-settings">
+<h4>Change Host and Port Settings<a class="headerlink" href="#change-host-and-port-settings" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HOST</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">8080</span>
+</pre></div>
+</div>
+</section>
+<section id="enable-development-mode">
+<h4>Enable Development Mode<a class="headerlink" href="#enable-development-mode" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEV</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>These settings allow customization of the application behavior to fit different use cases, such as development, testing, or production environments.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-initialization">1. Application Initialization</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-app">create_app()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#return-type">Return type:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage">Example Usage</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-app-object-in-dash">Understanding the app Object in Dash</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-and-layout-management">2. UI and Layout Management</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-static-layout">get_static_layout()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#args">Args:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Return type:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Example Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-token-handling">3. Authentication &amp; Token Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-explained">Steps Explained:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process-url-and-token">process_url_and_token()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Args:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-steps">Processing Steps:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-usage-callback-integration">Example Usage - Callback Integration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">4. Logging</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-logs-in-b-fabric">Accessing Logs in B-Fabric</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#through-web-applications">Through Web Applications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-a-logger-instance">Initializing a Logger Instance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-logger">get_logger()</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Args:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Returns:</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Return Type::</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-logs-manual-and-automatic-methods">Creating Logs: Manual and Automatic Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#log-operation">log_operation()</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Args:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Returns:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Example</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logthis">logthis()</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Args:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Returns:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Return Type:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flush-logs">flush_logs()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Args:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#behavior">Behavior:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-fabric-power-user-access">5. B-Fabric Power User Access</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-user-overview">Power User Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-power-user-wrapper">get_power_user_wrapper()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Args:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Example Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-reports">6. Bug Reports</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-the-bug-report-email-address">Modifying the Bug-Report Email Address</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-bug-report">submit_bug_report()</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Args:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Returns:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-variable-configuration">7. Dynamic Variable Configuration</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Overview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-configurable-variables">List of Configurable Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-modify-global-variables">How to Modify Global Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-the-configuration-file-path">Change the Configuration File Path</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-developer-email-address">Update Developer Email Address</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#update-bug-report-email-address">Update Bug Report Email Address</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-host-and-port-settings">Change Host and Port Settings</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#enable-development-mode">Enable Development Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+<footer class="bd-footer">
+  <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->
+    <div class="footer-items__start">
+      <div class="footer-item">
+        <p class="copyright">
+          © Copyright 2024, GWC GmbH. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

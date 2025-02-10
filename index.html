@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=ff720171"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="canonical" href="https://gwcustom.github.io/bfabric-web-apps-docs/index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar">
+  <div class="bd-header__inner bd-page-width">
+    
+    <!-- Left Side: Logo -->
+    <div class="navbar-header-items__start">
+      <a class="navbar-brand logo" href="#">
+        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+      </a>
+    </div>
+
+    <!-- Center: Title -->
+    <div class="navbar-header-items__center">
+      <span class="navbar-text">Bfabric Web Apps Documentation</span>
+    </div>
+
+    <!-- Right Side: Search & Light/Dark Mode -->
+    <div class="navbar-header-items__end">
+
+      <!-- Search -->
+      <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="search-button__default-text">Search</span>
+        <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+      </button>
+
+      <!-- Light/Dark Mode Switch -->
+      <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode">
+        <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+        <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+        <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><div class="sidebar-item" style="overflow: visible; height: auto; max-height: none;">
+  <h3>Navigation Bar</h3>
+  <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
+    <li><a href="#">Introduction</a></li>
+    <li><a href="installation.html">Installation Guide</a></li>
+    <li><a href="bfabric_web_apps_functions.html">Library Docs</a></li>
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul style="overflow: visible; height: auto; max-height: none;">
+        <li><a href="installation_template.html">Template Deployment Guide</a></li>
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+      </ul>
+    </li>
+  </ul>
+</div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
+<p><strong>bfabric_web_apps</strong> is a Python library designed for developing and integrating satellite applications with the <strong>B-Fabric Laboratory Information Management System (LIMS)</strong>.</p>
+<hr class="docutils" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Built to work seamlessly with <a class="reference external" href="https://dash.plotly.com/">Dash</a>, <strong>bfabric_web_apps</strong> simplifies the development of web applications that interact with B-Fabric. Using a <strong>template-based approach</strong>, it standardizes common patterns, streamlines development, and provides a modular foundation for extending B-Fabric with satellite applications.</p>
+<section id="key-features">
+<h3>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Seamless B-Fabric Integration</strong></p>
+<ul>
+<li><p><strong>Token Management</strong> – Securely handle authentication tokens for API access.</p></li>
+<li><p><strong>Entity Data Handling</strong> – Retrieve, modify, and update B-Fabric entities dynamically.</p></li>
+<li><p><strong>Integrated Logging</strong> – Track API calls, application events, and errors for debugging and auditing.</p></li>
+</ul>
+</li>
+<li><p><strong>Prebuilt UI Components &amp; Layouts</strong></p>
+<ul>
+<li><p>Utilize <strong>predefined Dash components, layouts, and callbacks</strong> to accelerate development, maintain consistency, and enhance user experience.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-is-this-library">
+<h2>What Is This Library?<a class="headerlink" href="#what-is-this-library" title="Link to this heading">#</a></h2>
+<p><strong>bfabric_web_apps</strong> is your <strong>foundation</strong> for building web applications that <strong>interface directly</strong> with B-Fabric. Its core objectives include:</p>
+<ul class="simple">
+<li><p><strong>Automating repetitive tasks</strong> like token handling and entity lookups.</p></li>
+<li><p><strong>Simplifying</strong> the creation of dashboards with <strong>Dash</strong> and <strong>Plotly</strong> for data visualization.</p></li>
+</ul>
+<p>To see the <strong>full source code</strong> or to <strong>contribute</strong>, visit the main GitHub repository:<br />
+<a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps"><strong>bfabric_web_apps</strong></a></p>
+</section>
+<hr class="docutils" />
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
+<p>Developers can hit the ground running with the <strong><a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">bfabric_web_app_template</a></strong>, a <strong>ready-made</strong> project that demonstrates how to configure and deploy a <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> application end-to-end. It includes:</p>
+<ul class="simple">
+<li><p><strong>Preconfigured layout</strong> using Dash and Bootstrap.</p></li>
+<li><p><strong>Authentication flow</strong> for B-Fabric.</p></li>
+<li><p><strong>Examples</strong> of logging, API interaction, and entity handling.</p></li>
+</ul>
+<p>By combining the <strong>template</strong> with the <strong>bfabric_web_apps</strong> library, you’ll have a <strong>flexible</strong>, <strong>scalable</strong> starting point for <strong>building custom web apps</strong> that tap into B-Fabric’s powerful capabilities.</p>
+<blockquote>
+<div><p>Alternatively, if you want to get started quickly, you can find a simple template example here:<br />
+<strong><a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/README.md#Basic-Usage-Example">Basic Usage Example</a></strong></p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="what-is-b-fabric">
+<h2>What Is B-Fabric?<a class="headerlink" href="#what-is-b-fabric" title="Link to this heading">#</a></h2>
+<p>B-Fabric is a Laboratory Information Management System (LIMS) developed for managing scientific experiments and their associated data. It offers a robust platform to track samples, analyze results, and organize workflows efficiently for researchers, laboratories, and core facilities.</p>
+<p>For more information, visit the <a class="reference external" href="https://fgcz-bfabric.uzh.ch/bfabric/">B-Fabric official website</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="what-is-bfabricpy">
+<h2>What Is BfabricPy?<a class="headerlink" href="#what-is-bfabricpy" title="Link to this heading">#</a></h2>
+<p><strong>BfabricPy</strong> is a Python library that serves as a programmatic interface to interact with the B-Fabric API. It enables developers to perform operations such as querying data, uploading results, and managing B-Fabric entities seamlessly from Python-based applications.</p>
+<p>BfabricPy is a core dependency of <strong>bfabric_web_apps</strong> and powers API connections for building custom applications.</p>
+<p>For more information, visit the <a class="reference external" href="https://github.com/fgcz/bfabricPy/tree/main">BfabricPy GitHub repository</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="what-is-dash">
+<h2>What Is Dash?<a class="headerlink" href="#what-is-dash" title="Link to this heading">#</a></h2>
+<p>Dash is a Python framework for building interactive web applications with a focus on data visualization and analytics. It combines the power of Plotly for frontend visualizations and Flask for backend support, making it ideal for creating scientific and analytical dashboards.</p>
+<p>For more details, refer to the <a class="reference external" href="https://dash.plotly.com/">Dash official documentation</a>.</p>
+<hr class="docutils" />
+<section id="useful-links">
+<h3>Useful Links:<a class="headerlink" href="#useful-links" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>bfabric_web_apps</strong>: <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps">bfabric-web-apps</a></p></li>
+<li><p><strong>Template App</strong>: <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">bfabric-web-app-template</a></p></li>
+<li><p><strong>BfabricPy</strong>: <a class="reference external" href="https://github.com/fgcz/bfabricPy/tree/main">BfabricPy GitHub</a></p></li>
+<li><p><strong>Dash Docs</strong>: <a class="reference external" href="https://dash.plotly.com/">Dash Documentation</a></p></li>
+<li><p><strong>Dash Bootstrap Components</strong>: <a class="reference external" href="https://dash-bootstrap-components.opensource.faculty.ai/docs/components/">Dash Bootstrap Components</a></p></li>
+<li><p><strong>BfabricPy Docs Page</strong>: <a class="reference external" href="https://fgcz.github.io/bfabricPy/">BfabricPy Documentation</a></p></li>
+<li><p><strong>B-Fabric Website</strong>: <a class="reference external" href="https://fgcz-bfabric.uzh.ch/bfabric/">B-Fabric Official Website</a></p></li>
+<li><p><strong>B-Fabric User Manual</strong>: <a class="reference external" href="https://www.bfabric.org/usermanual">B-Fabric User Manual</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-library">What Is This Library?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-fabric">What Is B-Fabric?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bfabricpy">What Is BfabricPy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dash">What Is Dash?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links">Useful Links:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+<footer class="bd-footer">
+  <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->
+    <div class="footer-items__start">
+      <div class="footer-item">
+        <p class="copyright">
+          © Copyright 2025, GWC GmbH.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

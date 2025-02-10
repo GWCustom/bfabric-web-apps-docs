@@ -1,0 +1,78 @@
+.bd-breadcrumbs {
+    display: none !important; /* Hides breadcrumbs */
+}
+
+.bd-header:not(:first-of-type) {
+    display: none !important;
+}
+
+
+.bd-content {
+    margin-top: 0 !important;  /* Removes extra margin from top */
+    padding-top: 0 !important; /* Ensures no extra padding */
+}
+
+.bd-header-article {
+    display: none !important;  /* Removes any breadcrumb container if present */
+}
+
+
+
+/* Change color for inline code in both light and dark mode */
+:root {
+    --inline-code-bg: #2d2d2d; /* Background for inline code */
+    --inline-code-color: #ffcc66; /* Text color for inline code */
+}
+
+/* Apply changes in light mode */
+html[data-theme="light"] code {
+    background-color: #f5f5f5;
+    color: #2d2d2d; /* Change this to your preferred color */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Apply changes in dark mode */
+html[data-theme="dark"] code {
+    background-color: #2d2d2d;
+    color: #f5f5f5; /* Change this to your preferred color */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.bd-sidebar-primary div#rtd-footer-container {
+    bottom:-1rem;
+    margin:-1rem;
+    position:fixed;
+}
+
+/* Align the header title precisely with the page title */
+.navbar-header-items__center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: calc(var(--bd-sidebar-width, 270px) + 1.75rem); /* Adjusted to 1.75rem */
+}
+
+/* Style the title text */
+.navbar-header-items__center .navbar-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--pst-color-text);
+    text-align: left;
+}
+
+/* Adjust for medium screens */
+@media (max-width: 1200px) {
+    .navbar-header-items__center {
+        padding-left: 2.25rem; /* Slightly more on medium screens */
+    }
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .navbar-header-items__center {
+        padding-left: 1.2rem; /* Keep it balanced on mobile */
+    }
+}

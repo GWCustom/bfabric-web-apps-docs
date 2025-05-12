@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installation Guide &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+    <title>Deploying Tutorials &#8212; bfabric-web-apps 20.12.2024 documentation</title>
   
   
   
@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6d44bb60" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -46,7 +46,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'installation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'deploying_video_tutorials';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -273,7 +273,7 @@
   <h3>Navigation Bar</h3>
   <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
     <li><a href="index.html">Introduction</a></li>
-    <li><a href="#">Installation Guide</a></li>
+    <li><a href="installation.html">Installation Guide</a></li>
 
     <li>
       <a href="bfabric_web_apps_functions.html">Library Docs</a>
@@ -306,7 +306,7 @@
     <li>
       <a href="video_tutorials.html">Video Tutorials</a>
       <ul>
-        <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+        <li><a href="#">Deploying Tutorials</a></li>
       </ul>
     </li>
 
@@ -344,7 +344,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Installation Guide</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Deploying Tutorials</span></li>
   </ul>
 </nav>
 </div>
@@ -361,37 +361,50 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="installation-guide">
-<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Link to this heading">#</a></h1>
-<p>This guide walks you through installing <strong>bfabric_web_apps</strong>, a Python-based library for integrating satellite applications with B-Fabric LIMS.</p>
+  <section id="deploying-tutorials">
+<h1>Deploying Tutorials<a class="headerlink" href="#deploying-tutorials" title="Link to this heading">#</a></h1>
+<p>This section provides concise and practical video guides for deploying B-Fabric web applications using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library.
+Whether you’re just getting started or looking to integrate advanced features like Redis queues, these tutorials will help you deploy confidently and efficiently.</p>
 <hr class="docutils" />
-<section id="dependencies">
-<h2>1. Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h2>
-<p>Before installing <strong>bfabric_web_apps</strong>, ensure your system meets the following requirements:</p>
+<section id="deploying-a-web-app-in-b-fabric">
+<h2>Deploying a Web App in B-Fabric<a class="headerlink" href="#deploying-a-web-app-in-b-fabric" title="Link to this heading">#</a></h2>
+<p><strong>Learn how to deploy a minimal B-Fabric app in just a few minutes.</strong>
+In this video on how to deploy a web app in B-Fabric using bfabric_web_apps, you will first learn some background information, and then see how to deploy one of the templates yourself.</p>
+<p>We hope you enjoy the video!</p>
+<div style="margin: 1rem 0;">
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/RLM4LibaNZQ?start=6" title="Deploying a Web-App in B-Fabric" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <ul class="simple">
-<li><p><strong>Python</strong> (&gt;= 3.8)</p></li>
-<li><p><strong>pip</strong> (latest version recommended)</p></li>
+<li><p><strong>Template Usage Guide</strong>
+For further details on how to work with the available templates, refer to the official documentation:
+<a class="reference internal" href="usage.html"><span class="std std-doc">usage.md</span></a></p></li>
 </ul>
-<p>To check if Python and pip are installed, run:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>--version
-pip<span class="w"> </span>--version
-</pre></div>
-</div>
-<p>If needed, install or update Python from <a class="reference external" href="https://www.python.org/downloads/">python.org</a> and upgrade pip using:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
-</pre></div>
-</div>
 </section>
 <hr class="docutils" />
-<section id="install-bfabric-web-apps">
-<h2>2. Install bfabric_web_apps<a class="headerlink" href="#install-bfabric-web-apps" title="Link to this heading">#</a></h2>
-<p>You can install <strong>bfabric_web_apps</strong> directly from PyPI using:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>bfabric_web_apps
-</pre></div>
+<section id="deploying-a-redis-based-b-fabric-app-template">
+<h2>Deploying a Redis-Based B-Fabric App Template<a class="headerlink" href="#deploying-a-redis-based-b-fabric-app-template" title="Link to this heading">#</a></h2>
+<p><strong>Explore how to set up and register a Redis-powered Dash application using the redis template.</strong>
+In this video, you will learn about the background of how the Redis template works, why you should use Redis, and ultimately how to deploy and use the Redis-based template.</p>
+<p>We hope you enjoy the video!</p>
+<div style="margin: 1rem 0;">
+  <iframe width="100%" height="400" src="https://www.youtube.com/embed/vjKlpi1b83U" title="Deploying Redis-based B-Fabric Web-App Template" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+<ul class="simple">
+<li><p><strong>Redis Template Documentation</strong>
+For detailed instructions on how to use and deploy the Redis template, refer to the official documentation:
+<a class="reference internal" href="index_redis.html"><span class="std std-doc">index_redis.md</span></a></p></li>
+<li><p><strong>How to Install Redis</strong>
+Follow the official Redis installation guide:
+<a class="reference external" href="https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/">https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/</a></p></li>
+<li><p><strong>GitHub Repository</strong>
+Explore the source code and contribute on GitHub:
+<a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">GWCustom/bfabric-web-app-template</a></p></li>
+</ul>
+</section>
 <hr class="docutils" />
-<p><strong>Congratulations!</strong> You have successfully installed <strong>bfabric_web_apps</strong>. You’re now ready to set up and deploy your first application!</p>
-<p>For more details on working with <strong>bfabric_web_apps</strong>, visit the <a class="reference internal" href="installation_template.html"><span class="std std-doc">Template Deployment Guide</span></a> chapter.</p>
+<section id="prefer-text-based-guides">
+<h2>Prefer Text-Based Guides?<a class="headerlink" href="#prefer-text-based-guides" title="Link to this heading">#</a></h2>
+<p>You can always refer to the full <strong><a class="reference internal" href="installation_template.html"><span class="std std-doc">deployment documentation</span></a></strong>.</p>
 </section>
 </section>
 
@@ -424,8 +437,9 @@ pip<span class="w"> </span>--version
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">1. Dependencies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-bfabric-web-apps">2. Install bfabric_web_apps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploying-a-web-app-in-b-fabric">Deploying a Web App in B-Fabric</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploying-a-redis-based-b-fabric-app-template">Deploying a Redis-Based B-Fabric App Template</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prefer-text-based-guides">Prefer Text-Based Guides?</a></li>
 </ul>
   </nav></div>
 

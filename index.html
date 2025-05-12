@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
   -->
   <noscript>
     <style>
@@ -27,19 +27,19 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=ff720171"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -47,7 +47,6 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
-    <link rel="canonical" href="https://gwcustom.github.io/bfabric-web-apps-docs/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -67,8 +66,8 @@
     <!-- Left Side: Logo -->
     <div class="navbar-header-items__start">
       <a class="navbar-brand logo" href="#">
-        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
-        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_blue.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_white.png" class="logo__image only-dark" alt="Bfabric Web Apps">
       </a>
     </div>
 
@@ -275,29 +274,51 @@
   <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
     <li><a href="#">Introduction</a></li>
     <li><a href="installation.html">Installation Guide</a></li>
-    <li><a href="bfabric_web_apps_functions.html">Library Docs</a></li>
+
     <li>
-      <a href="usage.html">Template Usage</a>
-      <ul style="overflow: visible; height: auto; max-height: none;">
-        <li><a href="installation_template.html">Template Deployment Guide</a></li>
-        <li><a href="index_py.html">Full-Featured Template</a></li>
-        <li><a href="index_basic_py.html">Minimal Template</a></li>
+      <a href="bfabric_web_apps_functions.html">Library Docs</a>
+      <ul>
+        <li><a href="global_variables.html">Global Variables</a></li>
+        <li><a href="important_components.html">Important Components</a></li>
+        <li><a href="important_functions.html">Important Functions</a></li>
       </ul>
     </li>
+
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul>
+        <li><a href="installation_template.html">Template Deployment Guide</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="index_redis.html">Redis Template</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="use_case.html">Use Case</a>
+      <ul>
+        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
+        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
+        <li><a href="sushi_use_case.html">SUSHI Use Case</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="video_tutorials.html">Video Tutorials</a>
+      <ul>
+        <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+      </ul>
+    </li>
+
   </ul>
 </div></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -323,21 +344,55 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>Built to work seamlessly with <a class="reference external" href="https://dash.plotly.com/">Dash</a>, <strong>bfabric_web_apps</strong> simplifies the development of web applications that interact with B-Fabric. Using a <strong>template-based approach</strong>, it standardizes common patterns, streamlines development, and provides a modular foundation for extending B-Fabric with satellite applications.</p>
+</section>
+<hr class="docutils" />
 <section id="key-features">
-<h3>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h3>
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading">#</a></h2>
+<section id="seamless-b-fabric-integration">
+<h3>Seamless B-Fabric Integration<a class="headerlink" href="#seamless-b-fabric-integration" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>Seamless B-Fabric Integration</strong></p>
-<ul>
-<li><p><strong>Token Management</strong> – Securely handle authentication tokens for API access.</p></li>
-<li><p><strong>Entity Data Handling</strong> – Retrieve, modify, and update B-Fabric entities dynamically.</p></li>
-<li><p><strong>Integrated Logging</strong> – Track API calls, application events, and errors for debugging and auditing.</p></li>
+<li><p><strong>Token Management</strong>
+Securely handle authentication tokens to enable user sessions and API access.</p></li>
+<li><p><strong>Entity Data Management</strong>
+Dynamically retrieve, update, and manage B-Fabric entities in your application.</p></li>
+<li><p><strong>Application Management</strong>
+Register and manage applications in B-Fabric.</p></li>
+<li><p><strong>Integrated Job Logging</strong>
+Capture job activity, command execution, and application-specific events out of the box.</p></li>
+<li><p><strong>Automatic Charging</strong>
+Bill resource usage to the appropriate project containers through an integrated charge switch.</p></li>
 </ul>
-</li>
-<li><p><strong>Prebuilt UI Components &amp; Layouts</strong></p>
-<ul>
-<li><p>Utilize <strong>predefined Dash components, layouts, and callbacks</strong> to accelerate development, maintain consistency, and enhance user experience.</p></li>
+</section>
+<hr class="docutils" />
+<section id="generalized-workflow-support">
+<h3>Generalized Workflow Support<a class="headerlink" href="#generalized-workflow-support" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Resource Creation</strong>
+Automatically generate and register B-Fabric resources (e.g., text files, reports, output folders).</p></li>
+<li><p><strong>Workunit Creation</strong>
+Easily define and create workunits programmatically during job submission.</p></li>
+<li><p><strong>Report and Link Creation</strong>
+Attach HTML reports or downloadable files directly to B-Fabric entities.</p></li>
 </ul>
-</li>
+</section>
+<hr class="docutils" />
+<section id="pipeline-execution-wrapper">
+<h3>Pipeline Execution Wrapper<a class="headerlink" href="#pipeline-execution-wrapper" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">run_main_job()</span></code> Function</strong>
+Generic wrapper for executing Bash-based workflows, saving files, creating resources, and logging execution steps. Includes support for Redis queue submission and remote processing.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="ui-framework-developer-utilities">
+<h3>UI Framework &amp; Developer Utilities<a class="headerlink" href="#ui-framework-developer-utilities" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Prebuilt Dash Components and Layouts</strong>
+Leverage boilerplate UIs, layout helpers, and responsive components to accelerate app development and ensure consistency across apps.</p></li>
+<li><p><strong>Callback Templates</strong>
+Ready-to-use callbacks for modals, alerts, authentication logic, and submission actions.</p></li>
+<li><p><strong>Bug Reporting Integration</strong>
+Automatically send bug reports to a specified email address when a submission fails or throws an exception.</p></li>
 </ul>
 </section>
 </section>
@@ -357,15 +412,47 @@
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
 <p>Developers can hit the ground running with the <strong><a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">bfabric_web_app_template</a></strong>, a <strong>ready-made</strong> project that demonstrates how to configure and deploy a <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> application end-to-end. It includes:</p>
 <ul class="simple">
-<li><p><strong>Preconfigured layout</strong> using Dash and Bootstrap.</p></li>
-<li><p><strong>Authentication flow</strong> for B-Fabric.</p></li>
-<li><p><strong>Examples</strong> of logging, API interaction, and entity handling.</p></li>
+<li><p><strong>Preconfigured layout</strong> using Dash and Bootstrap</p></li>
+<li><p><strong>Authentication flow</strong> for B-Fabric</p></li>
+<li><p><strong>Examples</strong> of logging, API interaction, and entity handling</p></li>
 </ul>
-<p>By combining the <strong>template</strong> with the <strong>bfabric_web_apps</strong> library, you’ll have a <strong>flexible</strong>, <strong>scalable</strong> starting point for <strong>building custom web apps</strong> that tap into B-Fabric’s powerful capabilities.</p>
 <blockquote>
 <div><p>Alternatively, if you want to get started quickly, you can find a simple template example here:<br />
 <strong><a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/README.md#Basic-Usage-Example">Basic Usage Example</a></strong></p>
 </div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="learn-by-watching">
+<h2>Learn by Watching<a class="headerlink" href="#learn-by-watching" title="Link to this heading">#</a></h2>
+<p>If you prefer learning by video, check out our dedicated <strong><a class="reference internal" href="video_tutorials.html"><span class="std std-doc">Video Tutorials</span></a></strong> section.
+It includes step-by-step deployment guides, use case walkthroughs, and insights into best practices using <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code>.</p>
+</section>
+<hr class="docutils" />
+<section id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">bfabric-web-app-template</a> repository provides a flexible foundation for building Dash applications that integrate with B-Fabric using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library. It includes three preconfigured templates suited for different levels of complexity:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="index_basic_py.html"><span class="std std-doc">Minimal Template</span></a> – A minimal template for simple apps</p></li>
+<li><p><a class="reference internal" href="index_py.html"><span class="std std-doc">Full-Featured Template</span></a> – A full-featured template for complex applications</p></li>
+<li><p><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template</span></a> – A template specifically designed for using Redis queues</p></li>
+</ul>
+<p>All templates follow a shared structure built around three core components: collecting user input, retrieving metadata from B-Fabric, and triggering workflow execution. This modular design promotes consistency and reusability across applications.</p>
+<p>To get started with the templates, please refer to the <strong><a class="reference internal" href="usage.html"><span class="std std-doc">Template Usage section</span></a></strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<p>The bfabric_web_apps library has been successfully used to build multiple proof-of-concept applications. The following chapters provide detailed examples of how bfabric_web_apps can be used in practice:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Work in Progress</strong><br />
+The following use case chapters are currently under construction and not yet complete. Content will be added and refined continuously to better showcase applications built with the bfabric_web_apps library.</p>
+</div>
+<ul class="simple">
+<li><p><strong><a class="reference internal" href="rna_seq_use_case.html"><span class="std std-doc">RNA-seq</span></a></strong> – Demonstrates how to run a large-scale pipeline like RNA-seq via a fully integrated Dash interface using bfabric_web_apps.</p></li>
+<li><p><strong><a class="reference internal" href="demultiplex_use_case.html"><span class="std std-doc">Demultiplex</span></a></strong> – A web application designed to run the nf-core pipeline for BCL to FASTQ demultiplexing, providing a streamlined interface for initiating and monitoring demultiplexing jobs.</p></li>
+<li><p><strong><a class="reference internal" href="sushi_use_case.html"><span class="std std-doc">SUSHI Apps</span></a></strong> – Showcases an application wrapper for Sushi applications via B-Fabric that enables flexible job configuration and execution through the Sushi backend.</p></li>
+</ul>
 </section>
 <hr class="docutils" />
 <section id="what-is-b-fabric">
@@ -385,12 +472,14 @@
 <h2>What Is Dash?<a class="headerlink" href="#what-is-dash" title="Link to this heading">#</a></h2>
 <p>Dash is a Python framework for building interactive web applications with a focus on data visualization and analytics. It combines the power of Plotly for frontend visualizations and Flask for backend support, making it ideal for creating scientific and analytical dashboards.</p>
 <p>For more details, refer to the <a class="reference external" href="https://dash.plotly.com/">Dash official documentation</a>.</p>
+</section>
 <hr class="docutils" />
 <section id="useful-links">
-<h3>Useful Links:<a class="headerlink" href="#useful-links" title="Link to this heading">#</a></h3>
+<h2>Useful Links:<a class="headerlink" href="#useful-links" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>bfabric_web_apps</strong>: <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps">bfabric-web-apps</a></p></li>
 <li><p><strong>Template App</strong>: <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template">bfabric-web-app-template</a></p></li>
+<li><p><strong>Redis Docs</strong>: <a class="reference external" href="https://redis.io/docs/latest/">Redis Template</a></p></li>
 <li><p><strong>BfabricPy</strong>: <a class="reference external" href="https://github.com/fgcz/bfabricPy/tree/main">BfabricPy GitHub</a></p></li>
 <li><p><strong>Dash Docs</strong>: <a class="reference external" href="https://dash.plotly.com/">Dash Documentation</a></p></li>
 <li><p><strong>Dash Bootstrap Components</strong>: <a class="reference external" href="https://dash-bootstrap-components.opensource.faculty.ai/docs/components/">Dash Bootstrap Components</a></p></li>
@@ -398,7 +487,6 @@
 <li><p><strong>B-Fabric Website</strong>: <a class="reference external" href="https://fgcz-bfabric.uzh.ch/bfabric/">B-Fabric Official Website</a></p></li>
 <li><p><strong>B-Fabric User Manual</strong>: <a class="reference external" href="https://www.bfabric.org/usermanual">B-Fabric User Manual</a></p></li>
 </ul>
-</section>
 </section>
 </section>
 
@@ -431,18 +519,23 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features">Key Features</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seamless-b-fabric-integration">Seamless B-Fabric Integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-workflow-support">Generalized Workflow Support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-execution-wrapper">Pipeline Execution Wrapper</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-framework-developer-utilities">UI Framework &amp; Developer Utilities</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-library">What Is This Library?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learn-by-watching">Learn by Watching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-fabric">What Is B-Fabric?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-bfabricpy">What Is BfabricPy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dash">What Is Dash?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links">Useful Links:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-dash">What Is Dash?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links">Useful Links:</a></li>
 </ul>
   </nav></div>
 
@@ -459,8 +552,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
 <footer class="bd-footer">
   <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->

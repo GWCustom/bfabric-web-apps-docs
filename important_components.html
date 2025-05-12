@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+
+
+<html lang="Python" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Important Components &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=ff720171"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'important_components';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="Python"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar">
+  <div class="bd-header__inner bd-page-width">
+    
+    <!-- Left Side: Logo -->
+    <div class="navbar-header-items__start">
+      <a class="navbar-brand logo" href="index.html">
+        <img src="_static/gwc_logo_simple_rgb_blue.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_white.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+      </a>
+    </div>
+
+    <!-- Center: Title -->
+    <div class="navbar-header-items__center">
+      <span class="navbar-text">Bfabric Web Apps Documentation</span>
+    </div>
+
+    <!-- Right Side: Search & Light/Dark Mode -->
+    <div class="navbar-header-items__end">
+
+      <!-- Search -->
+      <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="search-button__default-text">Search</span>
+        <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+      </button>
+
+      <!-- Light/Dark Mode Switch -->
+      <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode">
+        <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light" title="Light"></i>
+        <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark" title="Dark"></i>
+        <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto" title="System Settings"></i>
+      </button>
+
+    </div>
+
+  </div>
+</header>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><div class="sidebar-item" style="overflow: visible; height: auto; max-height: none;">
+  <h3>Navigation Bar</h3>
+  <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="installation.html">Installation Guide</a></li>
+
+    <li>
+      <a href="bfabric_web_apps_functions.html">Library Docs</a>
+      <ul>
+        <li><a href="global_variables.html">Global Variables</a></li>
+        <li><a href="#">Important Components</a></li>
+        <li><a href="important_functions.html">Important Functions</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul>
+        <li><a href="installation_template.html">Template Deployment Guide</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="index_redis.html">Redis Template</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="use_case.html">Use Case</a>
+      <ul>
+        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
+        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
+        <li><a href="sushi_use_case.html">SUSHI Use Case</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="video_tutorials.html">Video Tutorials</a>
+      <ul>
+        <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Important Components</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="important-components">
+<h1>Important Components<a class="headerlink" href="#important-components" title="Link to this heading">#</a></h1>
+<p>This section introduces the most important components when working with the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library. It begins by explaining the <strong>authentication and token handling</strong> process, which is the foundation for securely linking users, datasets, and applications. Next, it covers the <strong>key dictionaries</strong> that are extracted from the token, such as <code class="docutils literal notranslate"><span class="pre">app_data</span></code>, <code class="docutils literal notranslate"><span class="pre">entity_data</span></code>, and <code class="docutils literal notranslate"><span class="pre">token_data</span></code>. Finally, it presents an important out-of-the-box UI component: the <strong>Charge Switch</strong>, which enables users to manage cost attribution within their B-Fabric workflows.</p>
+<hr class="docutils" />
+<section id="authentication-token-handling">
+<h2>Authentication &amp; Token Handling<a class="headerlink" href="#authentication-token-handling" title="Link to this heading">#</a></h2>
+<p>The B-Fabric authentication system ensures secure access to web applications and links each session to a specific dataset and user identity. This process enables personalized behavior and access control for each user.</p>
+<p><img alt="Authentication Token Flow" src="_images/Authentication_Token_Flow.png" /></p>
+<section id="flow-overview">
+<h3>Flow Overview<a class="headerlink" href="#flow-overview" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Token sent via URL</strong>
+A user accesses the app with a B-Fabric token included as a URL parameter.
+Example:
+<code class="docutils literal notranslate"><span class="pre">https://some.webapp/param1?token=abcxyz123</span></code></p></li>
+<li><p><strong>Web app validates the token</strong>
+The app uses a REST API call to the B-Fabric backend to confirm the validity of the token.</p></li>
+<li><p><strong>B-Fabric responds</strong>
+If the token is valid, the backend returns a JSON payload with metadata about the user, app, and linked dataset.</p></li>
+<li><p><strong>Web app uses the credentials</strong>
+The app extracts relevant data from the response to configure the session, display context-specific information, and pre-fill app components.</p></li>
+</ol>
+<hr class="docutils" />
+<p>The <strong><a class="reference internal" href="important_functions.html#authentication-token-handling"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">process_url_and_token()</span></code></span></a></strong> function is a central utility used in almost every app built with <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code>. It extracts the token from the URL and transforms the backend response into structured dictionaries that are reused across callbacks.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">process_url_and_token</span><span class="p">(</span><span class="n">url_params</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The function returns the following elements:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">token_data</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">,</span> <span class="n">app_data</span><span class="p">,</span> <span class="n">page_title</span><span class="p">,</span> <span class="n">session_details</span><span class="p">,</span> <span class="n">job_link</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Among these, the most important for downstream app logic are the dictionaries: <code class="docutils literal notranslate"><span class="pre">token_data</span></code>, <code class="docutils literal notranslate"><span class="pre">entity_data</span></code>, and <code class="docutils literal notranslate"><span class="pre">app_data</span></code>. These are explained in detail in the next section.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="extracted-key-dictionaries">
+<h2>Extracted Key Dictionaries<a class="headerlink" href="#extracted-key-dictionaries" title="Link to this heading">#</a></h2>
+<section id="app-data">
+<h3>App Data<a class="headerlink" href="#app-data" title="Link to this heading">#</a></h3>
+<p><strong>What is it?</strong>
+App data contains metadata related to the specific B-Fabric application currently running in the session.</p>
+<p><strong>Structure Overview:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id</span></code></p></td>
+<td><p>App ID in B-Fabric</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>App name</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>A brief explanation of the app’s purpose</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">543</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;RNAseq&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;A web application designed to run the nf-core RNA-seq pipeline.&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="entity-data">
+<h3>Entity Data<a class="headerlink" href="#entity-data" title="Link to this heading">#</a></h3>
+<p><strong>What is it?</strong>
+<code class="docutils literal notranslate"><span class="pre">entity_data</span></code> represents the full metadata of a dataset retrieved from B-Fabric. It contains general dataset metadata (creator, timestamps, ID), schema definitions (attributes), associated files, links to other B-Fabric objects, and a detailed item-level structure. This data is typically the basis for what the app will visualize, process, or submit as a job.</p>
+<hr class="docutils" />
+<p><strong>Structure Overview:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Human-readable name/title of the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">createdby</span></code></p></td>
+<td><p>Username of the user who originally uploaded or created the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">created</span></code></p></td>
+<td><p>Timestamp when the dataset was first created.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">modified</span></code></p></td>
+<td><p>Timestamp of the most recent modification.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">full_api_response</span></code></p></td>
+<td><p>Complete raw metadata response from B-Fabric, including all subfields listed below.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The actual B-Fabric metadata is located inside the <code class="docutils literal notranslate"><span class="pre">full_api_response</span></code> key, and includes the following keys:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sub-Key in <code class="docutils literal notranslate"><span class="pre">full_api_response</span></code></p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">modifiedby</span></code></p></td>
+<td><p>Username of the last user who modified the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">classname</span></code></p></td>
+<td><p>B-Fabric class of the object (typically <code class="docutils literal notranslate"><span class="pre">'dataset'</span></code>).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id</span></code></p></td>
+<td><p>Unique internal dataset ID.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">container</span></code></p></td>
+<td><p>Dictionary with <code class="docutils literal notranslate"><span class="pre">classname</span></code> and <code class="docutils literal notranslate"><span class="pre">id</span></code> of the linked project or container.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">attribute</span></code></p></td>
+<td><p>List of dictionaries describing the dataset schema: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">position</span></code>, and <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">item</span></code></p></td>
+<td><p>List of data rows. Each row has a <code class="docutils literal notranslate"><span class="pre">position</span></code> and a list of <code class="docutils literal notranslate"><span class="pre">field</span></code> entries (linked to attributes).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">numberofattributes</span></code></p></td>
+<td><p>Number of columns (attributes) in the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">numberofitems</span></code></p></td>
+<td><p>Number of rows (samples/items) in the dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">link</span></code></p></td>
+<td><p>List of links (e.g., to resources like files), each with <code class="docutils literal notranslate"><span class="pre">classname</span></code> and <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">entity_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Uploaded FASTQ Dataset (Run 1913)&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;createdby&#39;</span><span class="p">:</span> <span class="s1">&#39;lopitz&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;created&#39;</span><span class="p">:</span> <span class="s1">&#39;2013-03-28 13:27:49&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;modified&#39;</span><span class="p">:</span> <span class="s1">&#39;2025-04-16 13:01:14&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;full_api_response&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;modifiedby&#39;</span><span class="p">:</span> <span class="s1">&#39;gfeeder&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;classname&#39;</span><span class="p">:</span> <span class="s1">&#39;dataset&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2220</span><span class="p">,</span>
+        <span class="s1">&#39;container&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;classname&#39;</span><span class="p">:</span> <span class="s1">&#39;project&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">703</span><span class="p">},</span>
+        <span class="s1">&#39;attribute&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Sample&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;String&#39;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;FASTQ Read 1&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Resource&#39;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;FASTQ Read 2&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Resource&#39;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Strandedness&#39;</span><span class="p">,</span> <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;String&#39;</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;field&#39;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span><span class="s1">&#39;attributeposition&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;Run_1913_10&#39;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s1">&#39;attributeposition&#39;</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;/path/to/R1_001.fastq.gz&#39;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s1">&#39;attributeposition&#39;</span><span class="p">:</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;/path/to/R2_001.fastq.gz&#39;</span><span class="p">},</span>
+                    <span class="p">{</span><span class="s1">&#39;attributeposition&#39;</span><span class="p">:</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;auto&#39;</span><span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="c1"># Additional sample rows...</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;numberofattributes&#39;</span><span class="p">:</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;numberofitems&#39;</span><span class="p">:</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;classname&#39;</span><span class="p">:</span> <span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">84502</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;classname&#39;</span><span class="p">:</span> <span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">84503</span><span class="p">},</span>
+            <span class="c1"># Additional links...</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="token-data">
+<h3>Token Data<a class="headerlink" href="#token-data" title="Link to this heading">#</a></h3>
+<p><strong>What is it?</strong>
+Token data includes session-specific metadata like the authenticated user, app ID, dataset ID, and token expiry time.</p>
+<p><strong>Structure Overview:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">environment</span></code></p></td>
+<td><p>Deployment environment (e.g., Test, Production)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code></p></td>
+<td><p>Username associated with the token</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">token_expires</span></code></p></td>
+<td><p>Expiry timestamp of the session token</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">entity_id_data</span></code></p></td>
+<td><p>ID of the selected entity (usually a dataset)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">entityClass_data</span></code></p></td>
+<td><p>Type of the entity (e.g., <code class="docutils literal notranslate"><span class="pre">Dataset</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">webbase_data</span></code></p></td>
+<td><p>Base URL of the B-Fabric server</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">application_data</span></code></p></td>
+<td><p>App ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">application_params_data</span></code></p></td>
+<td><p>Optional app parameters</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">userWsPassword</span></code></p></td>
+<td><p>Web service password (for programmatic access)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">jobId</span></code></p></td>
+<td><p>Linked job ID, if any</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">token_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;environment&#39;</span><span class="p">:</span> <span class="s1">&#39;Test&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;user_data&#39;</span><span class="p">:</span> <span class="s1">&#39;appdeveloper&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;token_expires&#39;</span><span class="p">:</span> <span class="s1">&#39;2025-05-01 22:54:56&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;entity_id_data&#39;</span><span class="p">:</span> <span class="s1">&#39;2220&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;entityClass_data&#39;</span><span class="p">:</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;webbase_data&#39;</span><span class="p">:</span> <span class="s1">&#39;https://fgcz-bfabric-test.uzh.ch/bfabric&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;application_params_data&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s1">&#39;application_data&#39;</span><span class="p">:</span> <span class="s1">&#39;543&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;userWsPassword&#39;</span><span class="p">:</span> <span class="s1">&#39;dummypassword&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jobId&#39;</span><span class="p">:</span> <span class="s1">&#39;2010&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="charge-switch">
+<h2>Charge Switch<a class="headerlink" href="#charge-switch" title="Link to this heading">#</a></h2>
+<section id="what-is-it">
+<h3>What Is It?<a class="headerlink" href="#what-is-it" title="Link to this heading">#</a></h3>
+<p>The <strong>Charge Switch</strong> is a predefined UI component that allows users to control whether the cost of running a job should be charged to a specific B-Fabric container. It integrates seamlessly into your Dash app and connects with the <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> function to enable or disable automatic service charging.</p>
+<p>This is especially useful in shared computing environments where resource usage must be tracked and billed to the correct entity.</p>
+</section>
+<hr class="docutils" />
+<section id="how-it-works">
+<h3>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>When toggled <strong>on</strong>, the switch returns <code class="docutils literal notranslate"><span class="pre">True</span></code>, indicating that the job execution should be charged.</p></li>
+<li><p>When toggled <strong>off</strong>, it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>, and no charge will be made.</p></li>
+<li><p>The switch is connected to a callback via <code class="docutils literal notranslate"><span class="pre">State(&quot;charge_run&quot;,</span> <span class="pre">&quot;on&quot;)</span></code> and is typically used in conjunction with a project ID to populate the <code class="docutils literal notranslate"><span class="pre">charge</span></code> list.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="ui-integration-sidebar-example">
+<h3>UI Integration (Sidebar Example)<a class="headerlink" href="#ui-integration-sidebar-example" title="Link to this heading">#</a></h3>
+<p>You can embed the charge switch directly into your sidebar layout using the <code class="docutils literal notranslate"><span class="pre">charge_switch</span></code> component provided by the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.components</span></code> module:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bfabric_web_apps.components</span> <span class="kn">import</span> <span class="n">charge_switch</span>
+
+<span class="n">sidebar</span> <span class="o">=</span> <span class="n">charge_switch</span> <span class="o">+</span> <span class="p">[</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;Select Lane:&quot;</span><span class="p">),</span>
+    <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;lane-dropdown&quot;</span><span class="p">,</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[],</span>  <span class="c1"># Populate dynamically</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="s2">&quot;Submit job to which queue?&quot;</span><span class="p">),</span>
+    <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;light&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;light&#39;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;heavy&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="s1">&#39;heavy&#39;</span><span class="p">}</span>
+        <span class="p">],</span>
+        <span class="n">value</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">,</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;queue&#39;</span>
+    <span class="p">),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
+    <span class="n">dbc</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-button&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>This layout inserts the switch at the top of the sidebar, followed by your workflow-specific inputs and the submit button.</p>
+</section>
+<hr class="docutils" />
+<section id="return-value">
+<h3>Return Value<a class="headerlink" href="#return-value" title="Link to this heading">#</a></h3>
+<p>The charge switch returns a <strong>Boolean</strong> value (<code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>), which you can access in a callback using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">State</span><span class="p">(</span><span class="s2">&quot;charge_run&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This Boolean value determines whether the computation should be billed.</p>
+</section>
+<hr class="docutils" />
+<section id="usage-in-a-callback">
+<h3>Usage in a Callback<a class="headerlink" href="#usage-in-a-callback" title="Link to this heading">#</a></h3>
+<p>You can use the return value to conditionally create a list of container IDs to be charged. If <code class="docutils literal notranslate"><span class="pre">charge_run</span> <span class="pre">=</span> <span class="pre">False</span></code>, the <code class="docutils literal notranslate"><span class="pre">charge</span></code> list will be empty. If it is <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will be a list populated with the corresponding <code class="docutils literal notranslate"><span class="pre">project_id</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">charge_run</span> <span class="ow">and</span> <span class="n">project_id</span><span class="p">:</span>
+    <span class="n">charge</span> <span class="o">=</span> <span class="p">[</span><span class="n">project_id</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">charge</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>This list is then passed to the <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> function as the <code class="docutils literal notranslate"><span class="pre">charge</span></code> parameter.</p>
+</section>
+<hr class="docutils" />
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>Passing the Charge Parameter to run_main_job() via Redis.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">q</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span><span class="o">.</span><span class="n">enqueue</span><span class="p">(</span><span class="n">run_main_job</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;files_as_byte_strings&quot;</span><span class="p">:</span> <span class="n">files_as_byte_strings</span><span class="p">,</span>
+    <span class="s2">&quot;bash_commands&quot;</span><span class="p">:</span> <span class="n">bash_commands</span><span class="p">,</span>
+    <span class="s2">&quot;resource_paths&quot;</span><span class="p">:</span> <span class="n">resource_paths</span><span class="p">,</span>
+    <span class="s2">&quot;attachment_paths&quot;</span><span class="p">:</span> <span class="n">attachment_paths</span><span class="p">,</span>
+    <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="n">url_params</span><span class="p">,</span>
+    <span class="s2">&quot;service_id&quot;</span><span class="p">:</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">SERVICE_ID</span><span class="p">,</span>
+    <span class="s2">&quot;charge&quot;</span><span class="p">:</span> <span class="n">charge</span>  <span class="c1"># Populated using the switch</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>If the switch is off, <code class="docutils literal notranslate"><span class="pre">charge</span></code> will be an empty list (<code class="docutils literal notranslate"><span class="pre">[]</span></code>), and no billing occurs. If the switch is on and a valid <code class="docutils literal notranslate"><span class="pre">project_id</span></code> is available, the execution will be billed accordingly.</p>
+</section>
+<hr class="docutils" />
+<section id="reference-projects">
+<h3>Reference Projects<a class="headerlink" href="#reference-projects" title="Link to this heading">#</a></h3>
+<p>To see and understand how the charge switch can be easily implemented into your project, please refer to the <strong><a class="reference internal" href="index_py.html"><span class="std std-doc">Full-Featured Template</span></a></strong> or the <strong><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template</span></a></strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Component ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">charge_run</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Return Value</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code> (on) or <code class="docutils literal notranslate"><span class="pre">False</span></code> (off)</p></td>
+</tr>
+<tr class="row-even"><td><p>Purpose</p></td>
+<td><p>Allows end users to choose whether or not to charge the current execution</p></td>
+</tr>
+<tr class="row-odd"><td><p>Integration Target</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">run_main_job(...,</span> <span class="pre">charge=[...])</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-token-handling">Authentication &amp; Token Handling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-overview">Flow Overview</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extracted-key-dictionaries">Extracted Key Dictionaries</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-data">App Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entity-data">Entity Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#token-data">Token Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-switch">Charge Switch</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What Is It?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-integration-sidebar-example">UI Integration (Sidebar Example)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-value">Return Value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-in-a-callback">Usage in a Callback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-projects">Reference Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+<footer class="bd-footer">
+  <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->
+    <div class="footer-items__start">
+      <div class="footer-item">
+        <p class="copyright">
+          © Copyright 2025, GWC GmbH.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

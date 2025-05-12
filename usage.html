@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
   -->
   <noscript>
     <style>
@@ -27,19 +27,19 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=ff720171"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -47,7 +47,6 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'usage';</script>
-    <link rel="canonical" href="https://gwcustom.github.io/bfabric-web-apps-docs/usage.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -67,8 +66,8 @@
     <!-- Left Side: Logo -->
     <div class="navbar-header-items__start">
       <a class="navbar-brand logo" href="index.html">
-        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
-        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_blue.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_white.png" class="logo__image only-dark" alt="Bfabric Web Apps">
       </a>
     </div>
 
@@ -275,29 +274,51 @@
   <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
     <li><a href="index.html">Introduction</a></li>
     <li><a href="installation.html">Installation Guide</a></li>
-    <li><a href="bfabric_web_apps_functions.html">Library Docs</a></li>
+
     <li>
-      <a href="#">Template Usage</a>
-      <ul style="overflow: visible; height: auto; max-height: none;">
-        <li><a href="installation_template.html">Template Deployment Guide</a></li>
-        <li><a href="index_py.html">Full-Featured Template</a></li>
-        <li><a href="index_basic_py.html">Minimal Template</a></li>
+      <a href="bfabric_web_apps_functions.html">Library Docs</a>
+      <ul>
+        <li><a href="global_variables.html">Global Variables</a></li>
+        <li><a href="important_components.html">Important Components</a></li>
+        <li><a href="important_functions.html">Important Functions</a></li>
       </ul>
     </li>
+
+    <li>
+      <a href="#">Template Usage</a>
+      <ul>
+        <li><a href="installation_template.html">Template Deployment Guide</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+        <li><a href="index_py.html">Full-Featured Template</a></li>
+        <li><a href="index_redis.html">Redis Template</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="use_case.html">Use Case</a>
+      <ul>
+        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
+        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
+        <li><a href="sushi_use_case.html">SUSHI Use Case</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="video_tutorials.html">Video Tutorials</a>
+      <ul>
+        <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+      </ul>
+    </li>
+
   </ul>
 </div></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -344,42 +365,90 @@
 <h1>Template Usage<a class="headerlink" href="#template-usage" title="Link to this heading">#</a></h1>
 <p>This section explains how to use <strong>bfabric_web_apps</strong> with the help of the <strong>bfabric_web_app_template</strong>.</p>
 <hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Version Compatibility Notice</strong><br />
+To ensure proper functionality, the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and the <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must have the <strong>same version</strong>. For example, if <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> is version <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>, then <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must also be <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>.</p>
+<p>Please verify and update the versions accordingly before running the application.</p>
+</div>
+<hr class="docutils" />
+<section id="bfabric-web-apps-application-structure">
+<h2>bfabric_web_apps Application Structure<a class="headerlink" href="#bfabric-web-apps-application-structure" title="Link to this heading">#</a></h2>
+<p>B-Fabric web applications built with the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library follow a modular design that ensures clarity, maintainability, and flexibility. Each app typically implements the following three core components:</p>
+<section id="collect-user-data">
+<h3>1. <strong>Collect User Data</strong><a class="headerlink" href="#collect-user-data" title="Link to this heading">#</a></h3>
+<p>This step provides a user-friendly Dash interface where users can configure parameters such as CPU, RAM, reference files, email address, and Charge Switch settings. It also allows users to review and edit sample metadata before submitting a job.</p>
+</section>
+<section id="collect-b-fabric-data">
+<h3>2. <strong>Collect B-Fabric Data</strong><a class="headerlink" href="#collect-b-fabric-data" title="Link to this heading">#</a></h3>
+<p>This component manages interactions with the B-Fabric API. It retrieves relevant project, dataset, and sample metadata needed for job execution. The collected data is typically used to generate sample sheets or other input files for the workflow.</p>
+</section>
+<section id="invoke-application">
+<h3>3. <strong>Invoke Application</strong><a class="headerlink" href="#invoke-application" title="Link to this heading">#</a></h3>
+<p>This part contains the core logic for executing the computational workflow. It builds execution commands (e.g., for Nextflow), converts input files, configures output paths, queues the job via Redis, and optionally charges the selected B-Fabric container.</p>
+<hr class="docutils" />
+<p>This architecture highlights the modularity and extensibility of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library, enabling developers to rapidly build robust applications that integrate seamlessly with the B-Fabric ecosystem.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="application-types">
+<h2>Application Types<a class="headerlink" href="#application-types" title="Link to this heading">#</a></h2>
+<p>bfabric_web_apps supports different categories of applications:</p>
+<ul class="simple">
+<li><p><strong>One-off helper apps</strong> – Small tools such as barcode generators or project-specific utilities.</p></li>
+<li><p><strong>Big-data apps</strong> – Robust applications that execute pipelines like <strong>nf-core RNA-seq</strong> or <strong>SUSHI-based</strong> workflows, requiring queueing and scalable backend processing.</p></li>
+</ul>
+<p>These app types can be mixed and matched depending on user needs and computing resources.</p>
+</section>
+<hr class="docutils" />
+<section id="redis-integration">
+<h2>Redis Integration<a class="headerlink" href="#redis-integration" title="Link to this heading">#</a></h2>
+<p><strong>Redis</strong> is used in bfabric_web_apps to support <strong>job queuing</strong> and <strong>decoupled server architecture</strong>. This allows resource-intensive or asynchronous jobs to be executed in background workers, improving performance and reliability of B-Fabric applications.</p>
+<p>You can try out a working implementation in the <strong><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template</span></a></strong>, which demonstrates:</p>
+<ul class="simple">
+<li><p>How to enqueue background jobs</p></li>
+<li><p>How to transfer files and parameters to job runners</p></li>
+</ul>
+<p>For more details, refer to the <a class="reference external" href="https://redis.io/docs/latest/">Redis official documentation</a>.</p>
+</section>
+<hr class="docutils" />
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>The <strong>bfabric_web_app_template</strong> provides two ready-to-use starting points:</p>
+<p>The <strong>bfabric_web_app_template</strong> provides three ready-to-use starting points:</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">index.py</span></code></strong> – A full-featured template for complex applications.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">index_large.py</span></code></strong> – A full-featured template for complex applications.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code></strong> – A minimal template for simple apps.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code></strong> – A template specifically designed for using Redis queues.</p></li>
 </ul>
-<p>Both templates are designed to be <strong>modified and extended</strong> by users, serving as the main entry points for custom B-Fabric web applications.</p>
+<p>All templates are designed to be <strong>modified and extended</strong> by users, serving as the main entry points for custom B-Fabric web applications.</p>
 <p>Additionally, within the <strong>bfabric_web_app_template</strong>, the following files are available:</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></strong> – Both templates <strong>import</strong> and <strong>rely</strong> on <code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code> for core functionality.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong> – All templates <strong>import</strong> and <strong>rely</strong> on modules within the <code class="docutils literal notranslate"><span class="pre">generic</span></code> folder for core functionality.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">bfabric_apps_auto_registration.py</span></code></strong> – Calls the <a class="reference internal" href="bfabric_web_apps_functions.html#remote-creation-of-web-applications"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">create_web_app()</span></code></span></a> function to remotely create a B-Fabric web application.</p></li>
 </ul>
-<p>This structure ensures a modular and reusable approach to web application development within B-Fabric.</p>
+<p>Unlike the index files, these files are not intended to be modified and are meant to remain untouched. This structure ensures a modular and reusable approach to web application development within B-Fabric.</p>
 </section>
 <hr class="docutils" />
 <section id="choosing-the-right-template">
 <h2>Choosing the Right Template<a class="headerlink" href="#choosing-the-right-template" title="Link to this heading">#</a></h2>
-<p>This section helps you decide between the <strong>Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</strong> and the <strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index.py</span></code>)</strong> based on your use case.</p>
+<p>This section helps you decide between the <strong>Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</strong> and the <strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</strong> based on your use case. If your application utilizes Redis for asynchronous job execution, consider using the <strong>Redis Template (<code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code>)</strong>.</p>
 <section id="core-integration">
 <h3>Core Integration<a class="headerlink" href="#core-integration" title="Link to this heading">#</a></h3>
-<p>Both templates <strong>import</strong> and <strong>rely</strong> on <code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code>, which provides essential functions such as:<br />
-✔ <strong>Authentication Handling</strong> via B-Fabric tokens<br />
-✔ <strong>Session Management</strong> and user entity tracking<br />
-✔ <strong>Bug Reporting System</strong> for issue tracking<br />
+<p>Both templates <strong>import</strong> and <strong>rely</strong> on teh <strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong>, which provides essential functions such as:
+✔ <strong>Authentication Handling</strong> via B-Fabric tokens
+✔ <strong>Session Management</strong> and user entity tracking
+✔ <strong>Bug Reporting System</strong> for issue tracking
 ✔ <strong>Dynamic Page Title &amp; Session Details</strong></p>
 <p>These functionalities are <strong>built-in</strong> to both templates, so they work out of the box with B-Fabric.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Feature</p></th>
 <th class="head"><p><strong>Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</strong></p></th>
-<th class="head"><p><strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index.py</span></code>)</strong></p></th>
+<th class="head"><p><strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</strong></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Integrates <code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></strong></p></td>
+<tr class="row-even"><td><p><strong>Integrates <code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong></p></td>
 <td><p>✅ Yes</p></td>
 <td><p>✅ Yes</p></td>
 </tr>
@@ -411,13 +480,13 @@
 </table>
 </div>
 <hr class="docutils" />
-<blockquote>
-<div><p><strong>Important:</strong></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></strong> is a <strong>core system file</strong> and <strong>must not be modified</strong>. Any changes to this file may break authentication or system integration.</p></li>
-<li><p><strong>All customization</strong> (for example, adding UI components, callbacks, or logging) should be done in <strong><code class="docutils literal notranslate"><span class="pre">index.py</span></code> or <code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code></strong>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong> contains <strong>core system file</strong> and <strong>must not be modified</strong>. Any changes to this folder may break authentication or system integration.</p></li>
+<li><p><strong>All customization</strong> (for example, adding UI components, callbacks, or logging) should be done in <strong><code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>, <code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>, or <code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code></strong>.</p></li>
 </ul>
-</div></blockquote>
+</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -426,8 +495,9 @@
 <p>Now that you understand the structure, the next sections will explore:</p>
 <ol class="arabic simple">
 <li><p><strong><a class="reference internal" href="installation_template.html"><span class="std std-doc">Template Deployment Guide</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="index_py.html"><span class="std std-doc">Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index.py</span></code>)</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="index_py.html"><span class="std std-doc">Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</span></a></strong></p></li>
 <li><p><strong><a class="reference internal" href="index_basic_py.html"><span class="std std-doc">Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</span></a></strong></p></li>
+<li><p><strong><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template (<code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code>)</span></a></strong></p></li>
 </ol>
 </section>
 </section>
@@ -461,6 +531,14 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bfabric-web-apps-application-structure">bfabric_web_apps Application Structure</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-user-data">1. <strong>Collect User Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-b-fabric-data">2. <strong>Collect B-Fabric Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invoke-application">3. <strong>Invoke Application</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-types">Application Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redis-integration">Redis Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-right-template">Choosing the Right Template</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-integration">Core Integration</a></li>
@@ -483,8 +561,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
 <footer class="bd-footer">
   <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->

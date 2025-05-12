@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Full-Featured Template - index.py &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+    <title>Full-Featured Template &#8212; bfabric-web-apps 20.12.2024 documentation</title>
   
   
   
@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
   -->
   <noscript>
     <style>
@@ -27,19 +27,19 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=026f3a4d" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=84513af9" />
+    <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/documentation_options.js?v=ff720171"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -47,7 +47,6 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index_py';</script>
-    <link rel="canonical" href="https://gwcustom.github.io/bfabric-web-apps-docs/index_py.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -67,8 +66,8 @@
     <!-- Left Side: Logo -->
     <div class="navbar-header-items__start">
       <a class="navbar-brand logo" href="index.html">
-        <img src="_static/logo_light.png" class="logo__image only-light" alt="Bfabric Web Apps">
-        <img src="_static/logo_dark.png" class="logo__image only-dark" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_blue.png" class="logo__image only-light" alt="Bfabric Web Apps">
+        <img src="_static/gwc_logo_simple_rgb_white.png" class="logo__image only-dark" alt="Bfabric Web Apps">
       </a>
     </div>
 
@@ -275,29 +274,51 @@
   <ul class="sidebar-nav" style="overflow: visible; height: auto; max-height: none;">
     <li><a href="index.html">Introduction</a></li>
     <li><a href="installation.html">Installation Guide</a></li>
-    <li><a href="bfabric_web_apps_functions.html">Library Docs</a></li>
+
     <li>
-      <a href="usage.html">Template Usage</a>
-      <ul style="overflow: visible; height: auto; max-height: none;">
-        <li><a href="installation_template.html">Template Deployment Guide</a></li>
-        <li><a href="#">Full-Featured Template</a></li>
-        <li><a href="index_basic_py.html">Minimal Template</a></li>
+      <a href="bfabric_web_apps_functions.html">Library Docs</a>
+      <ul>
+        <li><a href="global_variables.html">Global Variables</a></li>
+        <li><a href="important_components.html">Important Components</a></li>
+        <li><a href="important_functions.html">Important Functions</a></li>
       </ul>
     </li>
+
+    <li>
+      <a href="usage.html">Template Usage</a>
+      <ul>
+        <li><a href="installation_template.html">Template Deployment Guide</a></li>
+        <li><a href="index_basic_py.html">Minimal Template</a></li>
+        <li><a href="#">Full-Featured Template</a></li>
+        <li><a href="index_redis.html">Redis Template</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="use_case.html">Use Case</a>
+      <ul>
+        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
+        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
+        <li><a href="sushi_use_case.html">SUSHI Use Case</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="video_tutorials.html">Video Tutorials</a>
+      <ul>
+        <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+      </ul>
+    </li>
+
   </ul>
 </div></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -323,7 +344,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Full-Featured Template - index.py</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Full-Featured Template</span></li>
   </ul>
 </nav>
 </div>
@@ -340,9 +361,16 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="full-featured-template-index-py">
-<h1>Full-Featured Template - index.py<a class="headerlink" href="#full-featured-template-index-py" title="Link to this heading">#</a></h1>
-<p>This chapter provides a step-by-step breakdown of the <strong>index.py</strong> script. It explains key functions and their roles in setting up a feature-rich B-Fabric web application.</p>
+  <section id="full-featured-template">
+<h1>Full-Featured Template<a class="headerlink" href="#full-featured-template" title="Link to this heading">#</a></h1>
+<p>This chapter provides a step-by-step breakdown of the <strong>index_large.py</strong> script. It explains key functions and their roles in setting up a B-Fabric web application.</p>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Version Compatibility Notice</strong><br />
+To ensure proper functionality, the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and the <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must have the <strong>same version</strong>. For example, if <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> is version <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>, then <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must also be <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>.</p>
+<p>Please verify and update the versions accordingly before running the application.</p>
+</div>
 <hr class="docutils" />
 <section id="view-the-demo">
 <h2>View the Demo<a class="headerlink" href="#view-the-demo" title="Link to this heading">#</a></h2>
@@ -368,7 +396,7 @@
 <p>To execute the template:</p>
 <ol class="arabic">
 <li><p>Run the following command in your terminal:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>index.py
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>index_large.py
 </pre></div>
 </div>
 </li>
@@ -382,8 +410,8 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="n">State</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span>
 <span class="kn">import</span> <span class="nn">dash_bootstrap_components</span> <span class="k">as</span> <span class="nn">dbc</span>
 <span class="kn">import</span> <span class="nn">bfabric_web_apps</span>
-<span class="kn">import</span> <span class="nn">generic_bfabric</span>
-<span class="kn">from</span> <span class="nn">generic_bfabric</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">from</span> <span class="nn">generic.callbacks</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">from</span> <span class="nn">generic.components</span> <span class="kn">import</span> <span class="n">no_auth</span>
 </pre></div>
 </div>
 <section id="explanation">
@@ -405,25 +433,25 @@
 <li><p>Contains <strong>utilities and configurations</strong> for seamless integration with B-Fabric.</p></li>
 </ul>
 </li>
-<li><p><strong>Generic B-Fabric</strong></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">generic_bfabric</span></code>: This file provides <strong>generalized functions</strong> that the template relies on.</p></li>
-</ul>
-</li>
-<li><p><strong>Generic B-Fabric app Import</strong></p>
+<li><p><strong>Generic Callbacks B-Fabric app Import</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">app</span></code>: The <strong>Dash instance</strong> that initializes and runs the web app.</p></li>
 </ul>
 </li>
+<li><p><strong>Generic B-Fabric no_auth Import</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">no_auth</span></code>: Message displayed in the UI to users who are not authenticated.</p></li>
+</ul>
+</li>
 </ol>
 <hr class="docutils" />
-<blockquote>
-<div><p><strong>Important:</strong></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic_bfabric.py</span></code></strong> is a <strong>core system file</strong> and <strong>must not be modified</strong>. Any changes to this file may break authentication or system integration.</p></li>
-<li><p><strong>All customization</strong> (for example, adding UI components, callbacks, or logging) should be done in <strong><code class="docutils literal notranslate"><span class="pre">index.py</span></code> or <code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code></strong>.</p></li>
+<li><p>The <strong><code class="docutils literal notranslate"><span class="pre">generic</span></code></strong> folder is a <strong>core system component</strong> and <strong>must not be modified</strong>. It contains shared files that handle authentication, layout, and integration with B-Fabric. Any changes may break app functionality or system compatibility.</p></li>
+<li><p><strong>All customization</strong> should be done in <strong><code class="docutils literal notranslate"><span class="pre">index_large.py</span></code></strong>, <strong><code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code></strong>, or <strong><code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code></strong>.</p></li>
 </ul>
-</div></blockquote>
+</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -431,8 +459,8 @@
 <h2>Setting Up Default Configuration<a class="headerlink" href="#setting-up-default-configuration" title="Link to this heading">#</a></h2>
 <p>The application uses <strong>global variables</strong> in bfabric_web_apps to define important <strong>default configuration values</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">CONFIG_FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;~/.bfabricpy.yml&quot;</span>
-<span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">DEVELOPER_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;marc@gwcustom.com&quot;</span>
-<span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">BUG_REPORT_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;marc@gwcustom.com&quot;</span>
+<span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">DEVELOPER_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;griffin@gwcustom.com&quot;</span>
+<span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">BUG_REPORT_EMAIL_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;gwtools@fgcz.system&quot;</span>
 </pre></div>
 </div>
 <section id="id1">
@@ -461,31 +489,95 @@
 <section id="defining-the-sidebar">
 <h2>Defining the Sidebar<a class="headerlink" href="#defining-the-sidebar" title="Link to this heading">#</a></h2>
 <p>The <strong>sidebar</strong> serves as the <strong>left-hand panel</strong> of the application, providing interactive elements for user input. It includes a <strong>slider, dropdown menu, text input field, and a submit button</strong>, allowing users to configure values before submitting data.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sidebar</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sidebar_text&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="s2">&quot;Select a Value&quot;</span><span class="p">),</span>  <span class="c1"># Sidebar header text.</span>
-    <span class="n">dcc</span><span class="o">.</span><span class="n">Slider</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-slider&#39;</span><span class="p">),</span>  <span class="c1"># Slider for selecting a numeric value.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># Predefine dropdown options / values</span>
+<span class="n">dropdown_options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Genomics (project 2220)&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteomics (project 3000)&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolomics (project 31230)&#39;</span><span class="p">]</span>
+<span class="n">dropdown_values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2220&#39;</span><span class="p">,</span> <span class="s1">&#39;3000&#39;</span><span class="p">,</span> <span class="s1">&#39;31230&#39;</span><span class="p">]</span>
+
+<span class="n">sidebar</span> <span class="o">=</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">charge_switch</span> <span class="o">+</span> <span class="p">[</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sidebar_text&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="s2">&quot;How Many Resources to Create?&quot;</span><span class="p">),</span>  <span class="c1"># Sidebar header text.</span>
+    <span class="n">dcc</span><span class="o">.</span><span class="n">Slider</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-slider&#39;</span><span class="p">),</span>  <span class="c1"># Slider for selecting a numeric value.</span>
     <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sidebar_text_2&quot;</span><span class="p">,</span> <span class="n">children</span><span class="o">=</span><span class="s2">&quot;For Which Internal Unit?&quot;</span><span class="p">),</span>
     <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
-        <span class="p">[</span><span class="s1">&#39;Genomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteomics&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolomics&#39;</span><span class="p">],</span>  <span class="c1"># Dropdown options.</span>
-        <span class="s1">&#39;Genomics&#39;</span><span class="p">,</span>  <span class="c1"># Default value.</span>
+        <span class="n">options</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">option</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">value</span><span class="p">}</span> <span class="k">for</span> <span class="n">option</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dropdown_options</span><span class="p">,</span> <span class="n">dropdown_values</span><span class="p">)],</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">dropdown_options</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
         <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-dropdown&#39;</span>  <span class="c1"># Dropdown ID for callback integration.</span>
     <span class="p">),</span>
     <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
-    <span class="n">dbc</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;Enter Some Text&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-input&#39;</span><span class="p">),</span>  <span class="c1"># Text input field.</span>
+    <span class="n">dbc</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;Content of Resources&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-input&#39;</span><span class="p">),</span>  <span class="c1"># Text input field.</span>
     <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
     <span class="n">dbc</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;example-button&#39;</span><span class="p">),</span>  <span class="c1"># Button for user submission.</span>
 <span class="p">]</span>
+
 </pre></div>
 </div>
 <section id="id2">
 <h3>Explanation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<p>The <strong>sidebar</strong> provides an intuitive interface for user interaction, consisting of:</p>
+<p>The <strong>sidebar</strong> is the left-hand panel of the app that allows users to configure job parameters before submitting. It includes:</p>
 <ul class="simple">
-<li><p><strong>Text Header (<code class="docutils literal notranslate"><span class="pre">html.P</span></code>)</strong> – Displays <strong>instructions or labels</strong> for users.</p></li>
-<li><p><strong>Slider (<code class="docutils literal notranslate"><span class="pre">dcc.Slider</span></code>)</strong> – Allows users to <strong>select numeric values</strong> within a defined range.</p></li>
-<li><p><strong>Dropdown (<code class="docutils literal notranslate"><span class="pre">dcc.Dropdown</span></code>)</strong> – Lets users <strong>choose a category</strong> from a predefined list.</p></li>
-<li><p><strong>Text Input (<code class="docutils literal notranslate"><span class="pre">dbc.Input</span></code>)</strong> – Provides a <strong>field for manual data entry</strong>.</p></li>
-<li><p><strong>Submit Button (<code class="docutils literal notranslate"><span class="pre">dbc.Button</span></code>)</strong> – Triggers an <strong>action based on user input</strong>.</p></li>
+<li><p><strong>Charge Switch (<code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.components.charge_switch</span></code>)</strong> – Toggles whether a job is billable or not. For additional details, see the <a class="reference internal" href="important_components.html#charge-switch"><span class="std std-ref">Charge Switch section</span></a>.</p></li>
+<li><p><strong>Text Header (<code class="docutils literal notranslate"><span class="pre">html.P</span></code>)</strong> – Displays a prompt for the number of resources to create.</p></li>
+<li><p><strong>Slider (<code class="docutils literal notranslate"><span class="pre">dcc.Slider</span></code>)</strong> – Selects a numeric value (e.g. number of resources) between 0 and 10.</p></li>
+<li><p><strong>Second Text Header (<code class="docutils literal notranslate"><span class="pre">html.P</span></code>)</strong> – Prompts the user to choose an internal unit or project.</p></li>
+<li><p><strong>Dropdown (<code class="docutils literal notranslate"><span class="pre">dcc.Dropdown</span></code>)</strong> – Lets the user choose from a list of predefined project options.</p></li>
+<li><p><strong>Text Input (<code class="docutils literal notranslate"><span class="pre">dbc.Input</span></code>)</strong> – Allows free-text entry (e.g. for naming or describing resources).</p></li>
+<li><p><strong>Submit Button (<code class="docutils literal notranslate"><span class="pre">dbc.Button</span></code>)</strong> – Opens a modal window where the actual submission button is located</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="defining-the-modal-confirmation-window">
+<h2>Defining the Modal Confirmation Window<a class="headerlink" href="#defining-the-modal-confirmation-window" title="Link to this heading">#</a></h2>
+<p>The <strong>modal</strong> provides a <strong>confirmation step</strong> before executing critical actions, such running a pipeline. It appears when the user clicks the <strong>Submit button</strong> in the sidebar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here we define the modal that will pop up when the user clicks the submit button.</span>
+<span class="n">modal</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span>
+    <span class="n">dbc</span><span class="o">.</span><span class="n">Modal</span><span class="p">([</span>
+        <span class="n">dbc</span><span class="o">.</span><span class="n">ModalHeader</span><span class="p">(</span><span class="n">dbc</span><span class="o">.</span><span class="n">ModalTitle</span><span class="p">(</span><span class="s2">&quot;Ready to Prepare Create Workunits?&quot;</span><span class="p">)),</span>  <span class="c1"># Modal title.</span>
+        <span class="n">dbc</span><span class="o">.</span><span class="n">ModalBody</span><span class="p">(</span><span class="s2">&quot;Are you sure you&#39;re ready to create workunits?&quot;</span><span class="p">),</span>  <span class="c1"># Confirmation message.</span>
+        <span class="n">dbc</span><span class="o">.</span><span class="n">ModalFooter</span><span class="p">(</span>
+            <span class="n">dbc</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Yes!&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;Submit&quot;</span><span class="p">,</span> <span class="n">className</span><span class="o">=</span><span class="s2">&quot;ms-auto&quot;</span><span class="p">,</span> <span class="n">n_clicks</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Final confirmation button.</span>
+        <span class="p">),</span>
+    <span class="p">],</span>
+    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;modal-confirmation&quot;</span><span class="p">,</span>  <span class="c1"># Modal component ID for callback control.</span>
+    <span class="n">is_open</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>  <span class="c1"># Initially hidden until triggered.</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+<section id="id3">
+<h3>Explanation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>The <strong>modal</strong> is a pop-up confirmation dialog triggered by the <strong>Submit button</strong> in the sidebar. It consists of:</p>
+<ul class="simple">
+<li><p><strong>Modal Header (<code class="docutils literal notranslate"><span class="pre">dbc.ModalHeader</span></code>)</strong> – Displays the title at the top of the modal.</p></li>
+<li><p><strong>Modal Body (<code class="docutils literal notranslate"><span class="pre">dbc.ModalBody</span></code>)</strong> – Shows a message asking for user confirmation.</p></li>
+<li><p><strong>Modal Footer (<code class="docutils literal notranslate"><span class="pre">dbc.ModalFooter</span></code>)</strong> – Contains a confirmation button labeled <strong>&quot;Yes!&quot;</strong>, which initiates the execution of <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">is_open=False</span></code></strong> – The modal is <strong>initially closed</strong> and only appears in response to user interaction.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="defining-the-alert-messages">
+<h2>Defining the Alert Messages<a class="headerlink" href="#defining-the-alert-messages" title="Link to this heading">#</a></h2>
+<p>The <strong>alerts</strong> notify the user whether the <strong>workunit creation process succeeded or failed</strong>, providing immediate visual feedback.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here are the alerts which will pop up when the user creates workunits </span>
+<span class="n">alerts</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">dbc</span><span class="o">.</span><span class="n">Alert</span><span class="p">(</span><span class="s2">&quot;Success: Workunit created!&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;success&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;alert-fade-success&quot;</span><span class="p">,</span> <span class="n">dismissable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_open</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+        <span class="n">dbc</span><span class="o">.</span><span class="n">Alert</span><span class="p">(</span><span class="s2">&quot;Error: Workunit creation failed!&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;danger&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;alert-fade-fail&quot;</span><span class="p">,</span> <span class="n">dismissable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_open</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;margin&quot;</span><span class="p">:</span> <span class="s2">&quot;20px&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id4">
+<h3>Explanation<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>The <strong>alerts</strong> are used to display <strong>success or error messages</strong> based on job outcome.<br />
+Each alert includes:</p>
+<ul class="simple">
+<li><p><strong>Message (<code class="docutils literal notranslate"><span class="pre">dbc.Alert</span></code>)</strong> – Informs the user of a success or failure event.</p></li>
+<li><p><strong>Color</strong> – Green for success (<code class="docutils literal notranslate"><span class="pre">&quot;success&quot;</span></code>), red for error (<code class="docutils literal notranslate"><span class="pre">&quot;danger&quot;</span></code>).</p></li>
+<li><p><strong>Dismissable</strong> – Alerts can be manually closed by the user.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">is_open=False</span></code></strong> – Both alerts are hidden by default and displayed dynamically after job submission.</p></li>
 </ul>
 </section>
 </section>
@@ -496,6 +588,8 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app_specific_layout</span> <span class="o">=</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span>
     <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;page-content-main&quot;</span><span class="p">,</span>
     <span class="n">children</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Loading</span><span class="p">(</span><span class="n">alerts</span><span class="p">),</span> 
+        <span class="n">modal</span><span class="p">,</span>  <span class="c1"># Modal defined earlier.</span>
         <span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span>
             <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span>
                 <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sidebar&quot;</span><span class="p">,</span>
@@ -528,8 +622,8 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<section id="id3">
-<h3>Explanation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>Explanation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>The <strong>layout consists of two primary sections</strong>:</p>
 <ul class="simple">
 <li><p><strong>Sidebar (left column, width = 3)</strong> – Contains interactive UI elements such as sliders, dropdowns, and buttons for user input.</p></li>
@@ -542,26 +636,33 @@
 <h2>Defining the Documentation<a class="headerlink" href="#defining-the-documentation" title="Link to this heading">#</a></h2>
 <p>The <strong>documentation section</strong> provides users with an introduction to the <strong>B-Fabric App Template</strong> and links to external resources for further learning.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">documentation_content</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">html</span><span class="o">.</span><span class="n">H2</span><span class="p">(</span><span class="s2">&quot;Welcome to B-Fabric App Template&quot;</span><span class="p">),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">H2</span><span class="p">(</span><span class="s2">&quot;Welcome to Bfabric App Template&quot;</span><span class="p">),</span>
     <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="s2">&quot;This app serves as the user interface for B-Fabric App Template, &quot;</span>
+            <span class="s2">&quot;This app serves as the user-interface for Bfabric App Template, &quot;</span>
             <span class="s2">&quot;a versatile tool designed to help build and customize new applications.&quot;</span>
         <span class="p">]</span>
     <span class="p">),</span>
     <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
     <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span>
         <span class="p">[</span>
+            <span class="s2">&quot;It is a simple application which allows you to bulk-create resources, &quot;</span>
+            <span class="s2">&quot;workunits, and demonstrates how to use the bfabric-web-apps library.&quot;</span>
+        <span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">Br</span><span class="p">(),</span>
+    <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span>
+        <span class="p">[</span>
             <span class="s2">&quot;Please check out the official documentation of &quot;</span><span class="p">,</span>
-            <span class="n">html</span><span class="o">.</span><span class="n">A</span><span class="p">(</span><span class="s2">&quot;B-Fabric Web Apps&quot;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://pypi.org/project/bfabric-web-apps/&quot;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">&quot;_blank&quot;</span><span class="p">),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">A</span><span class="p">(</span><span class="s2">&quot;Bfabric Web Apps&quot;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://bfabric-docs.gwc-solutions.ch/index.html&quot;</span><span class="p">),</span>
             <span class="s2">&quot;.&quot;</span>
         <span class="p">]</span>
     <span class="p">)</span>
 <span class="p">]</span>
 </pre></div>
 </div>
-<section id="id4">
-<h3>Explanation<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h3>Explanation<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Header (<code class="docutils literal notranslate"><span class="pre">html.H2</span></code>)</strong> – Displays a <strong>title</strong> for the documentation section.</p></li>
 <li><p><strong>Introduction (<code class="docutils literal notranslate"><span class="pre">html.P</span></code>)</strong> – Briefly explains the <strong>purpose of the application</strong> and its customization options.</p></li>
@@ -581,112 +682,158 @@
 <section id="defining-the-app-layout">
 <h2>Defining the App Layout<a class="headerlink" href="#defining-the-app-layout" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">app.layout</span></code> function <strong>establishes the final structure</strong> of the application by integrating the <strong>title, main content, and documentation</strong> into a cohesive layout. This ensures a <strong>consistent user experience</strong> across all pages.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">get_static_layout</span><span class="p">(</span>  <span class="c1"># The function from bfabric_web_apps that sets up the app layout.</span>
-    <span class="n">app_title</span><span class="p">,</span>  <span class="c1"># The app title we defined previously.</span>
-    <span class="n">app_specific_layout</span><span class="p">,</span>  <span class="c1"># The main content for the app defined earlier.</span>
-    <span class="n">documentation_content</span>  <span class="c1"># Documentation content for the app.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">get_static_layout</span><span class="p">(</span>
+    <span class="n">base_title</span><span class="o">=</span><span class="n">app_title</span><span class="p">,</span>
+    <span class="n">main_content</span><span class="o">=</span><span class="n">app_specific_layout</span><span class="p">,</span>
+    <span class="n">documentation_content</span><span class="o">=</span><span class="n">documentation_content</span><span class="p">,</span>
+    <span class="n">layout_config</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;workunits&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;queue&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;bug&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-<section id="id5">
-<h3>Explanation<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Uses <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-static-layout"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_static_layout</span></code></span></a></strong> to maintain a <strong>consistent page structure</strong> throughout the application.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_title</span></code></strong> – Defines the <strong>main heading</strong> of the application.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_specific_layout</span></code></strong> – Contains the <strong>sidebar and main content area</strong>.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">documentation_content</span></code></strong> – Displays <strong>informational resources</strong> for users.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="callback-for-ui-updates">
-<h2>Callback for UI Updates<a class="headerlink" href="#callback-for-ui-updates" title="Link to this heading">#</a></h2>
-<p>This callback <strong>dynamically updates the UI</strong> based on user interactions and authentication status. It manages sidebar behavior, displays entity-related data, and logs user actions.</p>
-<p>For more details on Dash callbacks, see: <strong><a class="reference external" href="https://dash.plotly.com/basic-callbacks">Dash Callbacks Documentation</a></strong></p>
-<hr class="docutils" />
-<section id="callback-definition">
-<h3>Callback Definition<a class="headerlink" href="#callback-definition" title="Link to this heading">#</a></h3>
-<p>The callback function listens for <strong>user input changes</strong> and modifies the UI accordingly.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
-    <span class="p">[</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;sidebar_text&#39;</span><span class="p">,</span> <span class="s1">&#39;hidden&#39;</span><span class="p">),</span>  <span class="c1"># Controls sidebar text visibility.</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>  <span class="c1"># Disables slider when needed.</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-dropdown&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>  <span class="c1"># Disables dropdown when needed.</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-input&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>  <span class="c1"># Disables input field when needed.</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-button&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>  <span class="c1"># Disables submit button when needed.</span>
-        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;auth-div&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>  <span class="c1"># Updates authentication UI.</span>
-    <span class="p">],</span>
-    <span class="p">[</span>
-        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>  <span class="c1"># Listens to slider value changes.</span>
-        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-dropdown&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>  <span class="c1"># Listens to dropdown selection changes.</span>
-        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-input&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>  <span class="c1"># Listens to text input changes.</span>
-        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-button&#39;</span><span class="p">,</span> <span class="s1">&#39;n_clicks&#39;</span><span class="p">),</span>  <span class="c1"># Tracks button clicks.</span>
-        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;token_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>  <span class="c1"># Tracks authentication token updates.</span>
-    <span class="p">],</span>
-    <span class="p">[</span><span class="n">State</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)]</span>  <span class="c1"># Retrieves stored entity data for authentication.</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="id6">
-<h3>Explanation<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Outputs:</strong></p>
-<ul>
-<li><p>Controls the sidebar’s elements (hiding text, disabling inputs).</p></li>
-<li><p>Updates the <code class="docutils literal notranslate"><span class="pre">auth-div</span></code> element to show authentication details.</p></li>
-</ul>
-</li>
-<li><p><strong>Inputs:</strong></p>
-<ul>
-<li><p>Tracks changes in the sidebar elements and authentication status.</p></li>
-</ul>
-</li>
-<li><p><strong>State:</strong></p>
-<ul>
-<li><p>Retrieves stored <strong>entity data</strong> to determine user-specific behavior.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="handling-sidebar-behavior">
-<h3>Handling Sidebar Behavior<a class="headerlink" href="#handling-sidebar-behavior" title="Link to this heading">#</a></h3>
-<p>The function determines whether to enable or disable sidebar elements based on authentication status.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_ui</span><span class="p">(</span><span class="n">slider_val</span><span class="p">,</span> <span class="n">dropdown_val</span><span class="p">,</span> <span class="n">input_val</span><span class="p">,</span> <span class="n">n_clicks</span><span class="p">,</span> <span class="n">token_data</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">):</span>
-    
-    <span class="k">if</span> <span class="n">token_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">sidebar_state</span> <span class="o">=</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Disable all elements if no token.</span>
-    <span class="k">elif</span> <span class="ow">not</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">DEV</span><span class="p">:</span>
-        <span class="n">sidebar_state</span> <span class="o">=</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># Enable elements in production mode.</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">sidebar_state</span> <span class="o">=</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Disable elements in development mode.</span>
-</pre></div>
-</div>
-</section>
 <section id="id7">
 <h3>Explanation<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>If the user is not authenticated (<code class="docutils literal notranslate"><span class="pre">token_data</span> <span class="pre">is</span> <span class="pre">None</span></code>), all sidebar elements are disabled.</p></li>
-<li><p>If running in production (<code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.DEV</span> <span class="pre">is</span> <span class="pre">False</span></code>), all elements remain enabled.</p></li>
-<li><p>If in development mode, the elements are disabled by default.</p></li>
+<li><p>Uses <strong><a class="reference internal" href="important_functions.html#get-static-layout"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">get_static_layout</span></code></span></a></strong> to maintain a <strong>consistent page structure</strong> throughout the application.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_title</span></code></strong> – Defines the <strong>main heading</strong> of the application.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">app_specific_layout</span></code></strong> – Contains the <strong>sidebar and main content area</strong>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">documentation_content</span></code></strong> – Displays <strong>informational resources</strong> for users.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">layout_config</span></code></strong> –  Configuration settings for the layout</p></li>
 </ul>
 </section>
+</section>
 <hr class="docutils" />
-<section id="handling-authentication-and-entity-data">
-<h3>Handling Authentication and Entity Data<a class="headerlink" href="#handling-authentication-and-entity-data" title="Link to this heading">#</a></h3>
-<p>If authentication is valid, the function updates the UI to display user-related data.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">entity_data</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">token_data</span><span class="p">:</span>
-        <span class="n">auth_div_content</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="n">generic_bfabric</span><span class="o">.</span><span class="n">no_auth</span><span class="p">)</span>  <span class="c1"># Shows login prompt if unauthorized.</span>
-    <span class="k">else</span><span class="p">:</span>
+<section id="defining-the-modal-toggle-callback">
+<h2>Defining the Modal Toggle Callback<a class="headerlink" href="#defining-the-modal-toggle-callback" title="Link to this heading">#</a></h2>
+<p>This <strong>callback function</strong> controls the visibility of the <strong>confirmation modal</strong>. It listens for clicks on both the <strong>sidebar Submit button</strong> and the <strong>modal confirmation button</strong>, toggling the modal open or closed accordingly.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This callback is necessary for the modal to pop up when the user clicks the submit button.</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;modal-confirmation&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">),</span>
+    <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s2">&quot;example-button&quot;</span><span class="p">,</span> <span class="s2">&quot;n_clicks&quot;</span><span class="p">),</span> <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;Submit&quot;</span><span class="p">,</span> <span class="s2">&quot;n_clicks&quot;</span><span class="p">)],</span>
+    <span class="p">[</span><span class="n">State</span><span class="p">(</span><span class="s2">&quot;modal-confirmation&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">)],</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">toggle_modal</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">is_open</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n1</span> <span class="ow">or</span> <span class="n">n2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">is_open</span>
+    <span class="k">return</span> <span class="n">is_open</span>
+</pre></div>
+</div>
+<section id="id8">
+<h3>Explanation<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>This <strong>Dash callback</strong> manages the open/close behavior of the confirmation modal:</p>
+<ul class="simple">
+<li><p><strong>Inputs (<code class="docutils literal notranslate"><span class="pre">Input</span></code>)</strong>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">example-button</span></code> – The sidebar button that <strong>triggers the modal to open</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Submit</span></code> – The confirmation button inside the modal, also used to <strong>close the modal</strong> after confirmation.</p></li>
+</ul>
+</li>
+<li><p><strong>State (<code class="docutils literal notranslate"><span class="pre">State</span></code>)</strong>:</p>
+<ul>
+<li><p>Tracks the current state of the modal (<code class="docutils literal notranslate"><span class="pre">is_open</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Logic</strong>:</p>
+<ul>
+<li><p>If either button is clicked, the modal <strong>toggles its visibility</strong> (open if closed, closed if open).</p></li>
+<li><p>If neither button is clicked, the modal <strong>remains in its current state</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<p>This adds a safeguard confirmation step before executing any job.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="callback-authentication-sidebar-state-management">
+<h2>Callback: Authentication &amp; Sidebar State Management<a class="headerlink" href="#callback-authentication-sidebar-state-management" title="Link to this heading">#</a></h2>
+<p>This callback dynamically adjusts the state of the user interface based on authentication and session context. It ensures that unauthenticated users are restricted from interaction, and authenticated users receive personalized data and context-aware controls.</p>
+<p>For general information on Dash callbacks, refer to the <a class="reference external" href="https://dash.plotly.com/basic-callbacks">Dash Callback Documentation</a>.</p>
+<hr class="docutils" />
+<section id="callback-definition">
+<h3>Callback Definition<a class="headerlink" href="#callback-definition" title="Link to this heading">#</a></h3>
+<p>This callback is triggered when any of the following inputs change:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;sidebar_text&#39;</span><span class="p">,</span> <span class="s1">&#39;hidden&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-dropdown&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;example-input&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;sidebar-button&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;submit-bug-report&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="s1">&#39;disabled&#39;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s1">&#39;auth-div&#39;</span><span class="p">,</span> <span class="s1">&#39;children&#39;</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="p">[</span>
+        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-slider&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-dropdown&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;example-input&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">),</span>
+        <span class="n">Input</span><span class="p">(</span><span class="s1">&#39;token_data&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="p">[</span><span class="n">State</span><span class="p">(</span><span class="s1">&#39;entity&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">)]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<section id="id9">
+<h4>Explanation:<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Outputs</strong>: This callback modifies the state (visibility or enable/disable) of sidebar components and updates the <code class="docutils literal notranslate"><span class="pre">auth-div</span></code> content.</p></li>
+<li><p><strong>Inputs</strong>: Changes to the user-selected slider, dropdown, text input, or token data trigger the callback.</p></li>
+<li><p><strong>State</strong>: Reads the current <code class="docutils literal notranslate"><span class="pre">entity</span></code> data from memory to personalize the UI.</p></li>
+</ul>
+<p>For more details about <code class="docutils literal notranslate"><span class="pre">token_data</span></code> and <code class="docutils literal notranslate"><span class="pre">entity_data</span></code>, see the chapter:
+<strong><a class="reference internal" href="important_components.html#extracted-key-dictionaries"><span class="std std-ref">Important Components → Extracted Key Dictionaries</span></a></strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="function-definition">
+<h3>Function Definition<a class="headerlink" href="#function-definition" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update_ui</span><span class="p">(</span><span class="n">slider_val</span><span class="p">,</span> <span class="n">dropdown_val</span><span class="p">,</span> <span class="n">input_val</span><span class="p">,</span> <span class="n">token_data</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>This function receives user inputs and authentication data, then determines how to update the UI accordingly.</p>
+</section>
+<hr class="docutils" />
+<section id="step-1-toggle-ui-elements-based-on-authentication">
+<h3>Step 1 – Toggle UI Elements Based on Authentication<a class="headerlink" href="#step-1-toggle-ui-elements-based-on-authentication" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">token_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">sidebar_state</span> <span class="o">=</span> <span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">sidebar_state</span> <span class="o">=</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the user is <strong>not authenticated</strong> (<code class="docutils literal notranslate"><span class="pre">token_data</span> <span class="pre">is</span> <span class="pre">None</span></code>), all interactive elements in the sidebar are <strong>disabled</strong> by setting them to <code class="docutils literal notranslate"><span class="pre">True</span></code>.
+If the user is authenticated, all elements remain <strong>enabled</strong> (<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+</section>
+<hr class="docutils" />
+<section id="step-2-display-message-if-user-is-not-authenticated">
+<h3>Step 2 – Display Message If User is Not Authenticated<a class="headerlink" href="#step-2-display-message-if-user-is-not-authenticated" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">entity_data</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">token_data</span><span class="p">:</span>
+    <span class="n">auth_div_content</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span><span class="n">children</span><span class="o">=</span><span class="n">no_auth</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If either <code class="docutils literal notranslate"><span class="pre">token_data</span></code> or <code class="docutils literal notranslate"><span class="pre">entity_data</span></code> is missing or invalid, the UI will show a predefined message (<code class="docutils literal notranslate"><span class="pre">no_auth</span></code>) instructing the user to log in via B-Fabric.</p>
+</section>
+<hr class="docutils" />
+<section id="step-3-build-ui-content-for-authenticated-users">
+<h3>Step 3 – Build UI Content for Authenticated Users<a class="headerlink" href="#step-3-build-ui-content-for-authenticated-users" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
         <span class="n">component_data</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">html</span><span class="o">.</span><span class="n">H1</span><span class="p">(</span><span class="s2">&quot;Component Data:&quot;</span><span class="p">),</span>
-            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Slider Value: </span><span class="si">{</span><span class="n">slider_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
-            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dropdown Value: </span><span class="si">{</span><span class="n">dropdown_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
-            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Input Value: </span><span class="si">{</span><span class="n">input_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
-            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Button Clicks: </span><span class="si">{</span><span class="n">n_clicks</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of Resources to Create: </span><span class="si">{</span><span class="n">slider_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Create workunit inside project: </span><span class="si">{</span><span class="n">dropdown_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
+            <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resource Content: </span><span class="si">{</span><span class="n">input_val</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="p">]</span>
-        <span class="n">entity_details</span> <span class="o">=</span> <span class="p">[</span>
+</pre></div>
+</div>
+<p>In the <code class="docutils literal notranslate"><span class="pre">else</span></code> block, the user is authenticated. The <code class="docutils literal notranslate"><span class="pre">component_data</span></code> list shows the current input values:</p>
+<ul class="simple">
+<li><p>Number of resources (from the slider)</p></li>
+<li><p>Selected container/project ID</p></li>
+<li><p>Entered text content</p></li>
+</ul>
+<p>This forms the <strong>left column</strong> of the authenticated view.</p>
+<hr class="docutils" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">entity_details</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">html</span><span class="o">.</span><span class="n">H1</span><span class="p">(</span><span class="s2">&quot;Entity Data:&quot;</span><span class="p">),</span>
             <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entity Class: </span><span class="si">{</span><span class="n">token_data</span><span class="p">[</span><span class="s1">&#39;entityClass_data&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
             <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Entity ID: </span><span class="si">{</span><span class="n">token_data</span><span class="p">[</span><span class="s1">&#39;entity_id_data&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
@@ -694,102 +841,296 @@
             <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created: </span><span class="si">{</span><span class="n">entity_data</span><span class="p">[</span><span class="s1">&#39;created&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
             <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Modified: </span><span class="si">{</span><span class="n">entity_data</span><span class="p">[</span><span class="s1">&#39;modified&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="p">]</span>
-        <span class="n">auth_div_content</span> <span class="o">=</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Row</span><span class="p">([</span><span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span><span class="n">component_data</span><span class="p">),</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span><span class="n">entity_details</span><span class="p">)])</span>
 </pre></div>
 </div>
-</section>
-<section id="id8">
-<h3>Explanation<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">entity_details</span></code> list shows key metadata associated with the current entity. These fields come from the token and entity data and provide:</p>
 <ul class="simple">
-<li><p>If no authentication data exists, it prompts the user to <strong>log in</strong>.</p></li>
-<li><p>If authenticated, it <strong>displays user-related data</strong>, including:</p>
-<ul>
-<li><p>The entity class, ID, creator, and modification details.</p></li>
-<li><p>Sidebar input values (slider, dropdown, text input, button clicks).</p></li>
+<li><p>Entity type (e.g., Dataset, Analysis, Workunit)</p></li>
+<li><p>Entity ID</p></li>
+<li><p>Creation and modification metadata</p></li>
 </ul>
-</li>
-</ul>
-</section>
+<p>This forms the <strong>right column</strong> of the authenticated view.</p>
 <hr class="docutils" />
-<section id="integrating-power-user-wrapper">
-<h3>Integrating Power User Wrapper<a class="headerlink" href="#integrating-power-user-wrapper" title="Link to this heading">#</a></h3>
-<p>The <strong>Power User Wrapper</strong> provides <strong>advanced functionalities</strong> for authorized users.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">power_user_wrapper</span> <span class="o">=</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">get_power_user_wrapper</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span> 
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">auth_div_content</span> <span class="o">=</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Row</span><span class="p">([</span><span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span><span class="n">component_data</span><span class="p">),</span> <span class="n">dbc</span><span class="o">.</span><span class="n">Col</span><span class="p">(</span><span class="n">entity_details</span><span class="p">)])</span>
 </pre></div>
 </div>
-<p>For more details, refer to: <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-power-user-wrapper"><span class="std std-ref">Power User Wrapper</span></a></strong></p>
+<p>The two columns (<code class="docutils literal notranslate"><span class="pre">component_data</span></code> and <code class="docutils literal notranslate"><span class="pre">entity_details</span></code>) are wrapped in a Bootstrap <code class="docutils literal notranslate"><span class="pre">Row</span></code>, allowing them to be displayed side-by-side in the <code class="docutils literal notranslate"><span class="pre">auth-div</span></code> section of the layout.</p>
 </section>
 <hr class="docutils" />
-<section id="logging-user-activity">
-<h3>Logging User Activity<a class="headerlink" href="#logging-user-activity" title="Link to this heading">#</a></h3>
-<p>User interactions are logged to track authentication and system events.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>        <span class="n">L</span> <span class="o">=</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">get_logger</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>  <span class="c1"># Initializes logger with token data.</span>
+<section id="step-4-error-handling">
+<h3>Step 4 – Error Handling<a class="headerlink" href="#step-4-error-handling" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">sidebar_state</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error Logging into B-Fabric: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If something goes wrong while accessing the token or entity data (e.g., a missing key), the callback returns an error message.
+This ensures the app fails gracefully and provides helpful feedback.</p>
+</section>
+<hr class="docutils" />
+<section id="step-5-return-updated-ui-state-and-content">
+<h3>Step 5 – Return Updated UI State and Content<a class="headerlink" href="#step-5-return-updated-ui-state-and-content" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">sidebar_state</span><span class="p">,</span> <span class="n">auth_div_content</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The final return provides:</p>
+<ol class="arabic simple">
+<li><p>The enabled/disabled state of sidebar components (<code class="docutils literal notranslate"><span class="pre">sidebar_state</span></code>)</p></li>
+<li><p>The content to display in the authentication div (<code class="docutils literal notranslate"><span class="pre">auth_div_content</span></code>)</p></li>
+</ol>
+<p>This return structure ensures the entire UI updates reactively based on user context.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="submitting-run-main-job">
+<h2>Submitting run_main_job<a class="headerlink" href="#submitting-run-main-job" title="Link to this heading">#</a></h2>
+<p>This callback function is triggered when the user confirms their input by clicking the <strong>&quot;Yes!&quot;</strong> button in the modal. It initiates the execution of the <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> method, which submits the job, attaches files, creates resources, and handles both success and error cases.</p>
+<hr class="docutils" />
+<section id="id10">
+<h3>Callback Definition<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;alert-fade-success&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;alert-fade-fail&quot;</span><span class="p">,</span> <span class="s2">&quot;is_open&quot;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;alert-fade-fail&quot;</span><span class="p">,</span> <span class="s2">&quot;children&quot;</span><span class="p">),</span>
+        <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;refresh-workunits&quot;</span><span class="p">,</span> <span class="s2">&quot;children&quot;</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="p">[</span><span class="n">Input</span><span class="p">(</span><span class="s2">&quot;Submit&quot;</span><span class="p">,</span> <span class="s2">&quot;n_clicks&quot;</span><span class="p">)],</span>
+    <span class="p">[</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;example-slider&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;example-dropdown&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;example-input&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;token_data&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">),</span>
+        <span class="n">State</span><span class="p">(</span><span class="s2">&quot;charge_run&quot;</span><span class="p">,</span> <span class="s2">&quot;on&quot;</span><span class="p">),</span>
+        <span class="n">State</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;search&#39;</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">prevent_initial_call</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="explanation-of-arguments">
+<h3>Explanation of Arguments<a class="headerlink" href="#explanation-of-arguments" title="Link to this heading">#</a></h3>
+<section id="inputs">
+<h4><strong>Inputs</strong><a class="headerlink" href="#inputs" title="Link to this heading">#</a></h4>
+<p>These values trigger the callback.</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Input(&quot;Submit&quot;,</span> <span class="pre">&quot;n_clicks&quot;)</span></code></strong>
+The callback is executed when the user clicks the confirmation button inside the modal. This acts as a signal to begin job submission.</p></li>
+</ul>
+</section>
+<section id="states">
+<h4><strong>States</strong><a class="headerlink" href="#states" title="Link to this heading">#</a></h4>
+<p>These values are <strong>read</strong> during the callback execution but <strong>do not</strong> trigger it.</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;example-slider&quot;,</span> <span class="pre">&quot;value&quot;)</span></code></strong>
+Represents the number of resources the user wants to create. It's an integer ranging from 0 to 10.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;example-dropdown&quot;,</span> <span class="pre">&quot;value&quot;)</span></code></strong>
+The selected project or container ID (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;2220&quot;</span></code>). Determines the B-Fabric container where the resources will be stored.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;example-input&quot;,</span> <span class="pre">&quot;value&quot;)</span></code></strong>
+Free-text input provided by the user. This content is written into each created resource file.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;token_data&quot;,</span> <span class="pre">&quot;data&quot;)</span></code></strong>
+A dictionary containing authentication and session information such as <code class="docutils literal notranslate"><span class="pre">application_data</span></code>, <code class="docutils literal notranslate"><span class="pre">entity_id_data</span></code>, and authorization token.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;charge_run&quot;,</span> <span class="pre">&quot;on&quot;)</span></code></strong>
+A boolean flag indicating whether the job should be marked as <strong>billable</strong> in B-Fabric. This is controlled via the <strong>charge switch</strong> component.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">State(&quot;url&quot;,</span> <span class="pre">&quot;search&quot;)</span></code></strong>
+The full search string from the app URL. It is passed along to <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> as a token for authorization.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="explanation-of-outputs">
+<h3>Explanation of Outputs<a class="headerlink" href="#explanation-of-outputs" title="Link to this heading">#</a></h3>
+<p>These values are updated by the callback and affect the UI:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Output(&quot;alert-fade-success&quot;,</span> <span class="pre">&quot;is_open&quot;)</span></code></strong>
+A boolean value that controls the <strong>success alert</strong> visibility. Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the job runs successfully.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Output(&quot;alert-fade-fail&quot;,</span> <span class="pre">&quot;is_open&quot;)</span></code></strong>
+Controls the <strong>error alert</strong> visibility. Set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the job fails (e.g., due to missing dropdown selection or a runtime error).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Output(&quot;alert-fade-fail&quot;,</span> <span class="pre">&quot;children&quot;)</span></code></strong>
+Provides the <strong>content of the error message</strong> shown in the alert. Includes exception details to help users understand what went wrong.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">Output(&quot;refresh-workunits&quot;,</span> <span class="pre">&quot;children&quot;)</span></code></strong>
+This dummy output is used to <strong>trigger a refresh</strong> of the workunit section, allowing updates without user interaction. While it's set to an empty <code class="docutils literal notranslate"><span class="pre">html.Div()</span></code>, it can later be extended to update live data.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="submission-logic">
+<h3>Submission Logic<a class="headerlink" href="#submission-logic" title="Link to this heading">#</a></h3>
+<p>This function prepares and triggers the job submission process. It collects user input, creates temporary resource definitions, and calls <code class="docutils literal notranslate"><span class="pre">run_main_job()</span></code> a general-purpose utility that handles:</p>
+<ul class="simple">
+<li><p>File saving (as byte strings)</p></li>
+<li><p>Bash command execution</p></li>
+<li><p>Resource registration</p></li>
+<li><p>Workunit creation</p></li>
+<li><p>Download link attachments</p></li>
+<li><p>Optional project-based charging in B-Fabric</p></li>
+</ul>
+<p>Let's walk through each step with code and explanation.</p>
+<p>For more details, please refer to the <a class="reference internal" href="important_functions.html#9-main-job-execution"><span class="std std-ref"><strong>run_main_job function</strong></span></a> in the library documentation.</p>
+<hr class="docutils" />
+<section id="step-1-validate-input-and-extract-container-id">
+<h4>Step 1 – Validate Input and Extract Container ID<a class="headerlink" href="#step-1-validate-input-and-extract-container-id" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">dropdown_val</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;Error: Please select a container Id&quot;</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">()</span>
 
-        <span class="n">L</span><span class="o">.</span><span class="n">log_operation</span><span class="p">(</span>
-            <span class="s2">&quot;Example Log&quot;</span><span class="p">,</span>  <span class="c1"># Log operation title.</span>
-            <span class="s2">&quot;This is an example of how to use the log_operation method.&quot;</span><span class="p">,</span>  <span class="c1"># Log message.</span>
-            <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># (Optional) Additional log parameters.</span>
-            <span class="n">flush_logs</span><span class="o">=</span><span class="kc">True</span>  <span class="c1"># Ensures logs are stored immediately.</span>
-        <span class="p">)</span>
+<span class="n">container_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dropdown_val</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For more details, refer to: <strong><a class="reference internal" href="bfabric_web_apps_functions.html#get-logger"><span class="std std-ref">Logging Functions</span></a></strong></p>
+<p><strong>Explanation:</strong>
+The function first ensures that the user selected a valid container (<code class="docutils literal notranslate"><span class="pre">dropdown_val</span></code>). If not, it immediately returns an error alert.</p>
 </section>
 <hr class="docutils" />
-<section id="final-return-statement">
-<h3>Final Return Statement<a class="headerlink" href="#final-return-statement" title="Link to this heading">#</a></h3>
-<p>The function returns:</p>
-<ul class="simple">
-<li><p><strong>Sidebar state settings</strong> (enabled/disabled components).</p></li>
-<li><p><strong>Authentication UI content</strong> (updated authentication UI).</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="n">sidebar_state</span><span class="p">,</span> <span class="n">auth_div_content</span><span class="p">)</span>
+<section id="step-2-define-attachments">
+<h4>Step 2 – Define Attachments<a class="headerlink" href="#step-2-define-attachments" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">attachment1_content</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>
+<span class="n">attachment1_name</span> <span class="o">=</span> <span class="s2">&quot;attachment_1.html&quot;</span>
+
+<span class="n">attachment2_content</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&quot;&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World a second time!!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>
+<span class="n">attachment2_name</span> <span class="o">=</span> <span class="s2">&quot;attachment_2.html&quot;</span>
+
+<span class="n">files_as_byte_strings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">attachment1_name</span><span class="p">:</span> <span class="n">attachment1_content</span><span class="p">,</span>
+    <span class="n">attachment2_name</span><span class="p">:</span> <span class="n">attachment2_content</span>
+<span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>Explanation:</strong>
+These attachments are passed to <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> as <code class="docutils literal notranslate"><span class="pre">files_as_byte_strings</span></code>.
+This mimics a common use case in B-Fabric, where reports or logs (e.g., <code class="docutils literal notranslate"><span class="pre">multiqc_report.html</span></code>) are attached and made downloadable after the job.</p>
+<p>Attachments are stored in <code class="docutils literal notranslate"><span class="pre">attachment_paths</span></code> for linking them in the UI (see Step 5).</p>
 </section>
 <hr class="docutils" />
-<section id="function-definition">
-<h3>Function Definition<a class="headerlink" href="#function-definition" title="Link to this heading">#</a></h3>
-<section id="args">
-<h4><strong>Args:</strong><a class="headerlink" href="#args" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">slider_val</span></code> (int)</strong> – The value of the slider.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">dropdown_val</span></code> (str)</strong> – The selected dropdown option.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">input_val</span></code> (str)</strong> – The text input value.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">n_clicks</span></code> (int)</strong> – Number of times the button was clicked.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">token_data</span></code> (dict or None)</strong> – Authentication token data.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">entity_data</span></code> (dict or None)</strong> – Entity information linked to the user.</p></li>
-</ul>
+<section id="step-3-generate-bash-commands">
+<h4>Step 3 – Generate Bash Commands<a class="headerlink" href="#step-3-generate-bash-commands" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bash_commands</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;echo &#39;</span><span class="si">{</span><span class="n">input_val</span><span class="si">}</span><span class="s2">&#39; &gt; resource_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">.txt&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+Each command creates a file named <code class="docutils literal notranslate"><span class="pre">resource_X.txt</span></code> containing the user’s input (<code class="docutils literal notranslate"><span class="pre">input_val</span></code>).
+These Bash commands will be run sequentially via <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code>, and their logs will be captured.</p>
+<p>This simulates what more complex pipelines (e.g., Nextflow, R scripts) would do.</p>
 </section>
 <hr class="docutils" />
-<section id="returns">
-<h4>Returns:<a class="headerlink" href="#returns" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Contains sidebar state settings and updated authentication UI.</p></li>
-</ul>
+<section id="step-4-determine-charge-containers">
+<h4>Step 4 – Determine Charge Containers<a class="headerlink" href="#step-4-determine-charge-containers" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">project_id</span> <span class="o">=</span> <span class="s2">&quot;2220&quot;</span>
+
+<span class="k">if</span> <span class="n">charge_run</span> <span class="ow">and</span> <span class="n">project_id</span><span class="p">:</span>
+    <span class="n">charge_run</span> <span class="o">=</span> <span class="p">[</span><span class="n">project_id</span><span class="p">]</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">charge_run</span> <span class="o">=</span> <span class="p">[]</span>
+    
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+If the charge switch (<code class="docutils literal notranslate"><span class="pre">charge_run</span></code>) is enabled, the project ID is included in the <code class="docutils literal notranslate"><span class="pre">charge</span></code> argument.
+This enables automatic billing in B-Fabric and logs the activity under the correct container.
+If charging is off, this list remains empty (<code class="docutils literal notranslate"><span class="pre">[]</span></code>).</p>
 </section>
 <hr class="docutils" />
-<section id="return-type">
-<h4>Return Type:<a class="headerlink" href="#return-type" title="Link to this heading">#</a></h4>
+<section id="step-5-define-resource-and-attachment-paths">
+<h4>Step 5 – Define Resource and Attachment Paths<a class="headerlink" href="#step-5-define-resource-and-attachment-paths" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">attachment_paths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">attachment1_name</span><span class="p">:</span> <span class="n">attachment1_name</span><span class="p">,</span>
+    <span class="n">attachment2_name</span><span class="p">:</span> <span class="n">attachment2_name</span>
+<span class="p">}</span>
+
+<span class="n">resource_paths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sa">f</span><span class="s2">&quot;resource_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">:</span> <span class="n">container_id</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+These paths tell <code class="docutils literal notranslate"><span class="pre">run_main_job</span></code>:</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">tuple</span></code></strong></p></li>
+<li><p>Where the output files should be registered (<code class="docutils literal notranslate"><span class="pre">resource_paths</span></code>)</p></li>
+<li><p>Which files should appear as downloadable links (<code class="docutils literal notranslate"><span class="pre">attachment_paths</span></code>)</p></li>
 </ul>
+<p>All files listed in <code class="docutils literal notranslate"><span class="pre">resource_paths</span></code> will be registered in B-Fabric under the specified container.</p>
+</section>
+<hr class="docutils" />
+<section id="step-6-build-the-dataset-dictionary">
+<h4>Step 6 – Build the Dataset Dictionary<a class="headerlink" href="#step-6-build-the-dataset-dictionary" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nb">str</span><span class="p">(</span><span class="n">container_id</span><span class="p">):</span> <span class="p">{</span>
+        <span class="s2">&quot;resource_name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;resource_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)],</span>
+        <span class="s2">&quot;resource_description&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Resource </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> created by Bfabric Web Apps&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)],</span>
+        <span class="s2">&quot;resource_type&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;text/plain&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">slider_val</span><span class="p">,</span>
+        <span class="s2">&quot;resource_size&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">bash_commands</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)],</span>
+        <span class="s2">&quot;resource_path&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;resource_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">.txt&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">slider_val</span><span class="p">)]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+This structure mirrors how B-Fabric stores resource metadata:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">resource_name</span></code></strong> – Human-readable name</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">resource_description</span></code></strong> – Optional context</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">resource_type</span></code></strong> – MIME type</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">resource_size</span></code></strong> – Useful for display and quota checking</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">resource_path</span></code></strong> – Where to find the file after job completion</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">run_main_job</span></code> uses this dictionary to create and register resources in the container.</p>
+</section>
+<hr class="docutils" />
+<section id="step-7-call-run-main-job">
+<h4>Step 7 – Call run_main_job()<a class="headerlink" href="#step-7-call-run-main-job" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arguments</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;files_as_byte_strings&quot;</span><span class="p">:</span> <span class="n">files_as_byte_strings</span><span class="p">,</span>
+    <span class="s2">&quot;bash_commands&quot;</span><span class="p">:</span> <span class="n">bash_commands</span><span class="p">,</span>
+    <span class="s2">&quot;resource_paths&quot;</span><span class="p">:</span> <span class="n">resource_paths</span><span class="p">,</span>
+    <span class="s2">&quot;attachment_paths&quot;</span><span class="p">:</span> <span class="n">attachment_paths</span><span class="p">,</span>
+    <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="n">raw_token</span><span class="p">,</span>
+    <span class="s2">&quot;service_id&quot;</span><span class="p">:</span> <span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">SERVICE_ID</span><span class="p">,</span>
+    <span class="s2">&quot;charge&quot;</span><span class="p">:</span> <span class="n">charge_run</span><span class="p">,</span>
+    <span class="s2">&quot;dataset_dict&quot;</span><span class="p">:</span> <span class="n">dataset_info</span>
+<span class="p">}</span>
+
+<span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">run_main_job</span><span class="p">(</span><span class="o">**</span><span class="n">arguments</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+Here, all components are passed to the central function <code class="docutils literal notranslate"><span class="pre">run_main_job()</span></code>:</p>
+<ul class="simple">
+<li><p>Transfers files via <code class="docutils literal notranslate"><span class="pre">files_as_byte_strings</span></code></p></li>
+<li><p>Executes Bash commands</p></li>
+<li><p>Registers output files as resources</p></li>
+<li><p>Creates workunits automatically</p></li>
+<li><p>Attaches download links</p></li>
+<li><p>Charges the project container if <code class="docutils literal notranslate"><span class="pre">charge</span></code> is set</p></li>
+</ul>
+<p>Behind the scenes, logs are written, errors are captured, and all job metadata is stored in B-Fabric.</p>
+</section>
+<hr class="docutils" />
+<section id="step-8-handle-success-or-failure">
+<h4>Step 8 – Handle Success or Failure<a class="headerlink" href="#step-8-handle-success-or-failure" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong>
+If everything runs successfully, this opens the success alert and clears the error message.</p>
+<p>If anything fails (e.g., exception during job execution), an error message is returned:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Error: Workunit creation failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>All exceptions are caught and shown in the UI for better debugging.</p>
 </section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="running-the-application">
 <h2>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h2>
-<p>This section ensures the app <strong>runs on the correct server settings</strong>.</p>
+<p>The following section ensures the application executes on the specified host and port configuration.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">PORT</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">HOST</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">PORT</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="n">bfabric_web_apps</span><span class="o">.</span><span class="n">HOST</span><span class="p">)</span>
 </pre></div>
 </div>
-<hr class="docutils" />
-<section id="id9">
-<h3>Explanation<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h3>Explanation<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Runs the <strong>Dash server</strong> with the specified <strong>host</strong> and <strong>port</strong> settings.</p></li>
+<li><p>Runs the Dash server, respecting settings defined by the global configuration (<code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.PORT</span></code>, <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.HOST</span></code>).</p></li>
 </ul>
 </section>
 </section>
@@ -839,39 +1180,67 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Explanation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-application-layout">Defining the Application Layout</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-modal-confirmation-window">Defining the Modal Confirmation Window</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Explanation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-documentation">Defining the Documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-alert-messages">Defining the Alert Messages</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-application-layout">Defining the Application Layout</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Explanation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-documentation">Defining the Documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Explanation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-application-title">Defining the Application Title</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-app-layout">Defining the App Layout</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Explanation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Explanation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-for-ui-updates">Callback for UI Updates</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-definition">Callback Definition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Explanation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-sidebar-behavior">Handling Sidebar Behavior</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Explanation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-authentication-and-entity-data">Handling Authentication and Entity Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-the-modal-toggle-callback">Defining the Modal Toggle Callback</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Explanation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-power-user-wrapper">Integrating Power User Wrapper</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-user-activity">Logging User Activity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-return-statement">Final Return Statement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-definition">Function Definition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#args"><strong>Args:</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#return-type">Return Type:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-authentication-sidebar-state-management">Callback: Authentication &amp; Sidebar State Management</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#callback-definition">Callback Definition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Explanation:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-definition">Function Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-toggle-ui-elements-based-on-authentication">Step 1 – Toggle UI Elements Based on Authentication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-display-message-if-user-is-not-authenticated">Step 2 – Display Message If User is Not Authenticated</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-build-ui-content-for-authenticated-users">Step 3 – Build UI Content for Authenticated Users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-error-handling">Step 4 – Error Handling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-return-updated-ui-state-and-content">Step 5 – Return Updated UI State and Content</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-run-main-job">Submitting run_main_job</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Callback Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-of-arguments">Explanation of Arguments</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs"><strong>Inputs</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#states"><strong>States</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation-of-outputs">Explanation of Outputs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-logic">Submission Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-validate-input-and-extract-container-id">Step 1 – Validate Input and Extract Container ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-attachments">Step 2 – Define Attachments</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-generate-bash-commands">Step 3 – Generate Bash Commands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-determine-charge-containers">Step 4 – Determine Charge Containers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-define-resource-and-attachment-paths">Step 5 – Define Resource and Attachment Paths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-build-the-dataset-dictionary">Step 6 – Build the Dataset Dictionary</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-call-run-main-job">Step 7 – Call run_main_job()</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-handle-success-or-failure">Step 8 – Handle Success or Failure</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Explanation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Explanation</a></li>
 </ul>
 </li>
 </ul>
@@ -890,8 +1259,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
 <footer class="bd-footer">
   <div class="bd-footer__inner bd-page-width" style="padding: 20px 0;"> <!-- Adjust padding to reduce height -->

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Usage &#8212; bfabric-web-apps 20.12.2024 documentation</title>
+    <title>Nextflow Use Case &#8212; bfabric-web-apps 20.12.2024 documentation</title>
   
   
   
@@ -46,7 +46,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'usage';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'nextflow_use_case';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -279,7 +279,7 @@
     </li>
 
     <li>
-      <a href="#">Template Usage</a>
+      <a href="usage.html">Template Usage</a>
       <ul>
         <li><a href="installation_template.html">Template Deployment Guide</a></li>
         <li><a href="index_basic_py.html">Minimal Template</a></li>
@@ -291,7 +291,7 @@
     <li>
       <a href="use_case.html">Use Case</a>
       <ul>
-        <li><a href="nextflow_use_case.html">Nextflow Use Case</a></li>
+        <li><a href="#">Nextflow Use Case</a></li>
         <li><a href="sushi_use_case.html">Sushi Use Case</a></li>
       </ul>
     </li>
@@ -338,7 +338,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Template Usage</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Nextflow Use Case</span></li>
   </ul>
 </nav>
 </div>
@@ -355,144 +355,141 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="template-usage">
-<h1>Template Usage<a class="headerlink" href="#template-usage" title="Link to this heading">#</a></h1>
-<p>This section explains how to use <strong>bfabric_web_apps</strong> with the help of the <strong>bfabric_web_app_template</strong>.</p>
-<hr class="docutils" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Version Compatibility Notice</strong><br />
-To ensure proper functionality, the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and the <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must have the <strong>same version</strong>. For example, if <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> is version <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>, then <code class="docutils literal notranslate"><span class="pre">bfabric_web_app_template</span></code> must also be <code class="docutils literal notranslate"><span class="pre">0.1.3</span></code>.</p>
-<p>Please verify and update the versions accordingly before running the application.</p>
-</div>
-<hr class="docutils" />
-<section id="bfabric-web-apps-application-structure">
-<h2>bfabric_web_apps Application Structure<a class="headerlink" href="#bfabric-web-apps-application-structure" title="Link to this heading">#</a></h2>
-<p>B-Fabric web applications built with the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library follow a modular design that ensures clarity, maintainability, and flexibility. Each app typically implements the following three core components:</p>
-<section id="collect-user-data">
-<h3>1. <strong>Collect User Data</strong><a class="headerlink" href="#collect-user-data" title="Link to this heading">#</a></h3>
-<p>This step provides a user-friendly Dash interface where users can configure parameters such as CPU, RAM, reference files, email address, and Charge Switch settings. It also allows users to review and edit sample metadata before submitting a job.</p>
-</section>
-<section id="collect-b-fabric-data">
-<h3>2. <strong>Collect B-Fabric Data</strong><a class="headerlink" href="#collect-b-fabric-data" title="Link to this heading">#</a></h3>
-<p>This component manages interactions with the B-Fabric API. It retrieves relevant project, dataset, and sample metadata needed for job execution. The collected data is typically used to generate sample sheets or other input files for the workflow.</p>
-</section>
-<section id="invoke-application">
-<h3>3. <strong>Invoke Application</strong><a class="headerlink" href="#invoke-application" title="Link to this heading">#</a></h3>
-<p>This part contains the core logic for executing the computational workflow. It builds execution commands (e.g., for Nextflow), converts input files, configures output paths, queues the job via Redis, and optionally charges the selected B-Fabric container.</p>
-<hr class="docutils" />
-<p>This architecture highlights the modularity and extensibility of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library, enabling developers to rapidly build robust applications that integrate seamlessly with the B-Fabric ecosystem.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="application-types">
-<h2>Application Types<a class="headerlink" href="#application-types" title="Link to this heading">#</a></h2>
-<p>bfabric_web_apps supports different categories of applications:</p>
-<ul class="simple">
-<li><p><strong>One-off helper apps</strong> – Small tools such as barcode generators or project-specific utilities.</p></li>
-<li><p><strong>Big-data apps</strong> – Robust applications that execute pipelines like <strong>nf-core RNA-seq</strong> or <strong>SUSHI-based</strong> workflows, requiring queueing and scalable backend processing.</p></li>
-</ul>
-<p>These app types can be mixed and matched depending on user needs and computing resources.</p>
-</section>
-<hr class="docutils" />
-<section id="redis-integration">
-<h2>Redis Integration<a class="headerlink" href="#redis-integration" title="Link to this heading">#</a></h2>
-<p><strong>Redis</strong> is used in bfabric_web_apps to support <strong>job queuing</strong> and <strong>decoupled server architecture</strong>. This allows resource-intensive or asynchronous jobs to be executed in background workers, improving performance and reliability of B-Fabric applications.</p>
-<p>You can try out a working implementation in the <strong><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template</span></a></strong>, which demonstrates:</p>
-<ul class="simple">
-<li><p>How to enqueue background jobs</p></li>
-<li><p>How to transfer files and parameters to job runners</p></li>
-</ul>
-<p>For more details, refer to the <a class="reference external" href="https://redis.io/docs/latest/">Redis official documentation</a>.</p>
-</section>
+  <section id="nextflow-use-case">
+<h1>Nextflow Use Case<a class="headerlink" href="#nextflow-use-case" title="Link to this heading">#</a></h1>
+<p>This chapter provides a comprehensive example of how Nextflow-based workflows, specifically NF-Core RNA-seq, can be seamlessly integrated into web applications using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library.</p>
 <hr class="docutils" />
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>The <strong>bfabric_web_app_template</strong> provides three ready-to-use starting points:</p>
+<p>This chapter demonstrates how the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library can be utilized to build Dash-based applications for running Nextflow pipelines. The general structure of these applications leverages Redis queues for asynchronous job management, integrates seamlessly with the B-Fabric system, and employs a modular, user-friendly web interface for workflow management.</p>
+<p>The RNA-seq application described in detail here is a proof-of-concept showcasing how complex bioinformatics workflows can be efficiently executed through an interactive web interface integrated into the B-Fabric ecosystem. For the complete source code or a quickstart guide, visit the <a class="reference external" href="https://github.com/GWCustom/rnaseq">RNA-seq app GitHub repository</a>.</p>
+<p>Additionally, although not covered extensively in this chapter, we provide two other proof-of-concept applications:</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">index_large.py</span></code></strong> – A full-featured template for complex applications.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code></strong> – A minimal template for simple apps.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code></strong> – A template specifically designed for using Redis queues.</p></li>
+<li><p><strong>Demultiplex App</strong>: Demonstrates integration between B-Fabric, the NF-Core Demultiplex pipeline, and Redis-based asynchronous job execution, validating the flexibility of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library. The source code is available in the <a class="reference external" href="https://github.com/GWCustom/bfabric_app_demultiplex">bfabric_app_demultiplex GitHub repository</a>.</p></li>
+<li><p><strong>Hello World App</strong>: Offers a minimalistic example to quickly grasp the basic integration concepts between Nextflow, B-Fabric, and Redis job queues. The source code is available in the <a class="reference external" href="https://github.com/GWCustom/nfc-hello-world">nfc-hello-world GitHub repository</a>.</p></li>
 </ul>
-<p>All templates are designed to be <strong>modified and extended</strong> by users, serving as the main entry points for custom B-Fabric web applications.</p>
-<p>Additionally, within the <strong>bfabric_web_app_template</strong>, the following files are available:</p>
-<ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong> – All templates <strong>import</strong> and <strong>rely</strong> on modules within the <code class="docutils literal notranslate"><span class="pre">generic</span></code> folder for core functionality.</p></li>
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">bfabric_apps_auto_registration.py</span></code></strong> – Calls the <a class="reference internal" href="bfabric_web_apps_functions.html#remote-creation-of-web-applications"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">create_web_app()</span></code></span></a> function to remotely create a B-Fabric web application.</p></li>
-</ul>
-<p>Unlike the index files, these files are not intended to be modified and are meant to remain untouched. This structure ensures a modular and reusable approach to web application development within B-Fabric.</p>
-</section>
 <hr class="docutils" />
-<section id="choosing-the-right-template">
-<h2>Choosing the Right Template<a class="headerlink" href="#choosing-the-right-template" title="Link to this heading">#</a></h2>
-<p>This section helps you decide between the <strong>Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</strong> and the <strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</strong> based on your use case. If your application utilizes Redis for asynchronous job execution, consider using the <strong>Redis Template (<code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code>)</strong>.</p>
-<section id="core-integration">
-<h3>Core Integration<a class="headerlink" href="#core-integration" title="Link to this heading">#</a></h3>
-<p>Both templates <strong>import</strong> and <strong>rely</strong> on teh <strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong>, which provides essential functions such as:
-✔ <strong>Authentication Handling</strong> via B-Fabric tokens
-✔ <strong>Session Management</strong> and user entity tracking
-✔ <strong>Bug Reporting System</strong> for issue tracking
-✔ <strong>Dynamic Page Title &amp; Session Details</strong></p>
-<p>These functionalities are <strong>built-in</strong> to both templates, so they work out of the box with B-Fabric.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Feature</p></th>
-<th class="head"><p><strong>Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</strong></p></th>
-<th class="head"><p><strong>Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Integrates <code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong></p></td>
-<td><p>✅ Yes</p></td>
-<td><p>✅ Yes</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Logging</strong></p></td>
-<td><p>✅ Minimal (only login events)</p></td>
-<td><p>✅ Extensive (logs multiple actions)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Dynamic Variable Configuration</strong></p></td>
-<td><p>❌ No</p></td>
-<td><p>✅ Yes (sets default variables like config paths and emails)</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Sidebar UI</strong></p></td>
-<td><p>❌ No</p></td>
-<td><p>✅ Yes (includes dropdowns, sliders, and text input)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Dynamic Callbacks</strong></p></td>
-<td><p>❌ No</p></td>
-<td><p>✅ Yes (interactive UI with callbacks)</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Power User Features</strong></p></td>
-<td><p>❌ No</p></td>
-<td><p>✅ Yes (enables power-user access)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Use Case</strong></p></td>
-<td><p>Simpler starting point</p></td>
-<td><p>Full-featured starting point</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">generic</span></code> folder</strong> contains <strong>core system file</strong> and <strong>must not be modified</strong>. Any changes to this folder may break authentication or system integration.</p></li>
-<li><p><strong>All customization</strong> (for example, adding UI components, callbacks, or logging) should be done in <strong><code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>, <code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>, or <code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code></strong>.</p></li>
-</ul>
-</div>
+<section id="what-is-nextflow-nf-core">
+<h3>What is Nextflow &amp; NF-Core?<a class="headerlink" href="#what-is-nextflow-nf-core" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.nextflow.io/docs/latest/index.html"><strong>Nextflow</strong></a> is a powerful workflow management system designed for scalable, reproducible computational pipelines. It supports parallel and distributed computing across various environments, including local machines, HPC clusters, and cloud services.</p>
+<p><a class="reference external" href="https://nf-co.re/"><strong>NF-Core</strong></a> is a community-driven project that provides standardized Nextflow pipelines adhering to best practices for bioinformatics analysis. It includes workflows for a wide range of use cases, such as RNA-seq, ATAC-seq, and genome assembly.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h2>
-<p>Now that you understand the structure, the next sections will explore:</p>
+<section id="rna-seq-use-case">
+<h2>RNA-seq Use Case<a class="headerlink" href="#rna-seq-use-case" title="Link to this heading">#</a></h2>
+<p>The RNA-seq app illustrates the practical application of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library by orchestrating the widely-used NF-Core RNA-seq pipeline for bulk transcriptomics analysis.</p>
+<p>The RNA-seq app is a <strong>proof-of-concept application</strong> for transcriptomic analysis within the B-Fabric ecosystem. It demonstrates how to combine B-Fabric metadata, a user-friendly Dash interface, and NF-Core RNA-seq pipelines in a single web application.</p>
+<p>The app is built using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and follows the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-app-template"><code class="docutils literal notranslate"><span class="pre">redis_index.py</span></code></a> template, enabling asynchronous job execution via a Redis queue system.</p>
+<p>Although this chapter specifically discusses the RNA-seq use case, many elements and structures described here are common across other Nextflow-based applications. The RNA-seq app thus serves as a representative example to illustrate the general structure and implementation patterns of Nextflow applications developed using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library.</p>
+<p>For the complete source code or a quickstart guide, visit the <a class="reference external" href="https://github.com/GWCustom/rnaseq">RNA-seq app GitHub repository</a>.</p>
+<hr class="docutils" />
+<section id="nf-core-rna-seq-pipeline">
+<h3>NF-Core RNA-seq Pipeline<a class="headerlink" href="#nf-core-rna-seq-pipeline" title="Link to this heading">#</a></h3>
+<p>The NF-Core RNA-seq pipeline is a widely used, community-maintained workflow for processing bulk RNA sequencing data. It includes quality control, alignment, quantification, and differential expression analysis using tools such as FastQC, STAR, and DESeq2.</p>
+<p>For more details, see the <a class="reference external" href="https://nf-co.re/rnaseq/3.18.0/">official documentation</a>.</p>
+<p><img alt="NF-Core RNA-seq Pipeline Overview" src="_images/nf-core-rnaseq_metro_map_grey.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="app-structure">
+<h3>App Structure<a class="headerlink" href="#app-structure" title="Link to this heading">#</a></h3>
+<p>The RNA-seq app is organized into three main components:</p>
 <ol class="arabic simple">
-<li><p><strong><a class="reference internal" href="installation_template.html"><span class="std std-doc">Template Deployment Guide</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="index_py.html"><span class="std std-doc">Full-Featured Template (<code class="docutils literal notranslate"><span class="pre">index_large.py</span></code>)</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="index_basic_py.html"><span class="std std-doc">Minimal Template (<code class="docutils literal notranslate"><span class="pre">index_basic.py</span></code>)</span></a></strong></p></li>
-<li><p><strong><a class="reference internal" href="index_redis.html"><span class="std std-doc">Redis Template (<code class="docutils literal notranslate"><span class="pre">index_redis.py</span></code>)</span></a></strong></p></li>
+<li><p><strong>B-Fabric Integration</strong>
+Internal logic handles all interactions with the B-Fabric API. It fetches project and dataset metadata, extracts relevant information, and generates sample sheet files used as pipeline input.</p></li>
+<li><p><strong>User Interface</strong>
+The Dash-based UI collects key input parameters such as CPU, RAM, FASTA, GTF files, and an email address. It also includes a <strong>Charge Switch</strong> to associate run costs with a B-Fabric container. Sample metadata is visualized in a table where users can review and edit records before submission.</p></li>
+<li><p><strong>Main Job Execution</strong>
+When the user confirms submission, the app:</p>
+<ul class="simple">
+<li><p>Converts files to byte streams.</p></li>
+<li><p>Builds the appropriate bash command to run the Nextflow-based NF-Core RNA-seq pipeline.</p></li>
+<li><p>Enqueues the job to Redis for remote execution.</p></li>
+<li><p>Registers output files and reports back into B-Fabric via the API.</p></li>
+</ul>
+</li>
 </ol>
+<p>This modular design supports rapid development and easy adaptation to other Nextflow pipelines.</p>
+</section>
+<hr class="docutils" />
+<section id="server-architecture">
+<h3>Server Architecture<a class="headerlink" href="#server-architecture" title="Link to this heading">#</a></h3>
+<p>The RNA-seq app follows a <strong>three-tier architecture</strong> that decouples the web interface, job scheduling, and job execution:</p>
+<ul class="simple">
+<li><p>A <strong>Web App Server</strong> hosts the Dash UI, processes input from users, fetches B-Fabric metadata, and enqueues jobs via Redis.</p></li>
+<li><p>A <strong>Compute Server</strong> listens to Redis, runs the actual Nextflow jobs using <code class="docutils literal notranslate"><span class="pre">run_main_job()</span></code>, and stores output locally.</p></li>
+<li><p>The <strong>B-Fabric System</strong> provides metadata access and receives resource links and attachments once processing is complete.</p></li>
+</ul>
+</section>
+<section id="rna-seq-architecture-diagram">
+<h3>RNA-seq Architecture Diagram<a class="headerlink" href="#rna-seq-architecture-diagram" title="Link to this heading">#</a></h3>
+<p><img alt="RNA-seq Architecture Diagram" src="_images/use_case_architecture.png" /></p>
+<p>This architecture allows for <strong>asynchronous</strong>, <strong>scalable</strong>, and <strong>user-friendly</strong> execution of complex workflows integrated with B-Fabric.</p>
+</section>
+<hr class="docutils" />
+<section id="step-by-step-workflow">
+<h3>Step-by-Step Workflow<a class="headerlink" href="#step-by-step-workflow" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Launch the App</strong>
+The user opens the RNA-seq web app via a B-Fabric launch link containing a valid session token.</p></li>
+<li><p><strong>Authentication and Token Validation</strong>
+The app extracts the token, validates it using B-Fabric’s REST API, and fetches:</p>
+<ul class="simple">
+<li><p>Token metadata</p></li>
+<li><p>Application metadata</p></li>
+<li><p>Dataset/entity metadata</p></li>
+</ul>
+</li>
+<li><p><strong>Configure Run Parameters</strong>
+The user enters details like:</p>
+<ul class="simple">
+<li><p>Job name and comment</p></li>
+<li><p>Email address</p></li>
+<li><p>Number of CPUs and RAM allocation</p></li>
+<li><p>FASTA and GTF reference files</p></li>
+<li><p>Queue selection (<code class="docutils literal notranslate"><span class="pre">light</span></code> or <code class="docutils literal notranslate"><span class="pre">heavy</span></code>)</p></li>
+<li><p>Toggle charge switch (on/off)</p></li>
+</ul>
+</li>
+<li><p><strong>Review Sample Metadata</strong>
+A DataTable renders the B-Fabric dataset. Users can inspect and review the detected sample names and file associations.</p></li>
+<li><p><strong>Submit the Pipeline Job</strong>
+After clicking the submit button, a modal asks for final confirmation.</p></li>
+<li><p><strong>Run the Job via Redis Queue</strong>
+On confirmation:</p>
+<ul class="simple">
+<li><p>A sample sheet CSV is generated and saved</p></li>
+<li><p>Associated files are converted to byte strings</p></li>
+<li><p>Bash commands for pipeline execution are prepared</p></li>
+<li><p>Output/attachment/resource paths are configured</p></li>
+<li><p>The job is enqueued using Redis (<code class="docutils literal notranslate"><span class="pre">q(queue).enqueue(...)</span></code>)</p></li>
+</ul>
+</li>
+<li><p><strong>Charge Project (Optional)</strong>
+If the Charge Switch is enabled, the selected container is charged using the <code class="docutils literal notranslate"><span class="pre">create_charge()</span></code> function before pipeline execution.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="expected-output">
+<h3>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h3>
+<p>Once the job is completed, users can expect the following:</p>
+<ul class="simple">
+<li><p><strong>Output Directory on Compute Server</strong>:
+A directory structure containing all pipeline outputs, logs, and reports. Named based on timestamp, e.g., <code class="docutils literal notranslate"><span class="pre">/STORAGE/OUTPUT_rnaseq_2025-05-06_10-32-00</span></code></p></li>
+<li><p><strong>Registered B-Fabric Resources</strong>:
+The output directory and key attachments (e.g., MultiQC reports, Qualimap reports, DESeq2 plots) are linked back to the originating dataset entity in B-Fabric.</p></li>
+<li><p><strong>Accessible QC Reports</strong>:
+HTML reports and plots are attached to the dataset for downstream inspection or publication.</p></li>
+<li><p><strong>Workunit Creation</strong>:
+The application logs workunits for job tracking and reproducibility within B-Fabric. This functionality is handled automatically through the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library configuration.</p></li>
+<li><p><strong>Automatic Charging (if enabled)</strong>:
+If the user activates the Charge Switch, the application automatically charges the appropriate container using the configured service ID before pipeline execution.</p></li>
+<li><p><strong>Integrated Metadata</strong>:
+All generated outputs—datasets, resources, and workunits—are fully connected within B-Fabric, ensuring traceability, reproducibility, and integration across the platform.</p></li>
+</ul>
+<hr class="docutils" />
+<p>By following this structured approach, users can run RNA-seq pipelines reproducibly, monitor job progress, and trace results directly within B-Fabric—all from an interactive and simplified Dash web interface.</p>
+</section>
 </section>
 </section>
 
@@ -525,20 +522,19 @@ To ensure proper functionality, the <code class="docutils literal notranslate"><
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bfabric-web-apps-application-structure">bfabric_web_apps Application Structure</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-user-data">1. <strong>Collect User Data</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-b-fabric-data">2. <strong>Collect B-Fabric Data</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invoke-application">3. <strong>Invoke Application</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-nextflow-nf-core">What is Nextflow &amp; NF-Core?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-types">Application Types</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redis-integration">Redis Integration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-the-right-template">Choosing the Right Template</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-integration">Core Integration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rna-seq-use-case">RNA-seq Use Case</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nf-core-rna-seq-pipeline">NF-Core RNA-seq Pipeline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-structure">App Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#server-architecture">Server Architecture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rna-seq-architecture-diagram">RNA-seq Architecture Diagram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-workflow">Step-by-Step Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
 </ul>
   </nav></div>
 

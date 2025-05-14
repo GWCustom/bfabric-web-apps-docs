@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sidebar-nav.css?v=0dc337ef" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6d44bb60" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=af8e464a" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
@@ -150,14 +150,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
-    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
   
+    <p class="title logo__title">bfabric-web-apps 20.12.2024 documentation</p>
   
 </a></div>
     
@@ -213,6 +207,10 @@
     </div>
   
 
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
   
 </div>
 
@@ -293,9 +291,8 @@
     <li>
       <a href="use_case.html">Use Case</a>
       <ul>
-        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
-        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
-        <li><a href="#">SUSHI Use Case</a></li>
+        <li><a href="nextflow_use_case.html">Nextflow Use Case</a></li>
+        <li><a href="#">Sushi Use Case</a></li>
       </ul>
     </li>
 
@@ -303,6 +300,7 @@
       <a href="video_tutorials.html">Video Tutorials</a>
       <ul>
         <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+        <li><a href="building_webapps_video_tutorials.html">Building WebApps</a></li>
       </ul>
     </li>
 
@@ -359,11 +357,97 @@
                   
   <section id="sushi-use-case">
 <h1>Sushi Use Case<a class="headerlink" href="#sushi-use-case" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Use Case in Progress</strong><br />
-This use case is still under construction. Please check back later to learn how to use <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> to build beautiful and functional applications quickly within the B-Fabric ecosystem.</p>
-</div>
+<p>This chapter presents a practical example of how B-Fabric datasets can be used to drive Sushi-based workflows through a Dash web interface, using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and the SushiRunner application.</p>
+<hr class="docutils" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This chapter demonstrates how the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library can be used to build modular, Dash-based web interfaces for launching <a class="reference external" href="https://github.com/uzh/sushi">Sushi</a> applications. The SushiRunner app connects B-Fabric datasets with the <a class="reference external" href="https://github.com/uzh/sushi_fabric">SushiFabric</a> command-line interface and the <a class="reference external" href="https://github.com/uzh/workflow_manager">WorkflowManager</a>, enabling structured job submission without requiring users to manually prepare TSV inputs or scripts.</p>
+<p>SushiRunner serves as a <strong>proof-of-concept</strong> application that allows authenticated B-Fabric users to submit predefined Sushi jobs using a form-based web interface.</p>
+<p>For source code and a quickstart guide, visit:
+<a class="reference external" href="https://github.com/GWCustom/SushiRunner">GWCustom/SushiRunner</a></p>
+<hr class="docutils" />
+<section id="what-is-sushi">
+<h3>What is Sushi?<a class="headerlink" href="#what-is-sushi" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://github.com/uzh/sushi">Sushi</a> is a Ruby-based framework for developing and executing bioinformatics workflows. It enables reproducible and modular pipelines by abstracting input/output definitions and runtime parameters. Sushi apps can be executed locally or on computing clusters using <a class="reference external" href="https://github.com/uzh/sushi_fabric">SushiFabric</a> and managed via <a class="reference external" href="https://github.com/uzh/workflow_manager">WorkflowManager</a>.</p>
+<p>Sushi is used extensively within the <a class="reference external" href="https://fgcz-bfabric.uzh.ch/bfabric/">FGCZ</a> infrastructure and integrates well with B-Fabric through standardized dataset and parameter input files.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="sushirunner-use-case">
+<h2>SushiRunner Use Case<a class="headerlink" href="#sushirunner-use-case" title="Link to this heading">#</a></h2>
+<p>SushiRunner demonstrates how a B-Fabric-aware Dash application can be built to configure, validate, and launch Sushi applications.</p>
+<p>The app is implemented using the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library and follows a template-based structure with reusable layout components. Users interact with a dynamic web form that collects job-specific parameters and generates the required <code class="docutils literal notranslate"><span class="pre">dataset.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">parameters.tsv</span></code> files before triggering execution via <code class="docutils literal notranslate"><span class="pre">sushi_fabric</span></code>.</p>
+<p>Although this use case specifically showcases SushiRunner, many of its patterns (authentication, dataset loading, parameter forms, and result registration) are reusable in other workflow UIs.</p>
+<hr class="docutils" />
+<section id="sushi-workflow">
+<h3>Sushi Workflow<a class="headerlink" href="#sushi-workflow" title="Link to this heading">#</a></h3>
+<p>The typical workflow in SushiRunner consists of the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Launch from B-Fabric</strong>
+The user opens the app via a dataset-specific link from B-Fabric.</p></li>
+<li><p><strong>Load Dataset Metadata</strong>
+The app automatically retrieves and parses metadata via the B-Fabric API.</p></li>
+<li><p><strong>Configure Parameters</strong>
+Users select the Sushi app to run and define input parameters (e.g., RAM, CPU, paired-end, QC options).</p></li>
+<li><p><strong>Generate Input Files</strong>
+The app creates the required <code class="docutils literal notranslate"><span class="pre">dataset.tsv</span></code> and <code class="docutils literal notranslate"><span class="pre">parameters.tsv</span></code> files for Sushi.</p></li>
+<li><p><strong>Submit Job via <code class="docutils literal notranslate"><span class="pre">sushi_fabric</span></code></strong>
+Sushi is invoked using the appropriate app class and configuration.</p></li>
+<li><p><strong>Monitor Execution</strong>
+Jobs are executed and tracked using WorkflowManager. Status updates and logs are available via the FGCZ monitoring tools.</p></li>
+<li><p><strong>Register Workunits and Outputs</strong>
+Completed job information is registered back into B-Fabric for traceability.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="app-structure">
+<h3>App Structure<a class="headerlink" href="#app-structure" title="Link to this heading">#</a></h3>
+<p>SushiRunner apps are organized as modular Dash apps, one per Sushi tool (e.g., FastQC, MultiQC, Trimgalore). The architecture includes:</p>
+<ul class="simple">
+<li><p><strong>Dataset Integration</strong>
+Retrieves and parses metadata from B-Fabric, typically used to generate the <code class="docutils literal notranslate"><span class="pre">dataset.tsv</span></code>.</p></li>
+<li><p><strong>Dynamic Parameter Form</strong>
+A form-based UI dynamically updates available fields based on the selected Sushi app. Generic options (RAM, cores, partition) and app-specific parameters (e.g., <code class="docutils literal notranslate"><span class="pre">paired</span></code>, <code class="docutils literal notranslate"><span class="pre">showNativeReports</span></code>) are supported.</p></li>
+<li><p><strong>Job Submission Logic</strong>
+Once confirmed, the app generates input files and submits the job using <code class="docutils literal notranslate"><span class="pre">sushi_fabric</span></code>, without relying on Redis queues.</p></li>
+<li><p><strong>Charging and Logging</strong>
+Optional integration with the B-Fabric charge system and automatic workunit creation via the library's configuration.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="supported-applications">
+<h3>Supported Applications<a class="headerlink" href="#supported-applications" title="Link to this heading">#</a></h3>
+<p>Each Sushi app is handled by a separate module within SushiRunner. Example:</p>
+<ul class="simple">
+<li><p><strong>FastQC App</strong></p>
+<ul>
+<li><p>Input: FASTQ files</p></li>
+<li><p>Parameters: cores, RAM, paired-end toggle, etc.</p></li>
+<li><p>Submission: Uses <code class="docutils literal notranslate"><span class="pre">FastqcApp</span></code> class in <code class="docutils literal notranslate"><span class="pre">sushi_fabric</span></code></p></li>
+<li><p>Visual output registered as attachments in B-Fabric</p></li>
+</ul>
+</li>
+</ul>
+<p>The SushiRunner architecture supports extending to additional Sushi apps with minimal duplication.</p>
+</section>
+<hr class="docutils" />
+<section id="expected-output">
+<h3>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h3>
+<p>Once submitted, the following outputs are produced:</p>
+<ul class="simple">
+<li><p><strong>Sushi Output Directory</strong>
+Results are stored in a structured folder on the compute cluster, according to Sushi conventions.</p></li>
+<li><p><strong>Workunit Registration</strong>
+Each job is logged in B-Fabric with metadata linking the execution and inputs.</p></li>
+<li><p><strong>Report Attachments</strong>
+Reports such as HTML QC summaries can be linked back to the dataset entity.</p></li>
+<li><p><strong>Automatic Charging (if enabled)</strong>:
+If the user activates the Charge Switch, the application automatically charges the appropriate container using the configured service ID before pipeline execution.</p></li>
+</ul>
+<hr class="docutils" />
+<p>By abstracting the complexity of TSV generation and <code class="docutils literal notranslate"><span class="pre">sushi_fabric</span></code> CLI usage, SushiRunner simplifies the execution of Sushi workflows through a user-friendly, form-based Dash interface — directly integrated with the B-Fabric system.</p>
+</section>
+</section>
 </section>
 
 
@@ -382,6 +466,34 @@ This use case is still under construction. Please check back later to learn how 
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-sushi">What is Sushi?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sushirunner-use-case">SushiRunner Use Case</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sushi-workflow">Sushi Workflow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-structure">App Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-applications">Supported Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

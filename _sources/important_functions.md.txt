@@ -374,24 +374,24 @@ If you want to explore the implementation of the `flush_logs()` function in more
 L.flush_logs()
 ```
 
-##### Args:  
+#### Args:  
 - None
 
 ---
 
-##### Returns:  
+#### Returns:  
 - None
 
 ---
 
-##### Behavior:  
+#### Behavior:  
 - If there are **pending logs** saved locally, they are flushed with a **single API call** to the backend, reducing the number of individual requests.
 - After a successful flush, the local log storage is cleared.
 - If no logs are pending, the function does nothing and exits immediately.
 
 ---
 
-##### Example
+#### Example
 
 ```python
 # Initialize the logger instance
@@ -489,7 +489,7 @@ wrapper = bfabric_interface.get_wrapper()
 ### Important Considerations
 
 * The wrapper object is **essential** for interacting with the B-Fabric API, and operations such as data queries (`read`) and submissions (`save`) rely on this wrapper.
-* Always ensure the wrapper is initialized by validating the authentication token beforehand. The token validation process happens automatically when using the provided B-Fabric workflow **[`process_url_and_token`](important_functions.md#l#process-url-and-token)**.
+* Always ensure the wrapper is initialized by validating the authentication token beforehand. The token validation process happens automatically when using the provided B-Fabric workflow **[`process_url_and_token`](important_functions.md#3-authentication--token-handling)**.
 
 ---
 
@@ -538,6 +538,8 @@ results = wrapper.read("sample", {"id": "1234"})
 Initializes and returns an **authenticated wrapper** for interacting with the **B-Fabric API**. This wrapper is specifically configured for **Power User** access, allowing privileged operations within the system. The default **Power User** login is **`gfeeder`**.
 
 This function uses the environment information provided in `token_data` to determine the appropriate configuration for initializing the `Bfabric` instance. It reads the configuration from a predefined path (`CONFIG_FILE_PATH`) and applies the environment settings.
+
+> **Note:** This requires a properly configured authentication block in your `.yml` config file, typically located at the path specified by `CONFIG_FILE_PATH`. For details on how to set this up, refer to the [bfabricPy documentation](https://fgcz.github.io/bfabricPy/).
 
 If you want to explore the implementation of the `get_power_user_wrapper()` function in more detail, check out the [source code on GitHub](https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/get_power_user_wrapper.py).
 
@@ -594,13 +596,15 @@ bfabric_web_apps.BUG_REPORT_EMAIL_ADDRESS = "my_email@my_domain.com"
 
 This change ensures that bug reports are redirected to your preferred email address instead of the default FGCZ system queue.
 
-For further details on modifying global variables, refer to [Chapter 7: Dynamic Variable Configuration](#dynamic-variable-configuration).
+For further details on modifying global variables, refer to the chapter [Global Variables](global_variables.md).
 
 ---
 
 ### submit_bug_report()
 
 Submits bug reports by collecting the user-provided bug description, along with token and entity data, and then emails these details to the **bug-report email address** configured in `bfabric_web_apps.BUG_REPORT_EMAIL_ADDRESS`. By default, this address is `gwtools@fgcz.system`, but it can be customized as needed.
+
+> **Note:** This function requires a **running mail server** and the **Unix command-line utility `mail`** to be installed in the app execution environment. Without these, the bug report will not be sent.
 
 If you want to explore the implementation of the `submit_bug_report()` function in more detail, check out the [source code on GitHub](https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/callbacks.py#L92).
 

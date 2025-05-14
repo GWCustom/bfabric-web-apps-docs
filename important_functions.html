@@ -150,14 +150,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo_light.png" class="logo__image only-light" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
-    <img src="_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt="bfabric-web-apps 20.12.2024 documentation - Home"/>
   
+    <p class="title logo__title">bfabric-web-apps 20.12.2024 documentation</p>
   
 </a></div>
     
@@ -297,9 +291,8 @@
     <li>
       <a href="use_case.html">Use Case</a>
       <ul>
-        <li><a href="rna_seq_use_case.html">RNA-seq Use Case</a></li>
-        <li><a href="demultiplex_use_case.html">Demultiplex Use Case</a></li>
-        <li><a href="sushi_use_case.html">SUSHI Use Case</a></li>
+        <li><a href="nextflow_use_case.html">Nextflow Use Case</a></li>
+        <li><a href="sushi_use_case.html">Sushi Use Case</a></li>
       </ul>
     </li>
 
@@ -307,6 +300,7 @@
       <a href="video_tutorials.html">Video Tutorials</a>
       <ul>
         <li><a href="deploying_video_tutorials.html">Deploying Tutorials</a></li>
+        <li><a href="building_webapps_video_tutorials.html">Building WebApps</a></li>
       </ul>
     </li>
 
@@ -452,7 +446,7 @@
 <h2>3. Authentication &amp; Token Handling<a class="headerlink" href="#authentication-token-handling" title="Link to this heading">#</a></h2>
 <section id="overview">
 <h3>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h3>
-<p>The B-Fabric authentication flow is designed to be straightforward and seamless for users of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library. For a deeper theoretical explanation of the authentication and token handling process, along with a detailed look at the function output, refer to the chapter <strong><a class="reference internal" href="important_components.html#authentication--token-handling"><span class="std std-ref">Important Components</span></a></strong>. While the underlying logic is abstracted away from the user, the following section provides an overview of how authentication and token processing works in practice.</p>
+<p>The B-Fabric authentication flow is designed to be straightforward and seamless for users of the <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps</span></code> library. For a deeper theoretical explanation of the authentication and token handling process, along with a detailed look at the function output, refer to the chapter <strong><a class="reference internal" href="important_components.html#authentication-token-handling"><span class="std std-ref">Important Components</span></a></strong>. While the underlying logic is abstracted away from the user, the following section provides an overview of how authentication and token processing works in practice.</p>
 </section>
 <hr class="docutils" />
 <section id="process-url-and-token">
@@ -771,15 +765,15 @@ The URL parameters containing the token (e.g., <code class="docutils literal not
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="id18">
 <h4>Returns:<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>None</p></li>
 </ul>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="behavior">
 <h4>Behavior:<a class="headerlink" href="#behavior" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -787,8 +781,8 @@ The URL parameters containing the token (e.g., <code class="docutils literal not
 <li><p>After a successful flush, the local log storage is cleared.</p></li>
 <li><p>If no logs are pending, the function does nothing and exits immediately.</p></li>
 </ul>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="id19">
 <h4>Example<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the logger instance</span>
@@ -882,7 +876,7 @@ The URL parameters containing the token (e.g., <code class="docutils literal not
 <h3>Important Considerations<a class="headerlink" href="#important-considerations" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The wrapper object is <strong>essential</strong> for interacting with the B-Fabric API, and operations such as data queries (<code class="docutils literal notranslate"><span class="pre">read</span></code>) and submissions (<code class="docutils literal notranslate"><span class="pre">save</span></code>) rely on this wrapper.</p></li>
-<li><p>Always ensure the wrapper is initialized by validating the authentication token beforehand. The token validation process happens automatically when using the provided B-Fabric workflow <strong><a class="reference internal" href="#l#process-url-and-token"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">process_url_and_token</span></code></span></a></strong>.</p></li>
+<li><p>Always ensure the wrapper is initialized by validating the authentication token beforehand. The token validation process happens automatically when using the provided B-Fabric workflow <strong><a class="reference internal" href="#authentication-token-handling"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">process_url_and_token</span></code></span></a></strong>.</p></li>
 </ul>
 <hr class="docutils" />
 <section id="id21">
@@ -925,6 +919,9 @@ The URL parameters containing the token (e.g., <code class="docutils literal not
 <h3>get_power_user_wrapper()<a class="headerlink" href="#get-power-user-wrapper" title="Link to this heading">#</a></h3>
 <p>Initializes and returns an <strong>authenticated wrapper</strong> for interacting with the <strong>B-Fabric API</strong>. This wrapper is specifically configured for <strong>Power User</strong> access, allowing privileged operations within the system. The default <strong>Power User</strong> login is <strong><code class="docutils literal notranslate"><span class="pre">gfeeder</span></code></strong>.</p>
 <p>This function uses the environment information provided in <code class="docutils literal notranslate"><span class="pre">token_data</span></code> to determine the appropriate configuration for initializing the <code class="docutils literal notranslate"><span class="pre">Bfabric</span></code> instance. It reads the configuration from a predefined path (<code class="docutils literal notranslate"><span class="pre">CONFIG_FILE_PATH</span></code>) and applies the environment settings.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This requires a properly configured authentication block in your <code class="docutils literal notranslate"><span class="pre">.yml</span></code> config file, typically located at the path specified by <code class="docutils literal notranslate"><span class="pre">CONFIG_FILE_PATH</span></code>. For details on how to set this up, refer to the <a class="reference external" href="https://fgcz.github.io/bfabricPy/">bfabricPy documentation</a>.</p>
+</div></blockquote>
 <p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">get_power_user_wrapper()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/get_power_user_wrapper.py">source code on GitHub</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">power_user_wrapper</span> <span class="o">=</span> <span class="n">get_power_user_wrapper</span><span class="p">(</span><span class="n">token_data</span><span class="p">)</span>
 
@@ -983,13 +980,16 @@ The URL parameters containing the token (e.g., <code class="docutils literal not
 </pre></div>
 </div>
 <p>This change ensures that bug reports are redirected to your preferred email address instead of the default FGCZ system queue.</p>
-<p>For further details on modifying global variables, refer to <a class="reference internal" href="#dynamic-variable-configuration"><span class="xref myst">Chapter 7: Dynamic Variable Configuration</span></a>.</p>
+<p>For further details on modifying global variables, refer to the chapter <a class="reference internal" href="global_variables.html"><span class="std std-doc">Global Variables</span></a>.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="submit-bug-report">
 <h3>submit_bug_report()<a class="headerlink" href="#submit-bug-report" title="Link to this heading">#</a></h3>
 <p>Submits bug reports by collecting the user-provided bug description, along with token and entity data, and then emails these details to the <strong>bug-report email address</strong> configured in <code class="docutils literal notranslate"><span class="pre">bfabric_web_apps.BUG_REPORT_EMAIL_ADDRESS</span></code>. By default, this address is <code class="docutils literal notranslate"><span class="pre">gwtools&#64;fgcz.system</span></code>, but it can be customized as needed.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This function requires a <strong>running mail server</strong> and the <strong>Unix command-line utility <code class="docutils literal notranslate"><span class="pre">mail</span></code></strong> to be installed in the app execution environment. Without these, the bug report will not be sent.</p>
+</div></blockquote>
 <p>If you want to explore the implementation of the <code class="docutils literal notranslate"><span class="pre">submit_bug_report()</span></code> function in more detail, check out the <a class="reference external" href="https://github.com/GWCustom/bfabric-web-apps/blob/main/bfabric_web_apps/utils/callbacks.py#L92">source code on GitHub</a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">submit_bug_report</span><span class="p">(</span><span class="n">n_clicks</span><span class="p">,</span> <span class="n">bug_description</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">entity_data</span><span class="p">)</span>
 </pre></div>
